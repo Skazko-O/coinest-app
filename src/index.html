@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coinest</title>
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Coinest" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="content">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div>
+          <div class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="Coinest icon">
+              <img src="assets/images/Coinest.png" alt="Coinest wordmark">
+            </a>
+          </div>
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#SquaresFour"></use>
+                  </svg>
+                  <span class="menu-text">Dashboard</span>
+                </a>
+              </li>
+              <li><a href="payments.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#CreditCard"></use>
+                  </svg>
+                  <span class="menu-text">Payments</span>
+                </a>
+              </li>
+              <li><a href="transactions.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#ArrowsLeftRight"></use>
+                  </svg>
+                  <span class="menu-text">Transactions</span>
+                </a>
+              </li>
+              <li><a href="invoices.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#Receipt"></use>
+                  </svg>
+                  <span class="menu-text">Invoices</span>
+                </a>
+              </li>
+              <li><a href="cards.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#Cardholder"></use>
+                  </svg>
+                  <span class="menu-text">Cards</span>
+                </a>
+              </li>
+              <li><a href="plans.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#Coins"></use>
+                  </svg>
+                  <span class="menu-text">Saving Plans</span>
+                </a>
+              </li>
+              <li><a href="investments.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#CurrencyEth"></use>
+                  </svg>
+                  <span class="menu-text">Investments</span>
+                </a>
+              </li>
+              <li><a href="inbox.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#Envelope"></use>
+                  </svg>
+                  <span class="menu-text">Inbox</span>
+                </a>
+              </li>
+              <li><a href="promos.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#SealPercent"></use>
+                  </svg>
+                  <span class="menu-text">Promos</span>
+                </a>
+              </li>
+              <li><a href="insights.html">
+                  <svg>
+                    <use xlink:href="assets/images/icon-sidebar/sidebar-icon.svg#Newspaper"></use>
+                  </svg>
+                  <span class="menu-text">Insights</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="get-pro">
+          <img src="assets/images/icon/LockOpen.svg" class="lock">
+          <img src="assets/images/icon/symbol.svg" class="symbol">
+          <div class="text-get-pro">Gain full access to your finances with detailed analytics and graphs</div>
+          <button class="btn-get-pro">Get Pro</button>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+
+      <div class="container">        
+          <header>
+            <div class="page-name">
+              <h1>Dashboard</h1>
+              <div class="right-section">
+                <div class="search-wrapper">
+                  <svg class="search-icon">
+                    <use xlink:href="assets/images/icon/sprite_header.svg#MagnifyingGlass"></use>
+                  </svg>
+                  <input type="text" id="search" name="search" placeholder="Search...">
+                </div>
+                <div class="circle-group">
+                  <button class="circle-btn">
+                    <svg>
+                      <use xlink:href="assets/images/icon/sprite_header.svg#ChatTeardropDots"></use>
+                    </svg>
+                  </button>
+                  <button class="circle-btn">
+                    <svg>
+                      <use xlink:href="assets/images/icon/sprite_header.svg#Bell"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="user-group">
+                  <div>
+                    <a href="#" class="user-name">Andrew Forbist</a>
+                  </div>
+                  <button class="avatar">
+                    <img src="assets/images/icon/Avatar.png" alt="avatar" class="avatar">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <main>
+            <div class="grid-container">
+              <div class="left-grid-section">
+                <div class="widget-card">
+                  <div class="card-header">
+                    <img class="symbol" src="assets/images/icon/symbol.svg">
+                    <img class="union" src="assets/images/icon/union.svg">
+                  </div>
+                  <div class="card-name">
+                    Andrew Forbist
+                  </div>
+                  <div class="card-footer">
+                    <div class="balance-group">
+                      <div class="card-text">
+                        Balance Amount
+                      </div>
+                      <div class="card-balance">
+                        $562,000
+                      </div>
+                    </div>
+                    <div class="sec-unit">
+                      <div>
+                        <div class="card-text">
+                          EXP
+                        </div>
+                        <div class="card-secur-value">
+                          11/29
+                        </div>
+                      </div>
+                      <div>
+                        <div class="card-text">
+                          CVV
+                        </div>
+                        <div class="card-secur-value">
+                          323
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!--left-grid-section-->
+              <div class="center-grid-section">
+                <div class="section-statistic">
+                  <div class="card-statistic border-section">
+                    <div class="statistic-head">
+                      <button class="circle-btn">
+                        <svg>
+                          <use xlink:href="assets/images/icon/sprite_card.svg#CoinIn"></use>
+                        </svg>
+                      </button>
+                      <button class="dots">
+                        <svg>
+                          <use xlink:href="assets/images/icon/sprite_card.svg#DotsThreeVertical"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="statistic-main">
+                      <div class="badge">
+                        <div>
+                          <img src="assets/images/icon/TrendUp.svg" alt="TrendUp">
+                        </div>
+                        <div>
+                          +178%
+                        </div>
+                      </div>
+                      <div class="statistic-amount">
+                        $78,000
+                      </div>
+                      <div class="total-income">Total income</div>
+                    </div>
+                  </div>
+                  <div class="card-statistic border-section">
+                    <div class="statistic-head">
+                      <button class="circle-btn">
+                        <svg>
+                          <use xlink:href="assets/images/icon/sprite_card.svg#CoinOut"></use>
+                        </svg>
+                      </button>
+                      <button class="dots">
+                        <svg>
+                          <use xlink:href="assets/images/icon/sprite_card.svg#DotsThreeVertical"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="statistic-main">
+                      <div class="badge">
+                        <div>
+                          <img src="assets/images/icon/TrendDown.svg" alt="TrendDown">
+                        </div>
+                        <div>
+                          -178%
+                        </div>
+                      </div>
+                      <div class="statistic-amount">
+                        $43,000
+                      </div>
+                      <div class="total-income">Total Expense</div>
+                    </div>
+                  </div>
+                  <div class="card-statistic border-section">
+                    <div class="statistic-head">
+                      <button class="circle-btn">
+                        <svg>
+                          <use xlink:href="assets/images/icon/sprite_card.svg#Wallet"></use>
+                        </svg>
+                      </button>
+                      <button class="dots">
+                        <svg>
+                          <use xlink:href="assets/images/icon/sprite_card.svg#DotsThreeVertical"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="statistic-main">
+                      <div class="badge">
+                        <div class="graph-wrap">
+                          <img src="assets/images/icon/TrendUp.svg" alt="TrendUp">
+                        </div>
+                        <div>
+                          +124%
+                        </div>
+                      </div>
+                      <div class="statistic-amount">
+                        $56,000
+                      </div>
+                      <div class="total-income">Total Savings</div>
+                    </div>
+                  </div>
+                </div>
+              </div> <!--center-grid-section-->
+              <div class="right-grid-section">
+
+              </div> <!--right-grid-section-->
+            </div>
+
+          </main>
+        </div> <!--container-->
+      </div> <!--content-->
+      <footer>
+        <div class="copyright">
+          Copyright © 2024 <a href="https://peterdraw.co/" target="_blank" rel="noopener">Peterdraw</a>
+        </div>
+        <div class="footer-menu">
+          <div>
+            Privacy Policy
+          </div>
+          <div>
+            Terms and conditions
+          </div>
+          <div>
+            Contact
+          </div>
+        </div>
+        <!-- <div class="social-links">
+          Reserved for future social media links
+        </div> -->
+      </footer>
+  </div> <!--wrapper-->
+
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
