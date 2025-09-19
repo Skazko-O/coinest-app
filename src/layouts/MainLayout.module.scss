@@ -1,0 +1,31 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1.05fr 3fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'left-grid-section center-grid-section right-grid-section';
+  gap: 20px;
+}
+
+.leftGridSection {
+  grid-area: left-grid-section;
+}
+
+.centerGridSection {
+  grid-area: center-grid-section;
+}
+
+.rightGridSection {
+  grid-area: right-grid-section;
+}

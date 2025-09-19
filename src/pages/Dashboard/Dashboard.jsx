@@ -1,5 +1,5 @@
-function Home() {
+function Dashboard() {
   return <h1>Головна сторінка</h1>;
 }
 
-export default Home;
+export default Dashboard;

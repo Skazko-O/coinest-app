@@ -1,0 +1,16 @@
+@use './variables.scss' as *;
+
+.container {
+  width: min(90%, 2000px);
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1; 
+}
+
+.border-section {
+  border-radius: 16px;
+  border: 1px solid $border-color;
+}

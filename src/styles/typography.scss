@@ -1,0 +1,13 @@
+@use './variables.scss' as *;
+
+body {
+  font-size: 1rem;
+  color: $accent-color;
+  font-family: 'Urbanist';
+}
+
+h1 {
+  font-size: 22px;
+  color: $green-text-color;
+  font-weight: 700;
+}
