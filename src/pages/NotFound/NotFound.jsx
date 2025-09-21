@@ -1,4 +1,3 @@
-// src/pages/NotFound.jsx
 import { Link } from 'react-router-dom';
 import styles from './NotFound.module.scss';
 
