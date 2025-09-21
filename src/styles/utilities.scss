@@ -2,7 +2,7 @@
 
 .container {
   width: min(90%, 2000px);
-  margin: 0 auto;
+  margin: 22px auto;  
 }
 
 .content {
@@ -10,7 +10,7 @@
   flex-grow: 1; 
 }
 
-.border-section {
+.borderSection {
   border-radius: 16px;
   border: 1px solid $border-color;
 }

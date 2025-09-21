@@ -1,0 +1,17 @@
+@use '../../styles/variables.scss' as *;
+
+.socialLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: $icon-color;
+
+     &:hover {
+        fill: $accent-color;
+    }
+}
