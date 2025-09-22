@@ -2,12 +2,13 @@
 
 .container {
   width: min(90%, 2000px);
-  margin: 22px auto;  
+  margin: 0 auto;  
 }
 
 .content {
   display: flex;
-  flex-grow: 1; 
+  flex-grow: 1;
+  margin-left: 198px; 
 }
 
 .borderSection {

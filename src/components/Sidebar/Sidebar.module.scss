@@ -1,6 +1,8 @@
 @use '../../styles/variables.scss' as *;
 
 .sidebar {
+  position: fixed;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +13,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  overflow-y: auto;  
+  overflow-y: auto;
 }
 
 .logo a {
@@ -23,7 +25,6 @@
 }
 
 .menu {
-  padding-bottom: 224px;
 
   .link {
     display: flex;
