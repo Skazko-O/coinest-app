@@ -1,0 +1,232 @@
+@use './variables.scss' as *;
+
+header {
+    padding-top: 22px;
+}
+
+.pageName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.searchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .searchIcon {
+        position: absolute;
+        right: 17px;
+    }
+
+    #search {
+        padding-right: 35px;
+        height: 36px;
+        font-size: 12px;
+        color: $text-color;
+        outline: none;
+    }
+
+    input[type="text"] {
+        width: 285px;
+        padding: 10px 16px;
+        border-radius: 20px;
+        background-color: $bg-color;
+        border: 1px solid $border-color;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+        fill: $green-text-color;
+    }
+}
+
+.userGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.userName {
+    padding-left: 15px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: $green-text-color;
+}
+
+.avatar {
+    border-radius: 50%;
+
+    img {
+        width: 38px;
+        height: 38px;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+    }
+
+}
+
+.circleGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.circleBtn {
+    background-color: $green-bg;
+    padding: 10px;
+    border-radius: 50%;
+
+    svg {
+        width: 18px;
+        height: 18px;
+        fill: $green-text-color;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 192px;
+    background-color: $green-bg;
+    color: $text-color;
+    padding: 22px 16px 26px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 16px 29px;
+    width: 125px;
+}
+
+.menu {
+
+    .link {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 8px 12px 8px 16px;
+        border-radius: 24px;
+        color: $text-color;
+        text-align: center;
+        font-family: 'Urbanist';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+
+        svg {
+            width: 24px;
+            height: 24px;
+            fill: $text-color;
+        }
+
+        &:hover {
+            background-color: $active-color;
+            color: $accent-color;
+        }
+
+        &.active {
+            background-color: $active-color;
+            color: $accent-color;
+        }
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.getPro {
+    position: relative;
+    padding: 20px 16px;
+    border-radius: 16px;
+    background-color: $green-text-color;
+
+    .lock {
+        background-color: white;
+        padding: 7px;
+        border-radius: 8px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .symbol {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65px;
+        height: 65px;
+    }
+
+    .textGetPro {
+        padding-top: 38px;
+        padding-bottom: 20px;
+        color: $green-bg;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    .btnGetPro {
+        padding: 10px 14px;
+        background-color: $active-color;
+        border-radius: 8px;
+        color: $accent-color;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 100%;
+    }
+}
+
+.socialLink {
+    display: flex;
+    gap: 12px;
+}
+
+.footerMenu {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    line-height: 130%;
+    color: $icon-color;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #000;
+    line-height: 130%;
+}
+
+.footerElement {
+    display: flex;
+    gap: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 22px;
+}

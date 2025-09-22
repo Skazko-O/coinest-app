@@ -9,8 +9,8 @@ function Dashboard() {
         <div className={layoutStyles.leftGridSection}>
           <div className={dashboardStyles.widgetCard}>
             <div className={dashboardStyles.cardHeader}>
-              <img className={dashboardStyles.symbol} src="assets/images/icon/symbol.svg" />
-              <img className={dashboardStyles.union} src="assets/images/icon/union.svg" />
+              <img className={dashboardStyles.symbol} src="src/assets/images/icon/symbol.svg" />
+              <img className={dashboardStyles.union} src="src/assets/images/icon/union.svg" />
             </div>
             <div className={dashboardStyles.cardName}>Andrew Forbist</div>
             <div className={dashboardStyles.cardFooter}>
@@ -38,19 +38,19 @@ function Dashboard() {
               <div className={dashboardStyles.statisticHead}>
                 <button className={dashboardStyles.circleBtn}>
                   <svg className={dashboardStyles.icon}>
-                    <use xlinkHref="assets/images/icon/sprite_card.svg#CoinIn" />
+                    <use xlinkHref="src/assets/images/icon/sprite_card.svg#CoinIn" />
                   </svg>
                 </button>
                 <button className={dashboardStyles.dots}>
                   <svg className={dashboardStyles.icon}>
-                    <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
+                    <use xlinkHref="src/assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                   </svg>
                 </button>
               </div>
               <div className={dashboardStyles.statisticMain}>
                 <div className={dashboardStyles.badge}>
                   <div>
-                    <img src="assets/images/icon/TrendUp.svg" alt="TrendUp" />
+                    <img src="src/assets/images/icon/TrendUp.svg" alt="TrendUp" />
                   </div>
                   <div>+178%</div>
                 </div>
@@ -62,12 +62,12 @@ function Dashboard() {
               <div className={dashboardStyles.statisticHead}>
                 <button className={dashboardStyles.circleBtn}>
                   <svg className={dashboardStyles.icon}>
-                    <use xlinkHref="assets/images/icon/sprite_card.svg#CoinOut" />
+                    <use xlinkHref="src/assets/images/icon/sprite_card.svg#CoinOut" />
                   </svg>
                 </button>
                 <button className={dashboardStyles.dots}>
                   <svg className={dashboardStyles.icon}>
-                    <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
+                    <use xlinkHref="src/assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                   </svg>
                 </button>
               </div>
@@ -75,7 +75,7 @@ function Dashboard() {
                 <div className={dashboardStyles.badge}>
                   <div>
                     <img
-                      src="assets/images/icon/TrendDown.svg"
+                      src="src/assets/images/icon/TrendDown.svg"
                       alt="TrendDown"
                     />
                   </div>
@@ -89,19 +89,19 @@ function Dashboard() {
               <div className={dashboardStyles.statisticHead}>
                 <button className={dashboardStyles.circleBtn}>
                   <svg className={dashboardStyles.icon}>
-                    <use xlinkHref="assets/images/icon/sprite_card.svg#Wallet" />
+                    <use xlinkHref="src/assets/images/icon/sprite_card.svg#Wallet" />
                   </svg>
                 </button>
                 <button className={dashboardStyles.dots}>
                   <svg className={dashboardStyles.icon}>
-                    <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
+                    <use xlinkHref="src/assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                   </svg>
                 </button>
               </div>
               <div className={dashboardStyles.statisticMain}>
                 <div className={dashboardStyles.badge}>
                   <div className={dashboardStyles.graphWrap}>
-                    <img src="assets/images/icon/TrendUp.svg" alt="TrendUp" />
+                    <img src="src/assets/images/icon/TrendUp.svg" alt="TrendUp" />
                   </div>
                   <div>+124%</div>
                 </div>

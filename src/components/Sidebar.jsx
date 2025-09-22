@@ -1,4 +1,3 @@
-import styles from './Sidebar.module.scss';
 import { NavLink } from 'react-router-dom';
 
 const menuItems = [
@@ -16,40 +15,40 @@ const menuItems = [
 
 function Sidebar() {
     return (
-        <aside className={styles.sidebar}>
+        <aside className="sidebar">
             <div>
-                <div className={styles.logo}>
+                <div className="logo">
                     <a href="index.html">
-                        <img src="assets/images/logo.png" alt="Coinest icon" />
-                        <img src="assets/images/Coinest.png" alt="Coinest wordmark" />
+                        <img src="src/assets/images/logo.png" alt="Coinest icon" />
+                        <img src="src/assets/images/Coinest.png" alt="Coinest wordmark" />
                     </a>
                 </div>
-                <nav className={styles.menu}>
+                <nav className="menu">
                     <ul>
                         {menuItems.map(({ to, icon, label }) => (
                             <li key={to}>
                                 <NavLink
                                     to={to}
                                     className={({ isActive }) =>
-                                        isActive ? `${styles.link} ${styles.active}` : styles.link
+                                        isActive ? 'link active' : 'link'
                                     }                                >
                                     <svg>
-                                        <use xlinkHref={`/assets/images/icon-sidebar/sidebar-icon.svg#${icon}`} />
+                                        <use xlinkHref={`src/assets/images/icon-sidebar/sidebar-icon.svg#${icon}`} />
                                     </svg>
-                                    <span className={styles.menuText}>{label}</span>
+                                    <span className="menuText">{label}</span>
                                 </NavLink>
                             </li>
                         ))}
                     </ul>
                 </nav>
             </div>
-            <div className={styles.getPro}>
-                <img src="assets/images/icon/LockOpen.svg" className={styles.lock} />
-                <img src="assets/images/icon/symbol.svg" className={styles.symbol} />
-                <div className={styles.textGetPro}>
+            <div className="getPro">
+                <img src="src/assets/images/icon/LockOpen.svg" className="lock" />
+                <img src="src/assets/images/icon/symbol.svg" className="symbol" />
+                <div className="textGetPro">
                     Gain full access to your finances with detailed analytics and graphs
                 </div>
-                <button className={styles.btnGetPro}>Get Pro</button>
+                <button className="btnGetPro">Get Pro</button>
             </div>
         </aside>
     );

@@ -2,5 +2,6 @@
 @use './variables.scss';
 @use './typography.scss';
 @use './utilities.scss';
+@use './leyout.scss';
 
-@import '../../public/assets/fonts/fonts.css';
+@import '../../src/assets/fonts/fonts.css';

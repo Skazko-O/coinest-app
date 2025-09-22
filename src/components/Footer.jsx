@@ -1,23 +1,22 @@
-import styles from './Footer.module.scss'
-import SocialLink from '../SocialLink/SocialLink'
+import SocialLink from './SocialLink/SocialLink'
 
 function Footer() {
     return (
         <footer>
-            <div className={styles.footerElement}>
-                <div className={styles.copyright}>
+            <div className="footerElement">
+                <div className="copyright">
                     Copyright © 2024{" "}
                     <a href="https://peterdraw.com/" target="_blank" rel="noopener">
                         Peterdraw
                     </a>
                 </div>
-                <div className={styles.footerMenu}>
+                <div className="footerMenu">
                     <div>Privacy Policy</div>
                     <div>Terms and conditions</div>
                     <div>Contact</div>
                 </div>
             </div>
-            <div className={styles.socialLink}>
+            <div className="socialLink">
                 <SocialLink
                     href="https://www.Facebook.com/"
                     label="Facebook"
