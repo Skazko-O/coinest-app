@@ -1,8 +1,14 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const menuItems = [
     { to: '/', icon: 'SquaresFour', label: 'Dashboard' },
-    { to: '/payments', icon: 'CreditCard', label: 'Payments' },
+    {
+        icon: 'CreditCard', label: 'Payments', children: [
+            { to: '/payments/transfer', label: 'Transfer' },
+            { to: '/payments/payment', label: 'Payment' },
+        ],
+    },
     { to: '/transactions', icon: 'ArrowsLeftRight', label: 'Transactions' },
     { to: '/invoices', icon: 'Receipt', label: 'Invoices' },
     { to: '/cards', icon: 'Cardholder', label: 'Cards' },
@@ -14,29 +20,75 @@ const menuItems = [
 ];
 
 function Sidebar() {
+    const [openDropdown, setOpenDropdown] = useState(null);
+
+    const toggleDropdown = (label) => {
+        setOpenDropdown(openDropdown === label ? null : label);
+    };
+
     return (
-        <aside className="sidebar">
+        <aside className="sidebar collapsed">
             <div>
                 <div className="logo">
                     <a href="index.html">
-                        <img src="src/assets/images/logo.png" alt="Coinest icon" />
-                        <img src="src/assets/images/Coinest.png" alt="Coinest wordmark" />
+                        <img src="src/assets/images/logo.png" alt="Coinest icon" className='logoIcon' />
+                        <img src="src/assets/images/Coinest.png" alt="Coinest wordmark" className="logoWordmark" />
                     </a>
                 </div>
                 <nav className="menu">
                     <ul>
-                        {menuItems.map(({ to, icon, label }) => (
-                            <li key={to}>
-                                <NavLink
-                                    to={to}
-                                    className={({ isActive }) =>
-                                        isActive ? 'link active' : 'link'
-                                    }                                >
-                                    <svg>
-                                        <use xlinkHref={`src/assets/images/icon-sidebar/sidebar-icon.svg#${icon}`} />
-                                    </svg>
-                                    <span className="menuText">{label}</span>
-                                </NavLink>
+                        {menuItems.map(({ to, icon, label, children }) => (
+                            <li key={label}>
+                                {children ? (
+                                    <>
+                                        <button
+                                            className="link dropdown-toggle"
+                                            onClick={() => toggleDropdown(label)}
+                                        >
+                                            <svg>
+                                                <use xlinkHref={`src/assets/images/icon-sidebar/sidebar-icon.svg#${icon}`} />
+                                            </svg>
+                                            <span className="menuText">{label}</span>
+                                            <span className="arrow">{openDropdown === label ?
+                                                <svg>
+                                                    <use xlinkHref="src/assets/images/icon-sidebar/sidebar-icon.svg#AngleUp" />
+                                                </svg>
+                                                :
+                                                <svg>
+                                                    <use xlinkHref="src/assets/images/icon-sidebar/sidebar-icon.svg#AngleDown" />
+                                                </svg>
+                                            }</span>
+                                        </button>
+                                        {openDropdown === label && (
+                                            <ul className="submenu">
+                                                {children.map(({ to, label }) => (
+                                                    <li key={to}>
+                                                        <NavLink
+                                                            to={to}
+                                                            className={({ isActive }) =>
+                                                                isActive ? 'link active' : 'link'
+                                                            }
+                                                        >
+                                                            <span className="menuText">{label}</span>
+                                                        </NavLink>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </>
+                                ) : (
+                                    <NavLink
+                                        to={to}
+                                        className={({ isActive }) =>
+                                            isActive ? 'link active' : 'link'
+                                        }
+                                    >
+                                        <svg>
+                                            <use xlinkHref={`src/assets/images/icon-sidebar/sidebar-icon.svg#${icon}`} />
+                                        </svg>
+                                        <span className="menuText">{label}</span>
+                                    </NavLink>
+                                )}
                             </li>
                         ))}
                     </ul>

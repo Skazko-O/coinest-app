@@ -110,7 +110,83 @@ header {
     left: 0;
     bottom: 0;
     overflow-y: auto;
+    transition: width 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+        width: 192px;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .submenu {
+        list-style: none;
+        padding-left: 20px;
+
+        li .link {
+            padding: 8px;
+            display: block;
+        }
+    }
+
+    @media (max-width: 750px) {
+
+        width: 72px;
+
+        .menuText,
+        .getPro {
+            display: none;
+        }
+
+        .logoWordmark {
+            display: none;
+        }
+
+        .logoIcon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+        a.link {
+            padding: 8px;
+
+            svg {
+                margin: 0 auto;
+
+            }
+        }
+
+        &:hover {
+            width: 198px;
+
+            .logoWordmark {
+                display: flex;
+            }
+
+            .menuText {
+                display: inline-block;
+            }
+
+            .getPro {
+                display: block;
+            }
+        }
+
+
+    }
 }
+
+
 
 .logo a {
     display: flex;
