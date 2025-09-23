@@ -1,6 +1,6 @@
 import { useLocation } from "react-router";
 import SearchInput from "./SearchInput";
-import CircleBtn from "./CirclBtn";
+import CircleBtn from "./CircleBtn";
 
 function Header() {
 

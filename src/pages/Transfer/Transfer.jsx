@@ -1,9 +1,7 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FinanceBtn from '../../components/FinanceBtn';
-import SearchInput from '../../components/SearchInput';
-import CircleBtn from '../../components/CirclBtn';
-import ItemList from '../../components/ItemList';
+import TransferList from '../../components/TransferList';
 
 function Transfer() {
     return (
@@ -12,11 +10,7 @@ function Transfer() {
             {/* Перша колонка: 3 стовпчики */}
             <Col sm={3}>
                 <FinanceBtn />
-                <div className="searchGroup">
-                 <SearchInput placeholder="Search account" /> 
-                 <CircleBtn iconHref="../../src/assets/images/icon/sprite_groupbtn.svg#Sliders" />
-                 </div>
-                 <ItemList />
+                <TransferList />
             </Col>
 
             {/* Друга колонка: 9 стовпчиків */}
