@@ -1,26 +1,35 @@
+import { useLocation } from "react-router";
+import SearchInput from "./SearchInput";
+import CircleBtn from "./CirclBtn";
+
 function Header() {
+
+  const pageTitles = {
+    '/': 'Dashboard',
+    '/payments': 'Payments',
+    '/payments/transfer': 'Transfer',
+    '/payments/payment': 'Payment',
+    '/transactions': 'Transactions',
+    '/invoices': 'Invoices',
+    '/cards': 'Cards',
+    '/savingplans': 'Saving Plans',
+    '/investments': 'Investments',
+    '/inbox': 'Inbox',
+    '/promos': 'Promos',
+    '/insights': 'Insights'
+  }
+ 
+  const location = useLocation();
+  const currentTitle = pageTitles[location.pathname] || 'Page';
   return (
     <header>
   <div className="pageName">
-    <h1>Dashboard</h1>
+    <h1>{currentTitle}</h1>
     <div className="rightSection">
-      <div className="searchWrapper">
-        <svg className="searchIcon">
-          <use xlinkHref="src/assets/images/icon/sprite_header.svg#MagnifyingGlass" />
-        </svg>
-        <input type="text" id="search" name="search" placeholder="Search..." />
-      </div>
+       {location.pathname === '/' && <SearchInput placeholder="Search..." />}
       <div className="circleGroup">
-        <button className="circleBtn">
-          <svg>
-            <use href="src/assets/images/icon/sprite_header.svg#ChatTeardropDots" />
-          </svg>
-        </button>
-        <button className="circleBtn">
-          <svg>
-            <use xlinkHref="src/assets/images/icon/sprite_header.svg#Bell" />
-          </svg>
-        </button>
+        <CircleBtn iconHref="/src/assets/images/icon/sprite_header.svg#ChatTeardropDots" />
+        <CircleBtn iconHref="/src/assets/images/icon/sprite_header.svg#Bell" />
       </div>
       <div className="userGroup">
         <div>
@@ -28,13 +37,7 @@ function Header() {
             Andrew Forbist
           </a>
         </div>
-        <button className="avatar">
-          <img
-            src="src/assets/images/icon/Avatar.png"
-            alt="avatar"
-            className="avatar"
-          />
-        </button>
+         <CircleBtn imgSrc="/src/assets/images/icon/Avatar.png" alt="avatar" />
       </div>
     </div>
   </div>

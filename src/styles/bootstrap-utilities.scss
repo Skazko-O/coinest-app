@@ -1,0 +1,44 @@
+@use './variables.scss' as *;
+
+$secondary: #ECF4E9;
+
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/button-group';
+
+
+
+.btn-icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.icon-xs {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    fill: $green-text-color;
+}
+
+.group-style {
+    padding: 8px;
+    border-radius: 16px;
+    background-color: #ECF4E9;
+    margin-bottom: 16px;
+}
+
+.btn-finance {
+    --bs-btn-padding-x: 8px;
+    --bs-btn-padding-y: 8px;
+}
+
+.divider {
+    width: 1px;
+    height: 56px;
+    background-color: #FBFBFC;
+}

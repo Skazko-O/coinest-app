@@ -36,7 +36,7 @@ header {
     }
 
     input[type="text"] {
-        width: 285px;
+        width: clamp(180px, 30vw, 225px);
         padding: 10px 16px;
         border-radius: 20px;
         background-color: $bg-color;
@@ -66,18 +66,7 @@ header {
     color: $green-text-color;
 }
 
-.avatar {
-    border-radius: 50%;
 
-    img {
-        width: 38px;
-        height: 38px;
-        object-fit: cover;
-        border-radius: 50%;
-        display: block;
-    }
-
-}
 
 .circleGroup {
     display: flex;
@@ -86,14 +75,29 @@ header {
 
 .circleBtn {
     background-color: $green-bg;
-    padding: 10px;
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
 
     svg {
         width: 18px;
         height: 18px;
         fill: $green-text-color;
     }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.searchGroup {
+  display: flex;  
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 16px;
 }
 
 .sidebar {
