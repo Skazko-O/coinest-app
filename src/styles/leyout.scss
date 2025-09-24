@@ -21,6 +21,8 @@ header {
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 400px;
 
     .searchIcon {
         position: absolute;
@@ -36,7 +38,7 @@ header {
     }
 
     input[type="text"] {
-        width: clamp(180px, 30vw, 225px);
+        flex: 1;
         padding: 10px 16px;
         border-radius: 20px;
         background-color: $bg-color;
@@ -78,6 +80,10 @@ header {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 
     svg {
         width: 18px;
@@ -94,10 +100,10 @@ header {
 }
 
 .searchGroup {
-  display: flex;  
-  align-items: center;
-  gap: 10px;
-  padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 16px;
 }
 
 .sidebar {
@@ -113,6 +119,7 @@ header {
     top: 0;
     left: 0;
     bottom: 0;
+    overflow-y: auto;
     transition: width 0.3s ease;
     overflow: hidden;
 

@@ -1,8 +1,5 @@
 @use './variables.scss' as *;
 
-$secondary: #ECF4E9;
-$primary: #1E4841;
-
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/maps';
@@ -11,6 +8,7 @@ $primary: #1E4841;
 @import 'bootstrap/scss/button-group';
 @import 'bootstrap/scss/grid';
 @import 'bootstrap/scss/card';
+@import 'bootstrap/scss/forms';
 
 
 
@@ -49,12 +47,13 @@ $primary: #1E4841;
 .cardStyle {
     display: flex;
     gap: 16px;
+    justify-content: space-between;
+
 }
 
 .card-body {
-    border: 1px solid #E5E6E6;
+    border: 1px solid $border-color;
     border-radius: 16px;
-    padding: 14px;
     margin-bottom: 16px;
 }
 
@@ -88,18 +87,162 @@ $primary: #1E4841;
     font-weight: 500;
 }
 
-.outerWrapper {
+.outerWrapperCol {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
-}
-
-.transferList {
-    flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    max-height: 80vh;
 
     &::-webkit-scrollbar {
         display: none;
     }
 }
+
+.outerWrapperCol>* {
+    flex: 0 0 auto;
+    min-height: 100px;
+}
+
+.outerWrapper {
+    border-radius: 16px;
+    // padding: 16px;
+}
+
+.outerWrapperBorder {
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.outerWrapperRaw {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.outerWrapperRaw>* {
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.headinSec {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+    color: $accent-color;
+}
+
+.showMore {
+    font-size: 12px;
+    font-weight: 600;
+    color: $green-text-color;
+}
+
+.balance {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 125%;
+    padding-bottom: 4px;
+}
+
+.status {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.status.pending {
+    color: #F73541;
+}
+
+.status.successful {
+    color: $accent-color;
+}
+
+.customForm {
+    border-radius: 16px;
+    background-color: $green-bg;
+    padding: 24px;
+}
+
+.btnForm {
+    --bs-gutter-x: 0;
+    padding-bottom: 24px;
+}
+
+.headForm {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 125%;
+    padding-bottom: 12px;
+}
+
+.copySVG {
+    width: 12px;
+    height: 12px;
+}
+
+@mixin cardText($color) {
+    font-size: 11px;
+    line-height: 124%;
+    color: $color;
+}
+
+.cardNumber {
+    @include cardText($text-color);
+    display: inline-block;
+    padding-right: 4px;
+}
+
+.cardName {
+    @include cardText($accent-color);
+}
+
+.cardBalance {
+    color: $accent-color;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+    padding: 6px 0;
+}
+
+.outerWrapperBankCard{
+    background-color: #FBFBFC;
+    border-radius: 16px;
+    padding: 16px 16px 0;
+}
+
+.outerWrapperRawBankCard {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.outerWrapperRawBankCard>* {
+    flex: 1 0 0;
+}
+

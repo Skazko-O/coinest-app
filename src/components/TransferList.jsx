@@ -6,15 +6,17 @@ import SearchInput from "./SearchInput";
 
 function TransferList() {
     return (<>
-        <div className="searchGroup">
-            <SearchInput placeholder="Search account" />
-            <CircleBtn iconHref="../../src/assets/images/icon/sprite_groupbtn.svg#Sliders" />
-        </div>
-        <div class="outerWrapper">
-            <div className="transferList">
-                {accounts.map((acc) => (
-                    <ItemList key={acc.id} account={acc} />
-                ))}
+        <div>
+            <div className="outerWrapper">
+                <div className="searchGroup">
+                    <SearchInput placeholder="Search account" />
+                    <CircleBtn iconHref="../../src/assets/images/icon/sprite_groupbtn.svg#Sliders" />
+                </div>
+                <div className="outerWrapperCol">
+                    {accounts.map((acc) => (
+                        <ItemList key={acc.id} account={acc} />
+                    ))}
+                </div>
             </div>
             <BlockBtn />
         </div>
