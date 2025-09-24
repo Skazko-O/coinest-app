@@ -1,18 +1,61 @@
-@use './variables.scss' as *;
-
 $secondary: #ECF4E9;
 $primary: #1E4841;
+$warning: #FBFBFC;
 
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/maps';
-@import 'bootstrap/scss/mixins';
-@import 'bootstrap/scss/buttons';
-@import 'bootstrap/scss/button-group';
-@import 'bootstrap/scss/grid';
-@import 'bootstrap/scss/card';
+@use './variables.scss' as *;
+@import "bootstrap/scss/bootstrap";
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a,
+button {
+    transition: all .2s ease;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    font-size: 1rem;
+    color: $accent-color;
+    font-family: 'Urbanist';
+}
+
+h1 {
+    font-size: 22px;
+    color: $green-text-color;
+    font-weight: 700;
+}
 
 
+ul {
+    padding: 0;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
 
 .btn-icon-text {
     display: flex;
@@ -31,9 +74,25 @@ $primary: #1E4841;
 .group-style {
     padding: 8px;
     border-radius: 16px;
-    background-color: #ECF4E9;
+    background-color: $green-bg;
     margin-bottom: 16px;
+    width: 100%;
+
+    &:hover {
+        background-color: darken($green-bg, 3%);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
 }
+
+.btn-icon-text {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        background-color: lighten($green-bg, 5%);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+}
+
 
 .btn-finance {
     --bs-btn-padding-x: 8px;
@@ -41,9 +100,9 @@ $primary: #1E4841;
 }
 
 .divider {
-    width: 1px;
+    width: 2px;
     height: 56px;
-    background-color: #FBFBFC;
+    background-color: #fcfbfb;
 }
 
 .cardStyle {
@@ -51,11 +110,23 @@ $primary: #1E4841;
     gap: 16px;
 }
 
-.card-body {
-    border: 1px solid #E5E6E6;
-    border-radius: 16px;
-    padding: 14px;
+.card {
     margin-bottom: 16px;
+}
+
+.card {
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
+
+    // :hover {
+    //     background-color: $green-bg;
+    //     border-radius: 16px;
+    // }
+}
+
+.card-body.activeCard {
+    background-color: $green-bg;
 }
 
 .name {
@@ -67,13 +138,16 @@ $primary: #1E4841;
     p {
         display: inline-block;
         padding-right: 3px;
+        margin-bottom: 0;
     }
 }
 
 .accountNo {
     font-size: 11px;
     font-weight: 500;
-    line-height: 130%
+    line-height: 130%;
+    color: $text-color;
+
 }
 
 .d-grid {
@@ -88,18 +162,298 @@ $primary: #1E4841;
     font-weight: 500;
 }
 
-.outerWrapper {
+.outerWrapperCol {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
-}
-
-.transferList {
-    flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    max-height: 80vh;
 
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+.outerWrapperCol>* {
+    flex: 0 0 auto;
+    min-height: 100px;
+}
+
+.outerWrapper {
+    border-radius: 16px;
+}
+
+.outerWrapperBorder {
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.outerWrapperRaw {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.outerWrapperRaw>* {
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.headingSec {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 120%;
+    color: $accent-color;
+}
+
+.showMore {
+    font-size: 12px;
+    font-weight: 600;
+    color: $green-text-color;
+}
+
+.balance {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 125%;
+    padding-bottom: 4px;
+}
+
+.status {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.status.pending {
+    color: #F73541;
+}
+
+.status.successful {
+    color: $accent-color;
+}
+
+.customForm {
+    border-radius: 16px;
+    background-color: $green-bg;
+    padding: 24px;
+}
+
+.btnForm {
+    --bs-gutter-x: 0;
+    padding-bottom: 24px;
+}
+
+.headForm {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 125%;
+    padding-bottom: 12px;
+}
+
+.copySVG {
+    width: 12px;
+    height: 12px;
+}
+
+@mixin cardText($color) {
+    font-size: 11px;
+    line-height: 124%;
+    color: $color;
+}
+
+.cardNumber {
+    @include cardText($text-color);
+    display: inline-block;
+    padding-right: 4px;
+}
+
+.cardName {
+    @include cardText($accent-color);
+}
+
+.cardBalance {
+    color: $accent-color;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+    padding: 6px 0;
+}
+
+.outerWrapperBankCard {
+    background-color: #FBFBFC;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.outerWrapperRawBankCard {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.outerWrapperRawBankCard>* {
+    flex: 1 0 0;
+}
+
+.widgetCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 27px;
+    max-width: 100%;
+    padding: 16px;
+    background-color: $green-text-color;
+    border-radius: 16px;
+
+    .cardHeader {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .symbol {
+        width: 23px;
+        height: 23px;
+    }
+
+    .union {
+        width: 14.71px;
+    }
+
+    .cardName {
+        color: $green-bg;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    .cardFooter {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cardText {
+        color: $green-bg;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 130%;
+        padding-bottom: 2px;
+    }
+
+    .cardBalance {
+        color: #FBFBFC;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    .secUnit {
+        display: flex;
+        gap: 18px;
+        padding-top: 10px;
+    }
+
+    .cardSecurValue {
+        color: #FBFBFC;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+}
+
+
+    
+    .statisticHead {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 28px;
+    }
+
+    .statisticAmount {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 110%;
+    }
+
+    .totalIncome {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    .statisticMain {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 130%;
+
+        img {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .badge {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 4px;
+        background-color: $active-color;
+        width: fit-content;
+        max-width: 100%; 
+        border-radius: 15px;
+        padding: 1px 4px;
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 130%;
+        color: $green-text-color;
+    }
+
+    .circleBtn {
+        border-radius: 8px;
+        padding: 8px;
+        background-color: $green-bg;
+    }
+
+    .dots {
+        background-color: transparent;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+
+.statisticGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }

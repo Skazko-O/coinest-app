@@ -1,28 +1,27 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import FinanceBtn from '../../components/FinanceBtn';
-import TransferList from '../../components/TransferList';
+import FinanceBtn from '../components/FinanceBtn';
+import TransferList from '../components/TransferList';
+import RecentTransferList from '../components/RecentTransferList';
+import TransferForm from '../components/TransferForm';
 
 function Transfer() {
     return (
 
-        <Row>
-            {/* Перша колонка: 3 стовпчики */}
+        <Row>            
             <Col sm={3}>
                 <FinanceBtn />
                 <TransferList />
-            </Col>
-
-            {/* Друга колонка: 9 стовпчиків */}
+            </Col>           
             <Col sm={9}>
                 <Row>
                     <Col>
-                        <div>Верхній блок</div>
+                        <RecentTransferList />
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <div>Нижній блок</div>
+                        <TransferForm />
                     </Col>
                 </Row>
             </Col>

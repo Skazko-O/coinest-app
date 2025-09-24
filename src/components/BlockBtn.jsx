@@ -1,10 +1,10 @@
 import Button from 'react-bootstrap/Button';
 
-function BlockBtn() {
+function BlockBtn({label = 'Add New Recipient', variant = 'primary'}) {
   return (
     <div className="d-grid">
-      <Button variant="primary" size="lg">
-        Add New Recipient
+      <Button variant={variant} size="lg">
+        {label}
       </Button>
     </div>
   );

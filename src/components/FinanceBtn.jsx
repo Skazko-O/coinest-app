@@ -3,8 +3,8 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 function FinanceBtn() {
   return (
-    <div className='group-style'>
-      <ButtonGroup aria-label="Basic example">
+    
+      <ButtonGroup aria-label="Basic example" className='group-style'>
         <Button variant="secondary" className=" text-xs btn-icon-text">
           <svg className="icon-xs">
             <use xlinkHref="/src/assets/images/icon/sprite_groupbtn.svg#CoinOut" />
@@ -29,7 +29,7 @@ function FinanceBtn() {
           </svg>
           Top Up</Button>
       </ButtonGroup>
-    </div>
+    
   );
 }
 
