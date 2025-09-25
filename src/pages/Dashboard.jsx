@@ -3,8 +3,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import WidgetCard from '../components/WidgetCard';
 import CardStatisticList from '../components/CardStatisticList';
-import CardStatistic from '../components/CardStatistic';
 import FinanceBtn from '../components/FinanceBtn';
+import DailyLimit from '../components/DailyLimit';
+import SavingPlans from '../components/SavingPlans';
 
 
 
@@ -15,6 +16,8 @@ function Dashboard() {
         <Col sm={3}>
           <WidgetCard />
           <FinanceBtn />
+          <DailyLimit />
+          <SavingPlans />
         </Col>
         <Col sm={6}><CardStatisticList /></Col>
         <Col sm={3}>sm=3</Col>

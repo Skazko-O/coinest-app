@@ -1,0 +1,23 @@
+[
+  {
+    "id": "plan1",
+    "label": "Emergency Fund",
+    "amount": 1200,    
+    "target": 1500,
+    "icon": "Warning"
+  },
+  {
+    "id": "plan2",
+    "label": "Vacation Fund",
+    "amount": 3000,    
+    "target": 5000,
+    "icon": "Airplane"
+  },
+  {
+    "id": "plan3",
+    "label": "Home Down Payment",
+    "amount": 7250,    
+    "target": 20000,
+    "icon": "House"
+  }
+]
