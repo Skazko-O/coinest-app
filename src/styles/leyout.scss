@@ -169,22 +169,22 @@ header {
 
         a.link {
             padding: 8px;
-
-            svg {
-                margin: 0 auto;
-
-            }
+            justify-content: center;
         }
 
         &:hover {
             width: 198px;
+
+            a.link {
+                justify-content: flex-start;
+            }
 
             .logoWordmark {
                 display: flex;
             }
 
             .menuText {
-                display: inline-block;
+                display: inline;
             }
 
             .getPro {
