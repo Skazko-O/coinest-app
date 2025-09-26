@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/Card';
+import sprite from '../assets/images/icon/sprite_card.svg';
 
 function BankCard ({ bankcard, isActive }) {   
     return (
@@ -16,7 +17,7 @@ function BankCard ({ bankcard, isActive }) {
                         {bankcard.number}
                     </div>
                     <svg className='copySVG'>
-                        <use xlinkHref="/src/assets/images/icon/sprite_card.svg#CopySimple" />
+                        <use href={`${sprite}#CopySimple`} />
                     </svg>
                 </div>
             </Card.Body>

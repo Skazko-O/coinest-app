@@ -47,8 +47,11 @@ function Cashflow() {
                 <div className="statisticHead">
                     <h3 className='headingSec'>Cashflow</h3>
                     <Dropdown onSelect={handleSelect}>
-                        <Dropdown.Toggle variant="success" id="range">
-                            {selectedYear}
+                        <Dropdown.Toggle className="customToggle" id="range">
+                            <span>{selectedYear}</span>
+                            <svg className="iconToggle" viewBox="0 0 24 24">
+                                <use xlinkHref="src/assets/images/icon-sidebar/sidebar-icon.svg#AngleDown" />
+                            </svg>
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                             <Dropdown.Item eventKey="This Year">This Year</Dropdown.Item>

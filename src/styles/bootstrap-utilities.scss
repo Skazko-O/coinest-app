@@ -108,8 +108,6 @@ ul {
 .cardStyle {
     display: flex;
     gap: 16px;
-    justify-content: space-between;
-
 }
 
 .card {
@@ -211,6 +209,28 @@ ul {
 .outerWrapperRaw>* {
     flex: 0 0 auto;
     min-width: 200px;
+}
+
+.customToggle {
+    display: flex;
+    gap: 4px;
+    background-color: transparent;
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid $border-color;
+
+    &::after {
+        display: none;
+    }
+}
+
+.iconToggle {
+    width: 14px;
+    height: 14px;
+    fill: $text-color;
 }
 
 .headerSection {
@@ -399,10 +419,21 @@ ul {
     align-items: center;
 }
 
+.leftGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .amount {
     font-size: 24px;
     font-weight: 700;
     line-height: 110%;
+}
+
+.addPlan {
+    font-size: 10px;
+    font-weight: 500;
 }
 
 .totalItem {
@@ -429,7 +460,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 4px;    
+    gap: 4px;
     width: fit-content;
     max-width: 100%;
     border-radius: 15px;
@@ -441,13 +472,13 @@ ul {
 }
 
 .badgeUp {
-  background-color: $active-color;
-  color: $accent-color;
+    background-color: $active-color;
+    color: $accent-color;
 }
 
 .badgeDown {
-  background-color: $warning-color;
-  color: $warning-accent-color;
+    background-color: $warning-color;
+    color: $warning-accent-color;
 }
 
 .dots {
@@ -494,5 +525,5 @@ ul {
 }
 
 .fs-10px {
-  font-size: 10px;
+    font-size: 10px;
 }

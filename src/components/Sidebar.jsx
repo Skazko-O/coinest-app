@@ -41,7 +41,7 @@ function Sidebar() {
                             <li key={label}>
                                 {children ? (
                                     <>
-                                        <button
+                                        <span
                                             className="link dropdown-toggle"
                                             onClick={() => toggleDropdown(label)}
                                         >
@@ -58,7 +58,7 @@ function Sidebar() {
                                                     <use xlinkHref="/src/assets/images/icon-sidebar/sidebar-icon.svg#AngleDown" />
                                                 </svg>
                                             }</span>
-                                        </button>
+                                        </span>
                                         {openDropdown === label && (
                                             <ul className="submenu">
                                                 {children.map(({ to, label }) => (

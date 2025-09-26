@@ -15,9 +15,9 @@ function SavingPlans() {
         <Card>
             <Card.Body>
                 <div className="statisticHead">
-                   
-                        <h3 className='headingSec'>Saving Plans</h3>
-                    
+
+                    <h3 className='headingSec'>Saving Plans</h3>
+
                     <a href="#" className='addPlan'>+ Add Plan</a>
                 </div>
                 {plan.length > 0 && (
@@ -31,19 +31,21 @@ function SavingPlans() {
                     return (
                         <Card key={plan.id} className='p-3'>
                             <div className="statisticHead">
+                                <div className="leftGroup">
                                 <button className="circleBtn">
                                     <svg className="icon">
                                         <use xlinkHref={`src/assets/images/icon/sprite_card.svg#${plan.icon}`} />
                                     </svg>
                                 </button>
                                 <div className="totalItem">{plan.label}</div>
+                                </div>
                                 <button className="dots">
                                     <svg className="icon">
                                         <use xlinkHref="src/assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                                     </svg>
                                 </button>
                             </div>
-                            <ProgressBar now={percent} label={`${percent}%`} className='mb-2'/>
+                            <ProgressBar now={percent} label={`${percent}%`} className='mb-2' />
                             <div className="dailyLimit">
                                 <div className="fs-10">${plan.amount.toLocaleString()}</div>
                                 <div className='limit'>

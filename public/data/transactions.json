@@ -1,0 +1,289 @@
+[
+  {
+    "name": "Electricity Bill",
+    "datetime": "2025-03-01T04:28:48",
+    "amount": 295.81,
+    "note": "Payment for monthly electricity bill",
+    "status": "Failed"
+  },
+  {
+    "name": "Weekly Groceries",
+    "datetime": "2025-03-04T04:28:48",
+    "amount": 204.07,
+    "note": "Groceries shopping at local supermarket",
+    "status": "Completed"
+  },
+  {
+    "name": "Movie Night",
+    "datetime": "2025-02-27T04:28:48",
+    "amount": 97.84,
+    "note": "Tickets for movies and snacks",
+    "status": "Pending"
+  },
+  {
+    "name": "Medical Check-up",
+    "datetime": "2025-03-03T04:28:48",
+    "amount": 233.32,
+    "note": "Routine health check-up and medications",
+    "status": "Pending"
+  },
+  {
+    "name": "Dinner at Italian Restaurant",
+    "datetime": "2025-03-02T04:28:48",
+    "amount": 226.71,
+    "note": "Dining out with family at a local Italian restaurant",
+    "status": "Pending"
+  },
+  {
+    "name": "Gym Membership",
+    "datetime": "2025-03-05T08:15:22",
+    "amount": 59.99,
+    "note": "Monthly gym subscription",
+    "status": "Completed"
+  },
+  {
+    "name": "Online Course",
+    "datetime": "2025-03-06T10:42:11",
+    "amount": 120.00,
+    "note": "Payment for React development course",
+    "status": "Completed"
+  },
+  {
+    "name": "Coffee with Friends",
+    "datetime": "2025-03-07T09:30:00",
+    "amount": 18.75,
+    "note": "Café meetup with friends",
+    "status": "Completed"
+  },
+  {
+    "name": "Uber Ride",
+    "datetime": "2025-03-07T22:10:45",
+    "amount": 13.40,
+    "note": "Ride to downtown",
+    "status": "Completed"
+  },
+  {
+    "name": "Spotify Subscription",
+    "datetime": "2025-03-08T01:00:00",
+    "amount": 9.99,
+    "note": "Monthly music subscription",
+    "status": "Completed"
+  },
+  {
+    "name": "Water Bill",
+    "datetime": "2025-03-08T04:28:48",
+    "amount": 45.20,
+    "note": "Monthly water utility payment",
+    "status": "Completed"
+  },
+  {
+    "name": "Amazon Purchase",
+    "datetime": "2025-03-09T14:20:00",
+    "amount": 89.50,
+    "note": "Electronics accessories",
+    "status": "Completed"
+  },
+  {
+    "name": "Netflix Subscription",
+    "datetime": "2025-03-10T00:00:00",
+    "amount": 15.99,
+    "note": "Monthly streaming service",
+    "status": "Completed"
+  },
+  {
+    "name": "Taxi to Airport",
+    "datetime": "2025-03-11T06:45:00",
+    "amount": 35.00,
+    "note": "Early morning ride to airport",
+    "status": "Completed"
+  },
+  {
+    "name": "Lunch at Sushi Bar",
+    "datetime": "2025-03-11T13:00:00",
+    "amount": 42.30,
+    "note": "Lunch with colleagues",
+    "status": "Completed"
+  },
+  {
+    "name": "Bookstore Purchase",
+    "datetime": "2025-03-12T17:30:00",
+    "amount": 27.99,
+    "note": "New novel and planner",
+    "status": "Completed"
+  },
+  {
+    "name": "Charity Donation",
+    "datetime": "2025-03-13T12:00:00",
+    "amount": 100.00,
+    "note": "Support for local shelter",
+    "status": "Completed"
+  },
+  {
+    "name": "Haircut",
+    "datetime": "2025-03-14T15:00:00",
+    "amount": 25.00,
+    "note": "Haircut at local salon",
+    "status": "Completed"
+  },
+  {
+    "name": "Mobile Recharge",
+    "datetime": "2025-03-15T11:00:00",
+    "amount": 20.00,
+    "note": "Prepaid mobile top-up",
+    "status": "Completed"
+  },
+  {
+    "name": "Parking Fee",
+    "datetime": "2025-03-15T18:00:00",
+    "amount": 5.00,
+    "note": "City parking",
+    "status": "Completed"
+  },
+  {
+    "name": "Flight Booking",
+    "datetime": "2025-03-16T09:00:00",
+    "amount": 320.00,
+    "note": "Round-trip flight to Berlin",
+    "status": "Pending"
+  },
+  {
+    "name": "Hotel Reservation",
+    "datetime": "2025-03-16T09:30:00",
+    "amount": 450.00,
+    "note": "3-night stay in Berlin",
+    "status": "Pending"
+  },
+  {
+    "name": "Conference Ticket",
+    "datetime": "2025-03-17T10:00:00",
+    "amount": 150.00,
+    "note": "Tech conference pass",
+    "status": "Completed"
+  },
+  {
+    "name": "Taxi from Airport",
+    "datetime": "2025-03-17T22:00:00",
+    "amount": 38.00,
+    "note": "Ride to hotel",
+    "status": "Completed"
+  },
+  {
+    "name": "Dinner with Team",
+    "datetime": "2025-03-18T20:00:00",
+    "amount": 120.00,
+    "note": "Team dinner at local restaurant",
+    "status": "Completed"
+  },
+  {
+    "name": "Museum Entry",
+    "datetime": "2025-03-19T14:00:00",
+    "amount": 18.00,
+    "note": "Art museum visit",
+    "status": "Completed"
+  },
+  {
+    "name": "Souvenir Shopping",
+    "datetime": "2025-03-19T16:00:00",
+    "amount": 60.00,
+    "note": "Gifts and souvenirs",
+    "status": "Completed"
+  },
+  {
+    "name": "Coffee at Airport",
+    "datetime": "2025-03-20T07:30:00",
+    "amount": 6.50,
+    "note": "Espresso before flight",
+    "status": "Completed"
+  },
+  {
+    "name": "Return Flight",
+    "datetime": "2025-03-20T09:00:00",
+    "amount": 320.00,
+    "note": "Flight back home",
+    "status": "Completed"
+  },
+  {
+    "name": "Taxi Home",
+    "datetime": "2025-03-20T12:00:00",
+    "amount": 30.00,
+    "note": "Ride from airport",
+    "status": "Completed"
+  },
+  {
+    "name": "Grocery Restock",
+    "datetime": "2025-03-21T17:00:00",
+    "amount": 190.00,
+    "note": "Weekly groceries",
+    "status": "Completed"
+  },
+  {
+    "name": "Electricity Bill",
+    "datetime": "2025-03-22T04:28:48",
+    "amount": 295.81,
+    "note": "Monthly electricity bill",
+    "status": "Completed"
+  },
+  {
+    "name": "Streaming Bundle",
+    "datetime": "2025-03-22T10:00:00",
+    "amount": 29.99,
+    "note": "Netflix + Disney+ bundle",
+    "status": "Completed"
+  },
+  {
+    "name": "Lunch with Client",
+    "datetime": "2025-03-23T13:00:00",
+    "amount": 85.00,
+    "note": "Business lunch",
+    "status": "Completed"
+  },
+  {
+    "name": "Office Supplies",
+    "datetime": "2025-03-24T11:00:00",
+    "amount": 60.00,
+    "note": "Stationery and printer",
+    "status": "Completed"
+  },
+  {
+    "name": "Streaming Bundle",
+    "datetime": "2024-03-22T10:00:00",
+    "amount": 29.99,
+    "note": "Netflix + Disney+ bundle",
+    "status": "Completed"
+  },
+  {
+    "name": "Lunch with Client",
+    "datetime": "2024-03-23T13:00:00",
+    "amount": 85.00,
+    "note": "Business lunch",
+    "status": "Completed"
+  },
+  {
+    "name": "Office Supplies",
+    "datetime": "2024-03-24T11:00:00",
+    "amount": 60.00,
+    "note": "Stationery and printer",
+    "status": "Completed"
+  },
+  {
+    "name": "Coffee at Airport",
+    "datetime": "2023-03-20T07:30:00",
+    "amount": 6.50,
+    "note": "Espresso before flight",
+    "status": "Completed"
+  },
+  {
+    "name": "Return Flight",
+    "datetime": "2023-03-20T09:00:00",
+    "amount": 320.00,
+    "note": "Flight back home",
+    "status": "Completed"
+  },
+  {
+    "name": "Taxi Home",
+    "datetime": "2023-03-20T12:00:00",
+    "amount": 30.00,
+    "note": "Ride from airport",
+    "status": "Completed"
+  }
+]
