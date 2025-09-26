@@ -6,6 +6,7 @@ import CardStatisticList from '../components/CardStatisticList';
 import FinanceBtn from '../components/FinanceBtn';
 import DailyLimit from '../components/DailyLimit';
 import SavingPlans from '../components/SavingPlans';
+import Cashflow from '../components/Cashflow';
 
 
 
@@ -19,7 +20,10 @@ function Dashboard() {
           <DailyLimit />
           <SavingPlans />
         </Col>
-        <Col sm={6}><CardStatisticList /></Col>
+        <Col sm={6}>
+        <CardStatisticList />
+        <Cashflow />
+        </Col>
         <Col sm={3}>sm=3</Col>
       </Row>
     </Container>
