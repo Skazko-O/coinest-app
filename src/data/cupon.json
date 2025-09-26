@@ -1,0 +1,42 @@
+[
+  {
+    "store": "Foxtrot",
+    "discount": "200 грн",
+    "condition": "на замовлення від 1000 грн",
+    "expires": "через 7 днів",
+    "code": "FOXTROT200",
+    "image": "https://ts4.mm.bing.net/th?id=OIP.beXuAAXE27QVLOZOmMAWRgAAAA&pid=15.1"
+  },
+  {
+    "store": "Adidas",
+    "discount": "15% + 5%",
+    "condition": "на весь кошик, додатково при оплаті карткою",
+    "expires": "15 жовтня",
+    "code": "ADIDAS20",
+    "image": "https://ts4.mm.bing.net/th?id=OIP.EUM4JkYGCX6Ckc_zqewxUQHaE8&pid=15.1"
+  },
+  {
+    "store": "iHerb",
+    "discount": "до 29%",
+    "condition": "на товари 400+ брендів",
+    "expires": "через 7 днів",
+    "code": "IHERB29",
+    "image": "https://ts4.mm.bing.net/th?id=OIP.tKtJwgkLoQ7S_XrxBprvdwHaBe&pid=15.1"
+  },
+  {
+    "store": "Rozetka",
+    "discount": "до 50%",
+    "condition": "на побутову техніку та гаджети",
+    "expires": "30 вересня",
+    "code": null,
+    "image": "https://ts1.mm.bing.net/th?id=OIP.PQDjCL-mbTcIahsq73U7WAAAAA&pid=15.1"
+  },
+  {
+    "store": "Varus",
+    "discount": "до 25%",
+    "condition": "на продукти тижня",
+    "expires": "23 жовтня",
+    "code": "VARUS25",
+    "image": "https://ts2.mm.bing.net/th?id=OIP.EuJnYvqTRt9w0agN65mB4AHaKp&pid=15.1"
+  }
+]
