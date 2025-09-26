@@ -1,0 +1,14 @@
+[
+  { "id": 120987654322, "name": "Abe", "fname": "Reeves", "avatar": "../../src/assets/images/avatars/1.png" },
+  { "id": 120987654329, "name": "Audrey", "fname": "Murphy", "avatar": "../../src/assets/images/avatars/4.png" },
+  { "id": 120987654331, "name": "Bob", "fname": "Johnson", "avatar": "../../src/assets/images/avatars/3.png" },
+  { "id": 120987654326, "name": "Cho Wan", "fname": "Kim", "avatar": "../../src/assets/images/avatars/5.png" },
+  { "id": 120987654327, "name": "Cyntia", "fname": "Watson", "avatar": "../../src/assets/images/avatars/5.png" },
+  { "id": 120987654323, "name": "Edna", "fname": "Connor", "avatar": "../../src/assets/images/avatars/1.png" },
+  { "id": 120987654332, "name": "Jade", "fname": "Brown", "avatar": "../../src/assets/images/avatars/2.png" },
+  { "id": 120987654328, "name": "Miles", "fname": "Morales", "avatar": "../../src/assets/images/avatars/3.png" },
+  { "id": 120987654321, "name": "Nathan", "fname": "Dreik", "avatar": "../../src/assets/images/avatars/4.png" },
+  { "id": 120987654324, "name": "Oleg", "fname": "Likar", "avatar": "../../src/assets/images/avatars/4.png" },
+  { "id": 120987654333, "name": "Oleksandr", "fname": "Chiko", "avatar": "../../src/assets/images/avatars/1.png" },
+  { "id": 120987654325, "name": "Vitaly", "fname": "Klichko", "avatar": "../../src/assets/images/avatars/4.png" }
+]

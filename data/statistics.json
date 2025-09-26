@@ -1,0 +1,23 @@
+[
+  {
+    "id": "income",
+    "trend": "+1.78%",
+    "amount": 78000,
+    "label": "Total income",
+    "icon": "CoinIn"    
+  },
+  {
+    "id": "expense",
+    "trend": "-1.78%",
+    "amount": 43000,
+    "label": "Total Expense",
+    "icon": "CoinOut"
+  },
+  {
+    "id": "savings",
+    "trend": "+1.24%",
+    "amount": 56000,
+    "label": "Total Savings",
+    "icon": "Wallet"
+  }
+]
