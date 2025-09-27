@@ -34,7 +34,7 @@ function Header() {
       <div className="userGroup">
         <div>
           <a href="#" className="userName">
-            Skazko Olrksandr
+            Skazko Oleksandr
           </a>
         </div>
          <CircleBtn imgSrc="/assets/images/icon/Avatar.png" alt="avatar" />

@@ -117,16 +117,11 @@ ul {
 .card {
     border: 1px solid $border-color;
     border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
-
-    // :hover {
-    //     background-color: $green-bg;
-    //     border-radius: 16px;
-    // }
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;    
 }
 
 .card-body.activeCard {
-    background-color: $green-bg;
+    background-color: $green-bg;    
 }
 
 .name {
@@ -526,4 +521,36 @@ ul {
 
 .fs-10px {
     font-size: 10px;
+}
+
+.submenu-link {
+  position: relative;  
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+    background-color: #242E2C;
+    border-radius: 1px;
+  }
+}
+
+.submenu-link-thin {
+  position: relative;  
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 47px;
+    background-color: #BCBEBD;
+    border-radius: 1px;
+  }
 }

@@ -66,7 +66,7 @@ function Sidebar() {
                                                         <NavLink
                                                             to={to}
                                                             className={({ isActive }) =>
-                                                                isActive ? 'link active' : 'link'
+                                                                isActive ? 'link active submenu-link' : 'link submenu-link-thin'
                                                             }
                                                         >
                                                             <span className="menuText">{label}</span>
