@@ -2,6 +2,5 @@
 @use './typography.scss';
 @use './utilities.scss';
 @use './leyout.scss';
-
-@import './bootstrap-utilities.scss';
-@import '../../src/assets/fonts/fonts.css';
+@use './bootstrap-utilities.scss';
+@use '../../src/assets/fonts/fonts.css';

@@ -50,7 +50,7 @@ function Cashflow() {
                         <Dropdown.Toggle className="customToggle" id="range">
                             <span>{selectedYear}</span>
                             <svg className="iconToggle" viewBox="0 0 24 24">
-                                <use xlinkHref="src/assets/images/icon-sidebar/sidebar-icon.svg#AngleDown" />
+                                <use xlinkHref="./assets/images/icon/sidebar-icon.svg#AngleDown" />
                             </svg>
                         </Dropdown.Toggle>
                         <Dropdown.Menu>

@@ -1,4 +1,4 @@
-import SocialLink from './SocialLink/SocialLink'
+import SocialLink from '../SocialLink/SocialLink'
 
 function Footer() {
     return (

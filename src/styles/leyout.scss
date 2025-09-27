@@ -249,7 +249,7 @@ footer {
     overflow: hidden;
 
     &:hover {
-        width: 192px;
+        width: 198px;
     }
 
     .dropdown-toggle {
@@ -274,7 +274,7 @@ footer {
     }
 
     @media (max-width: 750px) {
-
+        
         width: 72px;
 
         .menuText,
@@ -296,8 +296,7 @@ footer {
             justify-content: center;
         }
 
-        &:hover {
-            width: 198px;
+        &:hover {           
 
             a.link {
                 justify-content: flex-start;

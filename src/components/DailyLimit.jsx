@@ -21,7 +21,7 @@ function DailyLimit() {
                     <h3 className='headingSec'>Daily Limit</h3>
                     <button className="dots">
                         <svg className="icon">
-                            <use xlinkHref="src/assets/images/icon/sprite_card.svg#DotsThreeVertical" />
+                            <use xlinkHref="./assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                         </svg>
                     </button>
                 </div>

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router";
-import SearchInput from "./SearchInput";
-import CircleBtn from "./CircleBtn";
+import SearchInput from "../SearchInput";
+import CircleBtn from "../CircleBtn";
 
 function Header() {
 
@@ -28,8 +28,8 @@ function Header() {
     <div className="rightSection">
        {location.pathname === '/' && <SearchInput placeholder="Search..." />}
       <div className="circleGroup">
-        <CircleBtn iconHref="/src/assets/images/icon/sprite_header.svg#ChatTeardropDots" />
-        <CircleBtn iconHref="/src/assets/images/icon/sprite_header.svg#Bell" />
+        <CircleBtn iconHref="/assets/images/icon/sprite_header.svg#ChatTeardropDots" />
+        <CircleBtn iconHref="/assets/images/icon/sprite_header.svg#Bell" />
       </div>
       <div className="userGroup">
         <div>
@@ -37,7 +37,7 @@ function Header() {
             Skazko Olrksandr
           </a>
         </div>
-         <CircleBtn imgSrc="/src/assets/images/icon/Avatar.png" alt="avatar" />
+         <CircleBtn imgSrc="/assets/images/icon/Avatar.png" alt="avatar" />
       </div>
     </div>
   </div>

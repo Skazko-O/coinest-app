@@ -6,8 +6,8 @@ function WidgetCard() {
             <Card.Body className="widgetCard">
                
                     <div className="cardHeader">
-                        <img className="symbol" src="src/assets/images/icon/symbol.svg" />
-                        <img className="union" src="src/assets/images/icon/union.svg" />
+                        <img className="symbol" src="assets/images/icon/symbol.svg" />
+                        <img className="union" src="assets/images/icon/union.svg" />
                     </div>
                     <div className="cardName">Oleksandr Skazko</div>
                     <div className="cardFooter">

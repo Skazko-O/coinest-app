@@ -10,7 +10,7 @@ const SocialLink = ({href, label, iconId}) => {
             className={styles.socialLink}
             >
                 <svg className={styles.icon} with="24" height="24">
-                    <use xlinkHref={`/src/assets/images/icon/sprite_footer.svg#${iconId}`} />
+                    <use xlinkHref={`/assets/images/icon/sprite_footer.svg#${iconId}`} />
                 </svg>
             </a>
     );

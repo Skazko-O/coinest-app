@@ -32,7 +32,7 @@ function TransferList() {
             <div className="outerWrapper">
                 <div className="searchGroup">
                     <SearchInput placeholder="Search account" />
-                    <CircleBtn iconHref="../../src/assets/images/icon/sprite_groupbtn.svg#Sliders" />
+                    <CircleBtn iconHref="../.././assets/images/icon/sprite_groupbtn.svg#Sliders" />
                 </div>
                 <div className="outerWrapperCol">
                     {loading && <p>Loading accounts...</p>}
