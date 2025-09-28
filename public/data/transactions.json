@@ -1,359 +1,447 @@
 [
   {
-    "name": "Electricity Bill",
+    "name": "Bill",
     "datetime": "2025-03-01T04:28:48",
     "amount": 295.81,
     "note": "Payment for monthly electricity bill",
-    "status": "Failed"
+    "status": "Failed",
+    "type": "expence"
   },
   {
-    "name": "Weekly Groceries",
-    "datetime": "2025-03-04T04:28:48",
+    "name": "Groceries",
+    "datetime": "2025-02-04T04:28:48",
     "amount": 204.07,
     "note": "Groceries shopping at local supermarket",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Movie Night",
+    "name": "Movie",
     "datetime": "2025-02-27T04:28:48",
     "amount": 97.84,
     "note": "Tickets for movies and snacks",
-    "status": "Pending"
+    "status": "Pending",
+    "type": "expence"
   },
   {
-    "name": "Medical Check-up",
-    "datetime": "2025-03-03T04:28:48",
+    "name": "Medical",
+    "datetime": "2025-01-03T04:28:48",
     "amount": 233.32,
     "note": "Routine health check-up and medications",
-    "status": "Pending"
+    "status": "Pending",
+    "type": "expence"
   },
   {
-    "name": "Dinner at Italian Restaurant",
-    "datetime": "2025-03-02T04:28:48",
+    "name": "Dinner",
+    "datetime": "2025-04-02T04:28:48",
     "amount": 226.71,
     "note": "Dining out with family at a local Italian restaurant",
-    "status": "Pending"
+    "status": "Pending",
+    "type": "expence"
   },
   {
-    "name": "Gym Membership",
-    "datetime": "2025-03-05T08:15:22",
+    "name": "Subscription",
+    "datetime": "2025-05-05T08:15:22",
     "amount": 59.99,
     "note": "Monthly gym subscription",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
     "name": "Online Course",
-    "datetime": "2025-03-06T10:42:11",
+    "datetime": "2025-06-06T10:42:11",
     "amount": 120.00,
     "note": "Payment for React development course",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Coffee with Friends",
-    "datetime": "2025-03-07T09:30:00",
+    "name": "Coffee",
+    "datetime": "2025-07-07T09:30:00",
     "amount": 18.75,
     "note": "Café meetup with friends",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Uber Ride",
-    "datetime": "2025-03-07T22:10:45",
+    "name": "Taxi",
+    "datetime": "2025-08-07T22:10:45",
     "amount": 13.40,
     "note": "Ride to downtown",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Spotify Subscription",
-    "datetime": "2025-03-08T01:00:00",
+    "name": "Subscription",
+    "datetime": "2025-09-08T01:00:00",
     "amount": 9.99,
     "note": "Monthly music subscription",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Water Bill",
-    "datetime": "2025-03-08T04:28:48",
+    "name": "Bill",
+    "datetime": "2025-10-08T04:28:48",
     "amount": 45.20,
     "note": "Monthly water utility payment",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Amazon Purchase",
-    "datetime": "2025-03-09T14:20:00",
+    "name": "Amazon",
+    "datetime": "2025-11-09T14:20:00",
     "amount": 89.50,
     "note": "Electronics accessories",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Netflix Subscription",
-    "datetime": "2025-03-10T00:00:00",
+    "name": "Subscription",
+    "datetime": "2025-12-10T00:00:00",
     "amount": 15.99,
     "note": "Monthly streaming service",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Taxi to Airport",
-    "datetime": "2025-03-11T06:45:00",
+    "name": "Taxi",
+    "datetime": "2025-01-11T06:45:00",
     "amount": 35.00,
     "note": "Early morning ride to airport",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Lunch at Sushi Bar",
-    "datetime": "2025-03-11T13:00:00",
+    "name": "Lunch",
+    "datetime": "2025-02-11T13:00:00",
     "amount": 42.30,
     "note": "Lunch with colleagues",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Bookstore Purchase",
+    "name": "Bookstore",
     "datetime": "2025-03-12T17:30:00",
     "amount": 27.99,
     "note": "New novel and planner",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Charity Donation",
-    "datetime": "2025-03-13T12:00:00",
+    "name": "Charity",
+    "datetime": "2025-04-13T12:00:00",
     "amount": 100.00,
     "note": "Support for local shelter",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
     "name": "Haircut",
-    "datetime": "2025-04-14T15:00:00",
+    "datetime": "2025-05-14T15:00:00",
     "amount": 25.00,
     "note": "Haircut at local salon",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Mobile Recharge",
-    "datetime": "2025-04-15T11:00:00",
+    "name": "Bill",
+    "datetime": "2025-06-15T11:00:00",
     "amount": 20.00,
     "note": "Prepaid mobile top-up",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Parking Fee",
-    "datetime": "2025-05-15T18:00:00",
+    "name": "Fee",
+    "datetime": "2025-07-15T18:00:00",
     "amount": 5.00,
     "note": "City parking",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Flight Booking",
-    "datetime": "2025-03-16T09:00:00",
+    "name": "Booking",
+    "datetime": "2025-08-16T09:00:00",
     "amount": 320.00,
     "note": "Round-trip flight to Berlin",
-    "status": "Pending"
+    "status": "Pending",
+    "type": "expence"
   },
   {
-    "name": "Hotel Reservation",
-    "datetime": "2025-03-16T09:30:00",
+    "name": "Hotel",
+    "datetime": "2025-09-16T09:30:00",
     "amount": 450.00,
     "note": "3-night stay in Berlin",
-    "status": "Pending"
+    "status": "Pending",
+    "type": "expence"
   },
   {
-    "name": "Conference Ticket",
-    "datetime": "2025-03-17T10:00:00",
+    "name": "Ticket",
+    "datetime": "2025-10-17T10:00:00",
     "amount": 150.00,
     "note": "Tech conference pass",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Taxi from Airport",
-    "datetime": "2025-03-17T22:00:00",
+    "name": "Taxi",
+    "datetime": "2025-11-17T22:00:00",
     "amount": 38.00,
     "note": "Ride to hotel",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Dinner with Team",
-    "datetime": "2025-03-18T20:00:00",
+    "name": "Dinner",
+    "datetime": "2025-12-18T20:00:00",
     "amount": 120.00,
     "note": "Team dinner at local restaurant",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Museum Entry",
-    "datetime": "2025-03-19T14:00:00",
+    "name": "Ticket",
+    "datetime": "2025-01-19T14:00:00",
     "amount": 18.00,
     "note": "Art museum visit",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Souvenir Shopping",
-    "datetime": "2025-03-19T16:00:00",
+    "name": "Shopping",
+    "datetime": "2025-02-19T16:00:00",
     "amount": 60.00,
     "note": "Gifts and souvenirs",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Coffee at Airport",
+    "name": "Coffee",
     "datetime": "2025-03-20T07:30:00",
     "amount": 6.50,
     "note": "Espresso before flight",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Return Flight",
-    "datetime": "2025-03-20T09:00:00",
+    "name": "Flight",
+    "datetime": "2025-04-20T09:00:00",
     "amount": 320.00,
     "note": "Flight back home",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Taxi Home",
-    "datetime": "2025-03-20T12:00:00",
+    "name": "Taxi",
+    "datetime": "2025-05-20T12:00:00",
     "amount": 30.00,
     "note": "Ride from airport",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Grocery Restock",
-    "datetime": "2025-03-21T17:00:00",
+    "name": "Grocery",
+    "datetime": "2025-06-21T17:00:00",
     "amount": 190.00,
     "note": "Weekly groceries",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Electricity Bill",
-    "datetime": "2025-03-22T04:28:48",
+    "name": "Bill",
+    "datetime": "2025-07-22T04:28:48",
     "amount": 295.81,
     "note": "Monthly electricity bill",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Streaming Bundle",
-    "datetime": "2025-03-22T10:00:00",
+    "name": "Subscription",
+    "datetime": "2025-08-22T10:00:00",
     "amount": 29.99,
     "note": "Netflix + Disney+ bundle",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Lunch with Client",
-    "datetime": "2025-03-23T13:00:00",
+    "name": "Lunch",
+    "datetime": "2025-09-23T13:00:00",
     "amount": 85.00,
     "note": "Business lunch",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Office Supplies",
+    "name": "Supplies",
     "datetime": "2025-03-24T11:00:00",
     "amount": 60.00,
     "note": "Stationery and printer",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Streaming Bundle",
+    "name": "Subscription",
     "datetime": "2024-03-22T10:00:00",
     "amount": 29.99,
     "note": "Netflix + Disney+ bundle",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Lunch with Client",
+    "name": "Lunch",
     "datetime": "2024-03-23T13:00:00",
     "amount": 85.00,
     "note": "Business lunch",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Office Supplies",
+    "name": "Supplies",
     "datetime": "2024-03-24T11:00:00",
     "amount": 60.00,
     "note": "Stationery and printer",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Coffee at Airport",
+    "name": "Coffee",
     "datetime": "2023-03-20T07:30:00",
     "amount": 6.50,
     "note": "Espresso before flight",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Return Flight",
+    "name": "Flight",
     "datetime": "2023-03-20T09:00:00",
     "amount": 320.00,
     "note": "Flight back home",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Taxi Home",
+    "name": "Taxi",
     "datetime": "2023-03-20T12:00:00",
     "amount": 30.00,
     "note": "Ride from airport",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Grocery Restock",
+    "name": "Grocery",
     "datetime": "2024-03-21T17:00:00",
     "amount": 190.00,
     "note": "Weekly groceries",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Electricity Bill",
+    "name": "Bill",
     "datetime": "2024-03-22T04:28:48",
     "amount": 295.81,
     "note": "Monthly electricity bill",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
     "name": "Streaming Bundle",
     "datetime": "2023-03-22T10:00:00",
     "amount": 29.99,
     "note": "Netflix + Disney+ bundle",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Lunch with Client",
+    "name": "Lunch",
     "datetime": "2023-06-23T13:00:00",
     "amount": 85.00,
     "note": "Business lunch",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Office Supplies",
+    "name": "Supplies",
     "datetime": "2023-08-24T11:00:00",
     "amount": 60.00,
     "note": "Stationery and printer",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Grocery Restock",
+    "name": "Grocery",
     "datetime": "2023-11-21T17:00:00",
     "amount": 190.00,
     "note": "Weekly groceries",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Electricity Bill",
+    "name": "Bill",
     "datetime": "2024-02-22T04:28:48",
     "amount": 295.81,
     "note": "Monthly electricity bill",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Streaming Bundle",
+    "name": "Subscription",
     "datetime": "2024-01-22T10:00:00",
     "amount": 29.99,
     "note": "Netflix + Disney+ bundle",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Lunch with Client",
+    "name": "Lunch",
     "datetime": "2024-06-23T13:00:00",
     "amount": 85.00,
     "note": "Business lunch",
-    "status": "Completed"
+    "status": "Completed",
+    "type": "expence"
   },
   {
-    "name": "Office Supplies",
+    "name": "Supplies",
     "datetime": "2024-08-24T11:00:00",
     "amount": 60.00,
     "note": "Stationery and printer",
-    "status": "Completed"
-  }
+    "status": "Completed",
+    "type": "expence"
+  }, 
+  { "name": "Salary", "datetime": "2023-01-24T11:00:00", "amount": 580.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-02-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-03-24T11:00:00", "amount": 620.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-04-24T11:00:00", "amount": 610.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-05-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-06-24T11:00:00", "amount": 590.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-07-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-08-24T11:00:00", "amount": 610.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-09-24T11:00:00", "amount": 620.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-10-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-11-24T11:00:00", "amount": 590.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2023-12-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+
+  { "name": "Salary", "datetime": "2024-01-24T11:00:00", "amount": 610.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-02-24T11:00:00", "amount": 620.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-03-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-04-24T11:00:00", "amount": 590.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-05-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-06-24T11:00:00", "amount": 610.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-07-24T11:00:00", "amount": 620.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-08-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-09-24T11:00:00", "amount": 590.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-10-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-11-24T11:00:00", "amount": 610.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2024-12-24T11:00:00", "amount": 620.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+
+  { "name": "Salary", "datetime": "2025-01-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-02-24T11:00:00", "amount": 590.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-03-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-04-24T11:00:00", "amount": 610.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-05-24T11:00:00", "amount": 620.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-06-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-07-24T11:00:00", "amount": 590.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-08-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-09-24T11:00:00", "amount": 610.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-10-24T11:00:00", "amount": 620.00, "note": "Stationery and printer", "status": "Completed", "type": "income" },
+  { "name": "Salary", "datetime": "2025-11-24T11:00:00", "amount": 600.00, "note": "Stationery and printer", "status": "Completed", "type": "income" }
 ]

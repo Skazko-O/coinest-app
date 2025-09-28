@@ -39,13 +39,15 @@ img {
 
 body {
     font-size: 1rem;
-    color: $accent-color;
+    color: var(--accent-color);
     font-family: 'Urbanist';
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
 }
 
 h1 {
     font-size: 22px;
-    color: $green-text-color;
+    color: var(--green-text-color);
     font-weight: 700;
 }
 
@@ -244,7 +246,7 @@ ul {
     font-size: 16px;
     font-weight: 700;
     line-height: 120%;
-    color: $accent-color;
+    color: var(--accent-color);
     margin-bottom: 0;
 }
 
@@ -272,12 +274,12 @@ ul {
 }
 
 .status.successful {
-    color: $accent-color;
+    color: var(--accent-color);
 }
 
 .customForm {
     border-radius: 16px;
-    background-color: $green-bg;
+    background-color: var(--green-bg);
     padding: 24px;
 }
 
@@ -291,6 +293,7 @@ ul {
     font-weight: 600;
     line-height: 125%;
     padding-bottom: 12px;
+    color: var(--accent-color);
 }
 
 .copySVG {
@@ -311,11 +314,11 @@ ul {
 }
 
 .cardName {
-    @include cardText($accent-color);
+    @include cardText(var(--accent-color));
 }
 
 .cardBalance {
-    color: $accent-color;
+    color: var(--accent-color);
     font-size: 20px;
     font-weight: 700;
     line-height: 120%;
@@ -473,7 +476,7 @@ ul {
 
 .badgeUp {
     background-color: $active-color;
-    color: $accent-color;
+    color: var(--accent-color);
 }
 
 .badgeDown {
@@ -507,14 +510,14 @@ ul {
     font-size: 12px;
     font-weight: 600;
     line-height: 130%;
-    color: $accent-color;
+    color: var(--accent-color);
     display: inline;
 }
 
 .limit {
     font-size: 10px;
     line-height: 130%;
-    color: $accent-color;
+    color: var(--accent-color);
 }
 
 .percent {
@@ -565,6 +568,32 @@ ul {
     gap: 10px;
 }
 
+.flexGroupSO {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+
+
+    button {
+        background: none;
+        border: none;
+        padding: 8px 16px;
+        font-size: 12px;
+        cursor: pointer;
+        color: $text-color;
+        border-radius: 6px;
+        border-bottom: 1px solid $border-color;
+        transition: all 0.2s ease;
+
+        &.active {
+            color: $green-text-color;
+            font-weight: 600;
+            border-bottom: 3px solid var(--accent-color);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
 .tableHeadStyle {
     display: flex;
     font-size: 10px;
@@ -579,8 +608,29 @@ ul {
 }
 
 .tableRawStyle {
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 130%;
     color: $text-color;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid $border-color;
+}
+
+.status.completed {
+    color: $green-text-color;
+}
+
+.status.pending {
+    color: $yellow-text-color;
+}
+
+.status.failed {
+    color: $warning-accent-color;
 }

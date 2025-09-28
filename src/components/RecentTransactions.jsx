@@ -71,7 +71,7 @@ function RecentTransactions({ selectedYear }) {
                             <Dropdown.Toggle className="customToggle" id="dropdown-basic">
                                 {selectedMonth !== null
                                     ? `${monthNames[selectedMonth]} ${selectedYear}`
-                                    : `Select Month`}
+                                    : `All months`}
                             </Dropdown.Toggle>
                             <SqearBtn iconHref="../.././assets/images/icon/sprite_groupbtn.svg#Sliders" />
                         </div>
@@ -108,10 +108,28 @@ function RecentTransactions({ selectedYear }) {
                         {filteredTransactions.map((tx, index) => (
                             <tr key={index}>
                                 <td>{tx.name}</td>
-                                <td>{new Date(tx.datetime).toLocaleString()}</td>
+                                <td><div style={{ display: 'flex', flexDirection: 'column' }}>
+                                    <span>
+                                        {new Date(tx.datetime).toLocaleDateString('uk-UA', {
+                                            day: '2-digit',
+                                            month: '2-digit',
+                                            year: 'numeric',
+                                        })}
+                                    </span>
+                                    <span>
+                                        {new Date(tx.datetime).toLocaleTimeString('uk-UA', {
+                                            hour: '2-digit',
+                                            minute: '2-digit',
+                                            second: '2-digit',
+                                            hour12: false,
+                                        })}
+                                    </span>
+                                </div></td>
                                 <td>${tx.amount.toFixed(2)}</td>
                                 <td>{tx.note}</td>
-                                <td>{tx.status}</td>
+                                <td> <div className={`status ${tx.status.toLowerCase()}`}>
+                                    {tx.status}
+                                </div></td>
                             </tr>
                         ))}
                     </tbody>

@@ -5,7 +5,7 @@ header {
     top: 0;
     z-index: 1000;
     padding-top: 22px;
-    background-color: white;
+    background-color: var( --bg-color);
 }
 
 .pageName {
@@ -46,7 +46,7 @@ header {
         padding: 10px 16px;
         border-radius: 20px;
         background-color: $bg-color;
-        border: 1px solid $border-color;
+        border: 1px solid var(--border-color);
     }
 
     svg {
@@ -69,7 +69,7 @@ header {
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
-    color: $green-text-color;
+    color: var(--green-text-color);
     white-space: nowrap;
     flex-shrink: 0;
 }
@@ -113,7 +113,7 @@ header {
   @extend %baseBtn;
   background-color: transparent;
   border-radius: 8px;
-  border: 1px solid $border-color;
+  border: 1px solid var(--border-color);
 }
 
 .searchGroup {
@@ -155,12 +155,12 @@ header {
 
         &:hover {
             background-color: $active-color;
-            color: $accent-color;
+            color: var(--accent-color);
         }
 
         &.active {
             background-color: $active-color;
-            color: $accent-color;
+            color: var(--accent-color);
         }
     }
 
@@ -204,7 +204,7 @@ header {
         padding: 10px 14px;
         background-color: $active-color;
         border-radius: 8px;
-        color: $accent-color;
+        color: var(--accent-color);
         text-align: center;
         font-size: 14px;
         font-weight: 500;
@@ -227,17 +227,19 @@ header {
 
 .copyright {
     font-size: 12px;
-    color: #000;
+    color:var (--accent-color);
     line-height: 130%;
 }
 
 .footerElement {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 footer {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-bottom: 22px;
 }
@@ -249,8 +251,8 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     width: 192px;
-    background-color: $green-bg;
-    color: $text-color;
+    background-color: var( --green-bg);
+    color: var(--text-color);
     padding: 22px 16px 26px;
     top: 0;
     left: 0;

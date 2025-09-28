@@ -6,14 +6,14 @@ function Footer() {
             <div className="footerElement">
                 <div className="copyright">
                     Copyright © 2024{" "}
-                    <a href="https://peterdraw.com/" target="_blank" rel="noopener">
-                        Peterdraw
+                    <a href="https://skazko-o.github.io/My_Homeworks/" target="_blank" rel="noopener">
+                        Skazko-O
                     </a>
                 </div>
                 <div className="footerMenu">
-                    <div>Privacy Policy</div>
-                    <div>Terms and conditions</div>
-                    <div>Contact</div>
+                   <a href="#" target="_blank" rel="noopener">Privacy Policy</a>
+                    <a href="#" target="_blank" rel="noopener">Terms and conditions</a>
+                    <a href="#" target="_blank" rel="noopener">Contact</a>
                 </div>
             </div>
             <div className="socialLink">

@@ -3,6 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   main {
     flex-grow: 1;

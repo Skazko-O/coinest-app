@@ -13,26 +13,29 @@ import {
     ResponsiveContainer,
 } from 'recharts';
 
-function Cashflow({ selectedYear, setSelectedYear }) {
-    const currentYear = new Date().getFullYear();    
+function Cashflow({ selectedYear, setSelectedYear }) {   
     const [cashflowData, setCashflowData] = useState([]);
 
     useEffect(() => {
         fetch('/data/cashflow.json')
             .then(response => response.json())
             .then(data => setCashflowData(data))
-            .catch(error => console.error('Помилка при завантаженні JSON:', error));
+            .catch(error => console.error('Error loading JSON:', error));
     }, []);
 
     const handleSelect = (eventKey) => {
         setSelectedYear(eventKey);
     };
 
-    const resolveYear = selectedYear === 'This Year' ? currentYear : Number(selectedYear);
-    const filteredData = cashflowData.filter(item => item.year === resolveYear);
+    const filteredData = cashflowData.filter(
+        (item) => item.year === Number(selectedYear)
+    );
+
     const availableYears = Array.from(
-        new Set(cashflowData.map(item => item.year))
-    ).sort((a, b) => b - a);
+        new Set(cashflowData.map((item) => item.year))
+    )
+        .sort((a, b) => b - a)
+        .map(String);
 
     const chartData = filteredData.map(item => ({
         name: item.month.slice(0, 3),
@@ -53,10 +56,9 @@ function Cashflow({ selectedYear, setSelectedYear }) {
                             </svg>
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            <Dropdown.Item eventKey="This Year">This Year</Dropdown.Item>
-                            {availableYears.map(year => (
-                                <Dropdown.Item key={year} eventKey={String(year)}>
-                                    {year}
+                            {availableYears.map(label => (
+                                <Dropdown.Item key={label} eventKey={label}>
+                                    {label}
                                 </Dropdown.Item>
                             ))}
                         </Dropdown.Menu>
@@ -93,7 +95,7 @@ function Cashflow({ selectedYear, setSelectedYear }) {
                             <Bar dataKey="expense" fill="#BBF49C" stackId="stack" />
                         </BarChart>
                     </ResponsiveContainer>
-                </div>               
+                </div>
             </Card.Body>
         </Card>
     )

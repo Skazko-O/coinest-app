@@ -9,6 +9,7 @@ import SavingPlans from '../components/SavingPlans';
 import Cashflow from '../components/Cashflow';
 import RecentTransactions from '../components/RecentTransactions';
 import { useState } from 'react';
+import Statistic from '../components/Statistic';
 
 function Dashboard() {
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
@@ -26,7 +27,9 @@ function Dashboard() {
           <Cashflow selectedYear={selectedYear} setSelectedYear={setSelectedYear} />
           <RecentTransactions selectedYear={selectedYear} />
         </Col>
-        <Col sm={3}>sm=3</Col>
+        <Col sm={3}>
+        <Statistic selectedYear={selectedYear} />
+        </Col>
       </Row>
     </Container>
   );

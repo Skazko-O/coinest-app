@@ -56,6 +56,9 @@
     "react-router-dom": "^7.9.1",
   
       
+    "react-toastify": "^11.0.5",
+  
+      
     "recharts": "^3.2.1",
   
       

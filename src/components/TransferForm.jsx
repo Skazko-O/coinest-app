@@ -5,6 +5,9 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import BlockBtn from './BlockBtn';
 import BankCardList from './BankCardList';
+import { showToast } from '../utils/toast';
+
+
 
 function TransferForm() {
   const [accounts, setAccounts] = useState([]);
@@ -32,6 +35,19 @@ function TransferForm() {
       checked,
     };
     console.log('Submitting:', payload);
+
+    if (!selectedRecipient || !amount || !method || !checked) {
+    showToast.error('Please fill in all required fields');
+    return;
+  }
+  showToast.success('The transfer has been successfully sent!');
+
+    setSelectedCardId(null);
+    setSelectedRecipient('');
+    setAmount('');
+    setMethod('');
+    setNote('');
+    setChecked(false);
   };
 
   return (
