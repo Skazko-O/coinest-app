@@ -13,9 +13,8 @@ import {
     ResponsiveContainer,
 } from 'recharts';
 
-function Cashflow() {
-    const currentYear = new Date().getFullYear();
-    const [selectedYear, setSelectedYear] = useState('This Year');
+function Cashflow({ selectedYear, setSelectedYear }) {
+    const currentYear = new Date().getFullYear();    
     const [cashflowData, setCashflowData] = useState([]);
 
     useEffect(() => {
@@ -94,8 +93,7 @@ function Cashflow() {
                             <Bar dataKey="expense" fill="#BBF49C" stackId="stack" />
                         </BarChart>
                     </ResponsiveContainer>
-                </div>
-
+                </div>               
             </Card.Body>
         </Card>
     )

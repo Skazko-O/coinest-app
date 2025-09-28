@@ -26,7 +26,7 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    min-width: 283px;
+    min-width: 255px;
 
     .searchIcon {
         position: absolute;
@@ -81,28 +81,39 @@ header {
     gap: 10px;
 }
 
-.circleBtn {
-    background-color: $green-bg;
+%baseBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: $green-text-color;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  }
+}
 
-    svg {
-        width: 18px;
-        height: 18px;
-        fill: $green-text-color;
-    }
+.circleBtn {
+  @extend %baseBtn;
+  background-color: $green-bg;
+  border-radius: 50%;
+}
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-    }
+.sqearBtn {
+  @extend %baseBtn;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid $border-color;
 }
 
 .searchGroup {

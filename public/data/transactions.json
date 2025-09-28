@@ -120,21 +120,21 @@
   },
   {
     "name": "Haircut",
-    "datetime": "2025-03-14T15:00:00",
+    "datetime": "2025-04-14T15:00:00",
     "amount": 25.00,
     "note": "Haircut at local salon",
     "status": "Completed"
   },
   {
     "name": "Mobile Recharge",
-    "datetime": "2025-03-15T11:00:00",
+    "datetime": "2025-04-15T11:00:00",
     "amount": 20.00,
     "note": "Prepaid mobile top-up",
     "status": "Completed"
   },
   {
     "name": "Parking Fee",
-    "datetime": "2025-03-15T18:00:00",
+    "datetime": "2025-05-15T18:00:00",
     "amount": 5.00,
     "note": "City parking",
     "status": "Completed"
@@ -284,6 +284,76 @@
     "datetime": "2023-03-20T12:00:00",
     "amount": 30.00,
     "note": "Ride from airport",
+    "status": "Completed"
+  },
+  {
+    "name": "Grocery Restock",
+    "datetime": "2024-03-21T17:00:00",
+    "amount": 190.00,
+    "note": "Weekly groceries",
+    "status": "Completed"
+  },
+  {
+    "name": "Electricity Bill",
+    "datetime": "2024-03-22T04:28:48",
+    "amount": 295.81,
+    "note": "Monthly electricity bill",
+    "status": "Completed"
+  },
+  {
+    "name": "Streaming Bundle",
+    "datetime": "2023-03-22T10:00:00",
+    "amount": 29.99,
+    "note": "Netflix + Disney+ bundle",
+    "status": "Completed"
+  },
+  {
+    "name": "Lunch with Client",
+    "datetime": "2023-06-23T13:00:00",
+    "amount": 85.00,
+    "note": "Business lunch",
+    "status": "Completed"
+  },
+  {
+    "name": "Office Supplies",
+    "datetime": "2023-08-24T11:00:00",
+    "amount": 60.00,
+    "note": "Stationery and printer",
+    "status": "Completed"
+  },
+  {
+    "name": "Grocery Restock",
+    "datetime": "2023-11-21T17:00:00",
+    "amount": 190.00,
+    "note": "Weekly groceries",
+    "status": "Completed"
+  },
+  {
+    "name": "Electricity Bill",
+    "datetime": "2024-02-22T04:28:48",
+    "amount": 295.81,
+    "note": "Monthly electricity bill",
+    "status": "Completed"
+  },
+  {
+    "name": "Streaming Bundle",
+    "datetime": "2024-01-22T10:00:00",
+    "amount": 29.99,
+    "note": "Netflix + Disney+ bundle",
+    "status": "Completed"
+  },
+  {
+    "name": "Lunch with Client",
+    "datetime": "2024-06-23T13:00:00",
+    "amount": 85.00,
+    "note": "Business lunch",
+    "status": "Completed"
+  },
+  {
+    "name": "Office Supplies",
+    "datetime": "2024-08-24T11:00:00",
+    "amount": 60.00,
+    "note": "Stationery and printer",
     "status": "Completed"
   }
 ]

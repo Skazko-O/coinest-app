@@ -1,6 +1,7 @@
 import { useLocation } from "react-router";
 import SearchInput from "../SearchInput";
 import CircleBtn from "../CircleBtn";
+import Themeswitcher from '../Themeswitcher';
 
 function Header() {
 
@@ -24,12 +25,13 @@ function Header() {
   return (
     <header>
   <div className="pageName">
-    <h1>{currentTitle}</h1>
+    <h1>{currentTitle}</h1>    
     <div className="rightSection">
        {location.pathname === '/' && <SearchInput placeholder="Search..." />}
       <div className="circleGroup">
         <CircleBtn iconHref="/assets/images/icon/sprite_header.svg#ChatTeardropDots" />
         <CircleBtn iconHref="/assets/images/icon/sprite_header.svg#Bell" />
+        <Themeswitcher />
       </div>
       <div className="userGroup">
         <div>

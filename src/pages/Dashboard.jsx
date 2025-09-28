@@ -7,10 +7,11 @@ import FinanceBtn from '../components/FinanceBtn';
 import DailyLimit from '../components/DailyLimit';
 import SavingPlans from '../components/SavingPlans';
 import Cashflow from '../components/Cashflow';
-
-
+import RecentTransactions from '../components/RecentTransactions';
+import { useState } from 'react';
 
 function Dashboard() {
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   return (
     <Container>
       <Row>
@@ -21,8 +22,9 @@ function Dashboard() {
           <SavingPlans />
         </Col>
         <Col sm={6}>
-        <CardStatisticList />
-        <Cashflow />
+          <CardStatisticList />
+          <Cashflow selectedYear={selectedYear} setSelectedYear={setSelectedYear} />
+          <RecentTransactions selectedYear={selectedYear} />
         </Col>
         <Col sm={3}>sm=3</Col>
       </Row>
