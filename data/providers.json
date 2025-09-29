@@ -1,0 +1,37 @@
+[
+  {
+    "category": "Healthcare",
+    "iconHref": "assets/images/icon/sprite_card.svg#FirstAid",
+    "companies": ["UnitedHealth Group", "CVS Health", "McKesson Corporation"]
+  },
+  {
+    "category": "E-commerce",
+    "iconHref": "assets/images/icon/sprite_card.svg#Cart",
+    "companies": ["Amazon", "eBay", "Shopify"]
+  },
+  {
+    "category": "Internet & Cable TV",
+    "iconHref": "assets/images/icon/sprite_card.svg#Monitor",
+    "companies": [
+      "Comcast Xfinity",
+      "AT&T Internet and Cable",
+      "Spectrum Cable Services",
+      "Verizon Fios",
+      "Cox Communications",
+      "DirecTV",
+      "DISH Network",
+      "Frontier Communications"
+    ]
+  },
+  {
+    "category": "Insurance",
+    "iconHref": "assets/images/icon/sprite_card.svg#Umbrella",
+    "companies": [
+      "Allianz",
+      "AXA",
+      "MetLife",
+      "Prudential",
+      "Zurich Insurance Group"
+    ]
+  }
+]
