@@ -634,3 +634,7 @@ ul {
 .status.failed {
     color: $warning-accent-color;
 }
+
+.accordion-item {
+    border-radius: 16px;
+}
