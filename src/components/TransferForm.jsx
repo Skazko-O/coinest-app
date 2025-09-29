@@ -19,7 +19,7 @@ function TransferForm() {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    fetch('/data/accounts.json')
+    fetch('data/accounts.json')
       .then(res => res.json())
       .then(data => setAccounts(data))
       .catch(err => console.error('Failed to load accounts:', err));

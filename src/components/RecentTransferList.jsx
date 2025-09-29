@@ -7,7 +7,7 @@ function RecentTransferList() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("/data/transfer.json")
+        fetch("data/transfer.json")
             .then((res) => {
                 if (!res.ok) {
                     throw new Error("Failed to fetch transfer data");

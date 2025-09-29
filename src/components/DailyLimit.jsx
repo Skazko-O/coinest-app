@@ -5,7 +5,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 function DailyLimit() {
     const [daily, setDaily] = useState(null);
     useEffect(() => {
-        fetch('/data/dailyLimit.json')
+        fetch('data/dailyLimit.json')
             .then((res) => res.json())
             .then((data) => setDaily(data))
             .catch((err) => console.error('Failed to load daily limit:', err));
@@ -21,7 +21,7 @@ function DailyLimit() {
                     <h3 className='headingSec'>Daily Limit</h3>
                     <button className="dots">
                         <svg className="icon">
-                            <use xlinkHref="./assets/images/icon/sprite_card.svg#DotsThreeVertical" />
+                            <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                         </svg>
                     </button>
                 </div>

@@ -73,7 +73,7 @@ function RecentTransactions({ selectedYear }) {
                                     ? `${monthNames[selectedMonth]} ${selectedYear}`
                                     : `All months`}
                             </Dropdown.Toggle>
-                            <SqearBtn iconHref="../.././assets/images/icon/sprite_groupbtn.svg#Sliders" />
+                            <SqearBtn iconHref="assets/images/icon/sprite_groupbtn.svg#Sliders" />
                         </div>
                         <Dropdown.Menu>
                             <Dropdown.Item

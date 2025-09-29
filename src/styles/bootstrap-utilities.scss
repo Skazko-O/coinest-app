@@ -635,6 +635,17 @@ ul {
     color: $warning-accent-color;
 }
 
+.custom-accordion .accordion-button {
+    border-radius: 16px !important;
+    overflow: hidden;
+    border: 1px solid $border-color;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
+}
+
 .accordion-item {
-    border-radius: 16px;
+  border: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $green-bg;
 }

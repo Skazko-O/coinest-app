@@ -1,5 +1,5 @@
 $accent-color: #242E2C;
-$bg-color: #EFF0F0;
+$bg-color: #fff;
 $border-color: #EFF0F0;
 $green-bg: #ECF4E9;
 $green-text-color: #1E4841;
@@ -15,7 +15,7 @@ $warning-accent-color: #F73541;
 
 :root {
   --accent-color: #242E2C;
-  --bg-color: #FBFBFC;
+  --bg-color: #fff;
   --border-color: #E5E6E6;
   --green-bg: #ECF4E9;
   --green-text-color: #1E4841;
@@ -29,7 +29,7 @@ $warning-accent-color: #F73541;
 
 [data-bs-theme="dark"] {
   --accent-color: #ffffff;
-  --bg-color: #1A1A1A;
+  --bg-color: #212529;
   --border-color: #333;
   --green-bg: #1E2E24;
   --green-text-color: #BBF49C;

@@ -1,7 +1,7 @@
 
 function CircleBtn({ iconHref, imgSrc, alt = '', onClick }) {
   return (
-    <button className="circleBtn" onClick={onClick}>
+    <div className="circleBtn" role="button" onClick={onClick} aria-label={alt}>
       {iconHref && (
         <svg aria-hidden="true">
           <use href={iconHref} />
@@ -10,7 +10,7 @@ function CircleBtn({ iconHref, imgSrc, alt = '', onClick }) {
       {imgSrc && (
         <img src={imgSrc} alt={alt} />
       )}
-    </button>
+    </div>
   );
 }
 

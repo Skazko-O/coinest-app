@@ -10,7 +10,7 @@ function TransferList() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("/data/accounts.json")
+        fetch("data/accounts.json")
             .then((res) => {
                 if (!res.ok) {
                     throw new Error("Failed to fetch accounts");
@@ -32,7 +32,7 @@ function TransferList() {
             <div className="outerWrapper">
                 <div className="searchGroup">
                     <SearchInput placeholder="Search account" />
-                    <CircleBtn iconHref="../.././assets/images/icon/sprite_groupbtn.svg#Sliders" />
+                    <CircleBtn iconHref="assets/images/icon/sprite_groupbtn.svg#Sliders" />
                 </div>
                 <div className="outerWrapperCol">
                     {loading && <p>Loading accounts...</p>}

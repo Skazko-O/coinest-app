@@ -17,7 +17,7 @@ function Cashflow({ selectedYear, setSelectedYear }) {
     const [cashflowData, setCashflowData] = useState([]);
 
     useEffect(() => {
-        fetch('/data/cashflow.json')
+        fetch('data/cashflow.json')
             .then(response => response.json())
             .then(data => setCashflowData(data))
             .catch(error => console.error('Error loading JSON:', error));
@@ -52,7 +52,7 @@ function Cashflow({ selectedYear, setSelectedYear }) {
                         <Dropdown.Toggle className="customToggle" id="range">
                             <span>{selectedYear}</span>
                             <svg className="iconToggle" viewBox="0 0 24 24">
-                                <use xlinkHref="./assets/images/icon/sidebar-icon.svg#AngleDown" />
+                                <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleDown" />
                             </svg>
                         </Dropdown.Toggle>
                         <Dropdown.Menu>

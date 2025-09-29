@@ -31,8 +31,8 @@ function Sidebar() {
             <div>
                 <div className="logo">
                     <a href="/">
-                        <img src="/assets/images/logo.png" alt="Coinest icon" className='logoIcon' />
-                        <img src="/assets/images/Coinest.png" alt="Coinest wordmark" className="logoWordmark" />
+                        <img src="assets/images/logo.png" alt="Coinest icon" className='logoIcon' />
+                        <img src="assets/images/Coinest.png" alt="Coinest wordmark" className="logoWordmark" />
                     </a>
                 </div>
                 <nav className="menu">
@@ -46,16 +46,16 @@ function Sidebar() {
                                             onClick={() => toggleDropdown(label)}
                                         >
                                             <svg>
-                                                <use xlinkHref={`/assets/images/icon/sidebar-icon.svg#${icon}`} />
+                                                <use xlinkHref={`assets/images/icon/sidebar-icon.svg#${icon}`} />
                                             </svg>
                                             <span className="menuText">{label}</span>
                                             <span className="arrow">{openDropdown === label ?
                                                 <svg>
-                                                    <use xlinkHref="/assets/images/icon/sidebar-icon.svg#AngleUp" />
+                                                    <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleUp" />
                                                 </svg>
                                                 :
                                                 <svg>
-                                                    <use xlinkHref="/assets/images/icon/sidebar-icon.svg#AngleDown" />
+                                                    <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleDown" />
                                                 </svg>
                                             }</span>
                                         </span>
@@ -84,7 +84,7 @@ function Sidebar() {
                                         }
                                     >
                                         <svg>
-                                            <use xlinkHref={`/assets/images/icon/sidebar-icon.svg#${icon}`} />
+                                            <use xlinkHref={`assets/images/icon/sidebar-icon.svg#${icon}`} />
                                         </svg>
                                         <span className="menuText">{label}</span>
                                     </NavLink>
@@ -95,8 +95,8 @@ function Sidebar() {
                 </nav>
             </div>
             <div className="getPro">
-                <img src="/assets/images/icon/LockOpen.svg" className="lock" />
-                <img src="/assets/images/icon/symbol.svg" className="symbol" />
+                <img src="assets/images/icon/LockOpen.svg" className="lock" />
+                <img src="assets/images/icon/symbol.svg" className="symbol" />
                 <div className="textGetPro">
                     Gain full access to your finances with detailed analytics and graphs
                 </div>

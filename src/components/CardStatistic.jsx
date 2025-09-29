@@ -9,19 +9,19 @@ function CardStatistic({ data }) {
                 <div className="statisticHead">
                     <button className="circleBtn">
                         <svg className="icon">
-                            <use xlinkHref={`./assets/images/icon/sprite_card.svg#${data.icon}`} />
+                            <use xlinkHref={`assets/images/icon/sprite_card.svg#${data.icon}`} />
                         </svg>
                     </button>
                     <button className="dots">
                         <svg className="icon">
-                            <use xlinkHref="./assets/images/icon/sprite_card.svg#DotsThreeVertical" />
+                            <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                         </svg>
                     </button>
                 </div>
                 <div className="statisticMain">
                     <div className={`badge ${isPositive ? 'badgeUp' : 'badgeDown'}`}>
                         <div>
-                            <img src={`./assets/images/icon/${trendIcon}.svg`} alt={data.trendIcon} />
+                            <img src={`assets/images/icon/${trendIcon}.svg`} alt={data.trendIcon} />
                         </div>
                         <div>{data.trend}</div>
                     </div>

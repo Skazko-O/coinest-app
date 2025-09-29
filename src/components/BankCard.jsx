@@ -16,7 +16,7 @@ function BankCard({ bankcard, isActive }) {
                         {bankcard.number}
                     </div>
                     <svg className='copySVG'>
-                        <use xlinkHref="./assets/images/icon/sprite_card.svg#CopySimple" />
+                        <use xlinkHref="assets/images/icon/sprite_card.svg#CopySimple" />
                     </svg>
                 </div>
             </Card.Body>

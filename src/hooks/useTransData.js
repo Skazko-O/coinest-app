@@ -6,7 +6,7 @@ export function useTransData(selectedYear) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('/data/transactions.json');
+      const response = await fetch('data/transactions.json');
       const data = await response.json();
       setAllTransactions(data);
     };

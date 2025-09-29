@@ -5,7 +5,7 @@ function BankCardList({ selectedCardId, onSelect }) {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetch('/data/bankcard.json')
+    fetch('data/bankcard.json')
       .then(res => res.json())
       .then(data => setCards(data));
   }, []);

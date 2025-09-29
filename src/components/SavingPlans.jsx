@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 function SavingPlans() {
     const [plan, setPlans] = useState([]);
     useEffect(() => {
-        fetch('/data/plans.json')
+        fetch('data/plans.json')
             .then((res) => res.json())
             .then((data) => setPlans(data))
             .catch((err) => console.error('Failed to load saving plans:', err));
@@ -34,14 +34,14 @@ function SavingPlans() {
                                 <div className="leftGroup">
                                 <button className="circleBtn">
                                     <svg className="icon">
-                                        <use xlinkHref={`./assets/images/icon/sprite_card.svg#${plan.icon}`} />
+                                        <use xlinkHref={`assets/images/icon/sprite_card.svg#${plan.icon}`} />
                                     </svg>
                                 </button>
                                 <div className="totalItem">{plan.label}</div>
                                 </div>
                                 <button className="dots">
                                     <svg className="icon">
-                                        <use xlinkHref="./assets/images/icon/sprite_card.svg#DotsThreeVertical" />
+                                        <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                                     </svg>
                                 </button>
                             </div>
