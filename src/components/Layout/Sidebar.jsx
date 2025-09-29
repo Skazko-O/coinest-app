@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const menuItems = [
     { to: '/', icon: 'SquaresFour', label: 'Dashboard' },
@@ -30,10 +31,10 @@ function Sidebar() {
         <aside className="sidebar collapsed">
             <div>
                 <div className="logo">
-                    <a href="/">
+                    <Link to="/">
                         <img src="assets/images/logo.png" alt="Coinest icon" className='logoIcon' />
                         <img src="assets/images/Coinest.png" alt="Coinest wordmark" className="logoWordmark" />
-                    </a>
+                    </Link>
                 </div>
                 <nav className="menu">
                     <ul>
