@@ -12,13 +12,13 @@ function RecentTransactions({ selectedYear }) {
 
     const SortIcon = () => (
         <svg className="icon-xs" width="12" height="12">
-            <use xlinkHref="/assets/images/icon/sprite_card.svg#Sort" />
+            <use xlinkHref="assets/images/icon/sprite_card.svg#Sort" />
         </svg>
     );
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('/data/transactions.json');
+            const response = await fetch('data/transactions.json');
             const data = await response.json();
             setAllTransactions(data);
         };

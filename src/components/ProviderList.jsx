@@ -8,7 +8,7 @@ function ProviderList() {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch("/data/providers.json") // або заміни на реальний API
+        fetch("data/providers.json") // або заміни на реальний API
             .then((res) => res.json())
             .then(setCategories)
             .catch((err) => console.error("Помилка завантаження JSON:", err));
@@ -19,7 +19,7 @@ function ProviderList() {
             <div className="outerWrapper">
                 <div className="searchGroup">
                     <SearchInput placeholder="Search prividers" />
-                    <CircleBtn iconHref="/assets/images/icon/sprite_groupbtn.svg#Sliders" />
+                    <CircleBtn iconHref="assets/images/icon/sprite_groupbtn.svg#Sliders" />
                 </div>
                 <Accordion defaultActiveKey={null}>
                     {categories.map((item, idx) => (                        
