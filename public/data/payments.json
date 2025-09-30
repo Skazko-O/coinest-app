@@ -1,0 +1,14 @@
+[
+  { "id": 87654322, "companies": "UnitedHealth Group",  "bill": 1200, "status": "Successful" },
+  { "id": 12098765, "companies": "Amazon",  "bill": 850, "status": "Pending" },
+  { "id": 87654331, "companies": "Shopify",  "bill": 478, "status": "Pending" },
+  { "id": 12098764, "companies": "eBay",  "bill": 456, "status": "Successful" },
+  { "id": 87654327, "companies": "Comcast Xfinity",  "bill": 5000, "status": "Successful" },
+  { "id": 12098761, "companies": "AT&T Internet and Cable",  "bill": 755, "status": "Successful" },
+  { "id": 87654332, "companies": "AXA",  "bill": 1200, "status": "Successful" },
+  { "id": 12098767, "companies": "MetLife", "bill": 955, "status": "Successful" },
+  { "id": 87654321, "companies": "Prudential", "bill": 850, "status": "Pending" },
+  { "id": 12098768, "companies": "Zurich Insurance Group",  "bill": 1500, "status": "Pending" },
+  { "id": 87654333, "companies": "Frontier Communications", "bill": 789, "status": "Pending" },
+  { "id": 12098763, "companies": "DirecTV", "bill": 356, "status": "Pending" }
+]

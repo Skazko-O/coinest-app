@@ -2,7 +2,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FinanceBtn from '../components/FinanceBtn';
 import TransferList from '../components/TransferList';
-import RecentTransferList from '../components/RecentTransferList';
+import RecentList from '../components/RecentList';
 import TransferForm from '../components/TransferForm';
 
 function Transfer() {
@@ -16,7 +16,7 @@ function Transfer() {
             <Col sm={9}>
                 <Row>
                     <Col>
-                        <RecentTransferList />
+                        <RecentList title="Recent Transfer" dataUrl="data/transfer.json" />
                     </Col>
                 </Row>
                 <Row>

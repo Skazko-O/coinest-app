@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import RecentItemList from "./RecentItemList";
+import RecentItem from "./RecentItem";
 
-function RecentTransferList() {
+function RecentList({ title , dataUrl } ) {
     const [transferData, setTransferData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("data/transfer.json")
+        fetch(dataUrl)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error("Failed to fetch transfer data");
@@ -22,23 +22,23 @@ function RecentTransferList() {
                 setError(err.message);
                 setLoading(false);
             });
-    }, []);
+    }, [dataUrl]);
 
     return (
         <div className="outerWrapperBorder">
             <div className='headerSection'>
-                <h3 className='headingSec'>Recent Transfer</h3>
+                <h3 className='headingSec'>{title}</h3>
                 <a href='#' className='showMore'>Show More</a>
             </div>
             <div className="outerWrapperRaw">
                 {loading && <p>Loading transfers...</p>}
                 {error && <p>Error: {error}</p>}
                 {!loading && !error && transferData.map((acc) => (
-                    <RecentItemList key={acc.id} transfer={acc} />
+                    <RecentItem key={acc.id} transfer={acc} />
                 ))}
             </div>
         </div>
     );
 }
 
-export default RecentTransferList;
+export default RecentList;
