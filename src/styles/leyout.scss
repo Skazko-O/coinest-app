@@ -9,10 +9,11 @@ header {
 }
 
 .pageName {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 5fr 5fr;
+  align-items: center;
 }
+
 
 .rightSection {
     display: flex;

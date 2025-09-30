@@ -2,6 +2,7 @@ import { useLocation } from "react-router";
 import SearchInput from "../SearchInput";
 import CircleBtn from "../CircleBtn";
 import Themeswitcher from '../Themeswitcher';
+import CurrencyRates from "../CurrencyRates";
 
 function Header() {
 
@@ -19,31 +20,34 @@ function Header() {
     '/promos': 'Promos',
     '/insights': 'Insights'
   }
- 
+
   const location = useLocation();
   const currentTitle = pageTitles[location.pathname] || 'Page';
   return (
     <header>
-  <div className="pageName">
-    <h1>{currentTitle}</h1>    
-    <div className="rightSection">
-       {location.pathname === '/' && <SearchInput placeholder="Search..." />}
-      <div className="circleGroup">
-        <CircleBtn iconHref="assets/images/icon/sprite_header.svg#ChatTeardropDots" />
-        <CircleBtn iconHref="assets/images/icon/sprite_header.svg#Bell" />
-        <Themeswitcher />
-      </div>
-      <div className="userGroup">
-        <div>
-          <a href="#" className="userName">
-            Skazko Oleksandr
-          </a>
+      <div className="container">
+        <div className="pageName">
+          <h1>{currentTitle}</h1>
+          <div> <CurrencyRates /></div>
+          <div className="rightSection">
+            {location.pathname === '/' && <SearchInput placeholder="Search..." />}
+            <div className="circleGroup">
+              <CircleBtn iconHref="assets/images/icon/sprite_header.svg#ChatTeardropDots" />
+              <CircleBtn iconHref="assets/images/icon/sprite_header.svg#Bell" />
+              <Themeswitcher />
+            </div>
+            <div className="userGroup">
+              <div>
+                <a href="#" className="userName">
+                  Skazko Oleksandr
+                </a>
+              </div>
+              <CircleBtn imgSrc="assets/images/icon/Avatar.png" alt="avatar" />
+            </div>
+          </div>
         </div>
-         <CircleBtn imgSrc="assets/images/icon/Avatar.png" alt="avatar" />
       </div>
-    </div>
-  </div>
-</header>
+    </header>
   );
 }
 
