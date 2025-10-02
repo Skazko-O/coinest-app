@@ -42,7 +42,7 @@ function Header() {
                   Skazko Oleksandr
                 </a>
               </div>
-              <CircleBtn imgSrc="assets/images/icon/Avatar.png" alt="avatar" />
+              <CircleBtn imgSrc="assets/images/avatars/Avatar.png" alt="avatar" />
             </div>
           </div>
         </div>

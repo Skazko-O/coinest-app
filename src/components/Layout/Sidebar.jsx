@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useCommonStore } from '../../store/commonStore';
 
 const menuItems = [
     { to: '/', icon: 'SquaresFour', label: 'Dashboard' },
@@ -26,14 +27,18 @@ function Sidebar() {
     const toggleDropdown = (label) => {
         setOpenDropdown(openDropdown === label ? null : label);
     };
+    const colorTheme = useCommonStore((state) => state.colorTheme);
+    const logoSrc = `assets/images/logo-${colorTheme}.png`;
+    const wordmarkSrc = `assets/images/coinest-${colorTheme}.png`;
+
 
     return (
         <aside className="sidebar collapsed">
             <div>
                 <div className="logo">
                     <Link to="/">
-                        <img src="assets/images/logo.png" alt="Coinest icon" className='logoIcon' />
-                        <img src="assets/images/Coinest.png" alt="Coinest wordmark" className="logoWordmark" />
+                        <img src={logoSrc} alt="Coinest icon" className='logoIcon' />
+                        <img src={wordmarkSrc} alt="Coinest wordmark" className="logoWordmark" />
                     </Link>
                 </div>
                 <nav className="menu">

@@ -1,7 +1,7 @@
 
 function SqearBtn({ iconHref, imgSrc, alt = '', onClick }) {
   return (
-    <button className="sqearBtn" onClick={onClick}>
+    <div className="sqearBtn" onClick={onClick} role="button" aria-label={alt}>
       {iconHref && (
         <svg aria-hidden="true">
           <use href={iconHref} />
@@ -10,7 +10,7 @@ function SqearBtn({ iconHref, imgSrc, alt = '', onClick }) {
       {imgSrc && (
         <img src={imgSrc} alt={alt} />
       )}
-    </button>
+    </div>
   );
 }
 

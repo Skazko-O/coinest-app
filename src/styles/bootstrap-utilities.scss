@@ -87,16 +87,17 @@ ul {
 
     &:hover {
         background-color: darken($green-bg, 3%);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 }
 
 .btn-icon-text {
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    // transition: background-color 0.3s ease, box-shadow 0.3s ease;
+     transition: background-color 0.3s ease;
 
     &:hover {
         background-color: lighten($green-bg, 5%);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 }
 
@@ -128,7 +129,7 @@ ul {
 .card {
     border: 1px solid $border-color;
     border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
+    // box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
 }
 
 .card-body.activeCard {
@@ -593,7 +594,7 @@ ul {
             color: $green-text-color;
             font-weight: 600;
             border-bottom: 3px solid var(--accent-color);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
     }
 }
@@ -628,22 +629,22 @@ ul {
 }
 
 .status.completed {
-    color: $green-text-color;
+    color: --green-text-color;
 }
 
 .status.pending {
-    color: $yellow-text-color;
+    color: --yellow-text-color;
 }
 
 .status.failed {
-    color: $warning-accent-color;
+    color: --warning-accent-color; 
 }
 
 .custom-accordion .accordion-button {
     border-radius: 16px !important;
     overflow: hidden;
     border: 1px solid $border-color;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
+    // box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
 }
 
 .accordion-item {

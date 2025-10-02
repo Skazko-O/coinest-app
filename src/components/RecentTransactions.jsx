@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
-import SqearBtn from './sqearBtn';
+import SqearBtn from './SqearBtn';
 import Table from 'react-bootstrap/Table';
 
 
