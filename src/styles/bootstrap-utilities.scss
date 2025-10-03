@@ -3,8 +3,7 @@ $primary: #1E4841;
 
 
 @use './variables.scss' as *;
-@use "bootstrap/scss/bootstrap" with ($secondary: $secondary,
-    $primary: $primary);
+@use "bootstrap/scss/bootstrap" with ($secondary: $secondary, $primary: $primary);
 
 *,
 *::before,
@@ -44,7 +43,7 @@ img {
 body {
     font-size: 1rem;
     color: var(--accent-color);
-    font-family: 'Urbanist';
+    font-family: 'rawline';
     background-color: var(--bs-body-bg);
     color: var(--bs-body-color);
 }
@@ -390,7 +389,7 @@ ul {
 
     .cardText {
         color: $green-bg;
-        font-size: 10px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 130%;
         padding-bottom: 2px;
@@ -473,10 +472,14 @@ ul {
     max-width: 100%;
     border-radius: 15px;
     padding: 1px 4px;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 130%;
     color: $green-text-color;
+   
+    img {
+        vertical-align: middle;
+    }
 }
 
 .badgeUp {
@@ -512,7 +515,7 @@ ul {
 }
 
 .spent {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 130%;
     color: var(--accent-color);
@@ -520,7 +523,7 @@ ul {
 }
 
 .limit {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 130%;
     color: var(--accent-color);
 }
@@ -585,15 +588,14 @@ ul {
         padding: 8px 16px;
         font-size: 12px;
         cursor: pointer;
-        color: $text-color;
-        border-radius: 6px;
-        border-bottom: 1px solid $border-color;
+        color: $text-color;        
+        border-bottom: 1px solid var(--border-color);
         transition: all 0.2s ease;
 
         &.active {
             color: $green-text-color;
             font-weight: 600;
-            border-bottom: 3px solid var(--accent-color);
+            border-bottom: 3px solid var(--active-color);
             // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
     }

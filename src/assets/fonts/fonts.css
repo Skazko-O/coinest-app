@@ -54,3 +54,38 @@
   font-weight: 600;
   src: url('./poppins/poppins-v23-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+@font-face {
+    font-family: 'rawline';    
+    src: url('./raleway/rawline-400.woff2') format('woff2');         
+    font-weight: 400;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'rawline';    
+    src: url('./raleway/rawline-500.woff2') format('woff2');         
+    font-weight: 500;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'rawline';    
+    src: url('./raleway/rawline-600.woff2') format('woff2');         
+    font-weight: 600;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'rawline';    
+    src: url('./raleway/rawline-600i.woff2') format('woff2');         
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'rawline';    
+    src: url('./raleway/rawline-700.woff2') format('woff2');         
+    font-weight: 700;
+    font-style: normal; 
+}

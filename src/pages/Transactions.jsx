@@ -1,14 +1,14 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import RecentTransactions from '../components/RecentTransactions';
-import CurrencyRates from '../components/CurrencyRates';
+import TransactionTable from '../components/Transactions';
+
 
 
 function Transactions() {  
     return (
         <Row>
             <Col sm={12}>
-                 <RecentTransactions selectedYear={2025} />
+                 <TransactionTable />
             </Col>                      
         </Row>
     );
