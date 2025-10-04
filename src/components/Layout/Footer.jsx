@@ -5,7 +5,7 @@ function Footer() {
         <footer>
             <div className="footerElement">
                 <div className="copyright">
-                    Copyright © 2024{" "}
+                    Copyright © 2025{" "}
                     <a href="https://skazko-o.github.io/My_Homeworks/" target="_blank" rel="noopener">
                         Skazko-O
                     </a>

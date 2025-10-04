@@ -52,7 +52,7 @@ function TransferForm() {
   return (
     <div className="outerWrapperBorder">
       <div className='headerSection'>
-        <h3 className='headingSec'>Recent Transfer</h3>
+        <h3 className='headingSec'>Make a Payment</h3>
       </div>
       <Form className="customForm" onSubmit={handleSubmit}>
         <Form.Group className="cardWrapperForm pb-3" controlId="formGridCardNumber">

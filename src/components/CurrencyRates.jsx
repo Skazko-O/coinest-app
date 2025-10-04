@@ -7,7 +7,20 @@ const CurrencyRates = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://api.monobank.ua/bank/currency')
+        const lastFetchDate = localStorage.getItem('currencyFetchDate');
+        const today = new Date().toISOString().split('T')[0];
+
+        if (lastFetchDate === today) {
+            const cachedRates = localStorage.getItem('currencyRates');
+            if (cachedRates) {
+                const { usd, eur } = JSON.parse(cachedRates);
+                setUsdRate(usd);
+                setEurRate(eur);
+                setLoading(false);
+                return;
+            }
+        }
+        fetch('https://api.monobank.ua/bank/currency')            
             .then((res) => res.json())
             .then((data) => {
                 const usd = data.find(
@@ -16,6 +29,10 @@ const CurrencyRates = () => {
                 const eur = data.find(
                     (item) => item.currencyCodeA === 978 && item.currencyCodeB === 980
                 );
+
+                localStorage.setItem('currencyFetchDate', today);
+                localStorage.setItem('currencyRates', JSON.stringify({ usd, eur }));
+
                 setUsdRate(usd);
                 setEurRate(eur);
                 setLoading(false);
@@ -30,19 +47,19 @@ const CurrencyRates = () => {
 
     return (
         <div className="d-flex align-items-center gap-3 flex-wrap">
-            
+
             {usdRate && (
                 <div className="d-flex align-items-center gap-1">
                     <div>USD/UAH</div>
-                    <p> {usdRate.rateBuy} /</p>
-                    <p> {usdRate.rateSell}</p>
+                    <p> {usdRate.rateBuy.toFixed(2)} /</p>
+                    <p> {usdRate.rateSell.toFixed(2)}</p>
                 </div>
             )}
             {eurRate && (
                 <div className="d-flex align-items-center gap-1">
                     <div>EUR/UAH</div>
-                    <p> {eurRate.rateBuy} /</p>
-                    <p> {eurRate.rateSell}</p>
+                    <p> {eurRate.rateBuy.toFixed(2)} /</p>
+                    <p> {eurRate.rateSell.toFixed(2)}</p>
                 </div>
             )}
         </div>

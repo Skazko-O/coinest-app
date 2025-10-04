@@ -114,7 +114,7 @@ function Statistic({ selectedYear }) {
                         ))}
                     </Pie>
                 </PieChart>
-                <Table striped bordered hover>                   
+                <Table striped bordered hover >                   
                     <tbody className="tableRawStyle">
                         {sortedPieData.map((group, index) => {
                             const percent = total > 0 ? ((group.value / total) * 100).toFixed(1) : '0.0';

@@ -14,7 +14,7 @@ $primary: #1E4841;
 }
 
 p {
-  margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 ul,
@@ -86,17 +86,14 @@ ul {
 
     &:hover {
         background-color: darken($green-bg, 3%);
-        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 }
 
 .btn-icon-text {
-    // transition: background-color 0.3s ease, box-shadow 0.3s ease;
-     transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
 
     &:hover {
         background-color: lighten($green-bg, 5%);
-        // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 }
 
@@ -122,17 +119,19 @@ ul {
 }
 
 .card {
+    border: none;
     margin-bottom: 16px;
 }
 
-.card {
-    border: 1px solid $border-color;
+.card-body {
     border-radius: 16px;
-    // box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
+    border: 1px solid $border-color;
 }
 
 .card-body.activeCard {
     background-color: $green-bg;
+    border-radius: 16px;
+    border: 1px solid $green-bg;
 }
 
 .name {
@@ -265,16 +264,13 @@ ul {
     font-weight: 600;
     line-height: 125%;
     padding-bottom: 4px;
+    color: var(--accent-color);
 }
 
 .status {
     font-size: 11px;
     font-weight: 500;
     line-height: 130%;
-}
-
-.status.pending {
-    color: #F73541;
 }
 
 .status.successful {
@@ -330,9 +326,9 @@ ul {
 }
 
 .outerWrapperBankCard {
-    background-color: #FBFBFC;
     border-radius: 16px;
     padding: 16px;
+    background-color: var(--bg-color);
 }
 
 .outerWrapperRawBankCard {
@@ -349,6 +345,7 @@ ul {
 
 .outerWrapperRawBankCard>* {
     flex: 1 0 0;
+
 }
 
 .widgetCard {
@@ -476,7 +473,7 @@ ul {
     font-weight: 500;
     line-height: 130%;
     color: $green-text-color;
-   
+
     img {
         vertical-align: middle;
     }
@@ -588,7 +585,7 @@ ul {
         padding: 8px 16px;
         font-size: 12px;
         cursor: pointer;
-        color: $text-color;        
+        color: $text-color;
         border-bottom: 1px solid var(--border-color);
         transition: all 0.2s ease;
 
@@ -606,6 +603,7 @@ ul {
     font-size: 10px;
     color: $text-color;
     line-height: 130%;
+    white-space: nowrap;
 
     svg {
         width: 12px;
@@ -614,8 +612,12 @@ ul {
     }
 }
 
+.colName {
+    white-space: nowrap;
+}
+
 .tableRawStyle {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 600;
     line-height: 130%;
     color: $text-color;
@@ -625,34 +627,52 @@ ul {
     padding: 4px 8px;
     border-radius: 4px;
     font-weight: 500;
+    font-size: 10px;
     display: inline-block;
     text-align: center;
     border: 1px solid $border-color;
 }
 
 .status.completed {
-    color: --green-text-color;
+    color: var(--green-text-color);
 }
 
 .status.pending {
-    color: --yellow-text-color;
+    color: var(--yellow-text-color);
 }
 
 .status.failed {
-    color: --warning-accent-color; 
+    color: var(--warning-accent-color);
 }
 
 .custom-accordion .accordion-button {
     border-radius: 16px !important;
     overflow: hidden;
     border: 1px solid $border-color;
-    // box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px, rgba(0, 0, 0, 0.12) 0px 4px 8px;
 }
 
 .accordion-item {
-  border: none;
+    border: none;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: $green-bg;
+    background-color: $green-bg;
+}
+
+.table,
+.table th,
+.table td {
+  border: none !important;
+  border-top: 1px solid var(--border-color) !important;  
+}
+
+.tHead th {
+    background-color: var(--green-bg) !important;
+    border-top: 1px solid var(--green-bg) !important;
+    padding: 10px;
+    background-color: var(--green-bg) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {   
+    --bs-table-bg-type: var(--bg-color);
 }

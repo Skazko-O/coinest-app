@@ -95,7 +95,7 @@ function RecentTransactions({ selectedYear }) {
                 </div>
 
                 <Table striped bordered hover>
-                    <thead>
+                    <thead className='tHead'>
                         <tr>
                             <th><div className="tableHeadStyle" >Transaction Name <SortIcon /></div></th>
                             <th><div className="tableHeadStyle" >Date & Time <SortIcon /></div></th>
@@ -107,7 +107,7 @@ function RecentTransactions({ selectedYear }) {
                     <tbody className="tableRawStyle">
                         {filteredTransactions.map((tx, index) => (
                             <tr key={index}>
-                                <td>{tx.name}</td>
+                                <td className='colName'>{tx.name}</td>
                                 <td><div style={{ display: 'flex', flexDirection: 'column' }}>
                                     <span>
                                         {new Date(tx.datetime).toLocaleDateString('uk-UA', {

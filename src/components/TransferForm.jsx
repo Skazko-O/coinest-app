@@ -11,6 +11,7 @@ import { showToast } from '../utils/toast';
 
 function TransferForm() {
   const [accounts, setAccounts] = useState([]);
+  const [activeType, setActiveType] = useState('Local');
   const [selectedCardId, setSelectedCardId] = useState(null);
   const [selectedRecipient, setSelectedRecipient] = useState('');
   const [amount, setAmount] = useState('');
@@ -37,10 +38,10 @@ function TransferForm() {
     console.log('Submitting:', payload);
 
     if (!selectedRecipient || !amount || !method || !checked) {
-    showToast.error('Please fill in all required fields');
-    return;
-  }
-  showToast.success('The transfer has been successfully sent!');
+      showToast.error('Please fill in all required fields');
+      return;
+    }
+    showToast.success('The transfer has been successfully sent!');
 
     setSelectedCardId(null);
     setSelectedRecipient('');
@@ -53,15 +54,23 @@ function TransferForm() {
   return (
     <div className="outerWrapperBorder">
       <div className='headerSection'>
-        <h3 className='headingSec'>Recent Transfer</h3>
+        <h3 className='headingSec'>Transfer Form</h3>
       </div>
       <Form className="customForm" onSubmit={handleSubmit}>
         <Row className="btnForm">
           <Form.Group as={Col}>
-            <BlockBtn label="Local" />
+            <BlockBtn
+              label="Local"
+              isActive={activeType === 'Local'}
+              onClick={() => setActiveType('Local')}
+            />
           </Form.Group>
           <Form.Group as={Col}>
-            <BlockBtn label="International" variant="warning" />
+            <BlockBtn
+              label="International"
+              isActive={activeType === 'International'}
+              onClick={() => setActiveType('International')}
+            />
           </Form.Group>
         </Row>
         <Form.Group className="cardWrapperForm pb-3" controlId="formGridCardNumber">

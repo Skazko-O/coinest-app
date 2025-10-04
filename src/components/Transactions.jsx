@@ -151,11 +151,12 @@ function PaginationControls({ table, pagination }) {
         key={i}
         onClick={() => table.setPageIndex(i)}
         style={{
-          fontWeight: i === current ? 'bold' : 'normal',
-          padding: '4px 8px',
-          border: '1px solid #ccc',
-          background: i === current ? '#eee' : 'white',
-          borderRadius: '4px',
+          fontSize: '10px',
+          fontWeight: '500',
+          color: i === current ? '#FBFBFC' : 'var(--green-text-color)',
+          padding: '6px 10px',
+          background: i === current ? 'var(--green-text-color)' : 'var(--green-bg)',
+          borderRadius: '7px',
         }}
       >
         {i + 1}
@@ -200,10 +201,10 @@ function PaginationControls({ table, pagination }) {
             onClick={() => table.setPageIndex(pageCount - 1)}
             style={{
               fontWeight: current === pageCount - 1 ? 'bold' : 'normal',
-              padding: '4px 8px',
-              border: '1px solid #ccc',
-              background: current === pageCount - 1 ? '#eee' : 'white',
-              borderRadius: '4px',
+              padding: '6px 10px',
+              background: current === pageCount - 1 ? 'var(--green-text-color)' : 'var(--green-bg)',
+              borderRadius: '7px',              
+              fontSize: '10px'
             }}
           >
             {pageCount}
