@@ -42,7 +42,7 @@ function TransferList() {
                     ))}
                 </div>
             </div>
-            <BlockBtn />
+            <BlockBtn isActive = "true" />
         </div>
     );
 }

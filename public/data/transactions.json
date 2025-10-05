@@ -4,11 +4,13 @@
     "account": "Platinum Plus Visa",
     "name": "Electricity",
     "category": "Bill",
+    "icon": "Lightning",
     "datetime": "2025-03-01T04:28:48",
     "amount": 295.81,
     "note": "Payment for monthly electricity bill",
     "status": "Failed",
     "type": "expence"
+    
   },
   {
     "id": "4567890134",

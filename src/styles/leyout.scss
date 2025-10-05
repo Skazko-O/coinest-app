@@ -46,7 +46,7 @@ header {
         flex: 1;
         padding: 10px 16px;
         border-radius: 20px;
-        background-color: $bg-color;
+        background-color: var(--grey-bg);
         border: 1px solid var(--border-color);
     }
 
