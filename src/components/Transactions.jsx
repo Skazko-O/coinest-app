@@ -170,27 +170,28 @@ export default function TransactionTable() {
   ];
 
   const [rowSelection, setRowSelection] = useState({});
+  
+  const [selectedCategory, setSelectedCategory] = useState('All Category');
+  const categories = ['All Category', ...new Set(data.map(tx => tx.category))];
+
+  const filteredData = selectedCategory === 'All Category'
+    ? data
+    : data.filter(tx => tx.category === selectedCategory);
 
   const table = useReactTable({
-    data,
+    data: filteredData,
     columns,
-    state: {
-      pagination,
-      sorting,
-      rowSelection,
-    },
+    state: { pagination, sorting, rowSelection },
     onRowSelectionChange: setRowSelection,
     onPaginationChange: setPagination,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
-
     enableRowSelection: true,
   });
 
   const selectedRows = table.getSelectedRowModel().rows;
-
 
   if (loading) return <div>Loading transactions...</div>;
 
@@ -200,22 +201,30 @@ export default function TransactionTable() {
         <div className="statisticHead">
           <div className='flexGroup'>
             <SearchInput placeholder="Search transaction" />
-            <Dropdown>
+            <Dropdown onSelect={(key) => setSelectedCategory(key)}>
               <Dropdown.Toggle className="customToggle" id="range">
-                <span>All Category</span>
+                <span>{selectedCategory}</span>
                 <svg className="iconToggle" viewBox="0 0 24 24">
                   <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleDown" />
                 </svg>
-              </Dropdown.Toggle>              
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                {categories.map(cat => (
+                  <Dropdown.Item key={cat} eventKey={cat}>
+                    {cat}
+                  </Dropdown.Item>
+                ))}
+              </Dropdown.Menu>
             </Dropdown>
+
             <Dropdown>
               <Dropdown.Toggle className="customToggle" id="range">
                 <span>All Account</span>
                 <svg className="iconToggle" viewBox="0 0 24 24">
                   <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleDown" />
                 </svg>
-              </Dropdown.Toggle>              
-            </Dropdown>           
+              </Dropdown.Toggle>
+            </Dropdown>
           </div>
           <div className='flexGroup'>
             <Dropdown>
@@ -227,8 +236,8 @@ export default function TransactionTable() {
                 <svg className="iconToggle" viewBox="0 0 24 24">
                   <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleDown" />
                 </svg>
-              </Dropdown.Toggle>              
-            </Dropdown>    
+              </Dropdown.Toggle>
+            </Dropdown>
             <button className='downloadBtn'>
               Download
             </button>
@@ -318,7 +327,7 @@ function PaginationControls({ table, pagination }) {
 
   return (
     <div style={{ marginTop: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-      <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+      <div style={{ display: 'flex', gap: '10px', alignItems: 'center', fontSize: "12px" }}>
         <span>Showing</span>
         <select style={{
           fontFamily: 'rawline',

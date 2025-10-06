@@ -72,7 +72,7 @@ ul {
 
 .icon-xs {
     width: 24px;
-    height: 24px;    
+    height: 24px;
     fill: $green-text-color;
 }
 
@@ -122,6 +122,8 @@ ul {
     margin-bottom: 16px;
 }
 
+
+
 .card-body {
     border-radius: 16px;
     border: 1px solid $border-color;
@@ -169,7 +171,7 @@ ul {
 .outerWrapperCol {
     display: flex;
     flex-direction: column;
-    height: 100%;    
+    height: 100%;
     overflow: hidden;
     overflow-y: auto;
     overflow-x: hidden;
@@ -661,8 +663,8 @@ ul {
 .table,
 .table th,
 .table td {
-  border: none !important;
-  border-top: 1px solid var(--border-color) !important;  
+    border: none !important;
+    border-top: 1px solid var(--border-color) !important;
 }
 
 .tHead th {
@@ -672,7 +674,7 @@ ul {
     background-color: var(--green-bg) !important;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) > * {   
+.table-striped>tbody>tr:nth-of-type(odd)>* {
     --bs-table-bg-type: var(--bg-color);
 }
 
@@ -681,7 +683,8 @@ ul {
     padding: 7px;
     border-radius: 7px;
     background-color: var(--grey-bg);
-    svg{
+
+    svg {
         width: 14px;
         height: 14px;
     }
@@ -694,4 +697,34 @@ ul {
     font-size: 12px;
     font-weight: 600;
     border-radius: 8px;
+}
+
+.cardScrollContainer {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.bankCardItem {
+    flex: 0 0 calc(50% - 0.5rem);
+    scroll-snap-align: start;
+}
+
+.text-danger {
+    font-weight: 700;
+}
+
+.clickCard {
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+
+    :hover {
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    }
 }

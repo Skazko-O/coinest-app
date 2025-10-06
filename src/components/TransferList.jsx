@@ -8,6 +8,7 @@ function TransferList() {
     const [accounts, setAccounts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
         fetch("data/accounts.json")
@@ -27,22 +28,34 @@ function TransferList() {
             });
     }, []);
 
+    const filteredAccounts = accounts.filter((acc) => {
+        const fullName = `${acc.name} ${acc.fname}`.toLowerCase();
+        return fullName.includes(searchTerm.toLowerCase());
+    });
+
     return (
         <div>
             <div className="outerWrapper">
                 <div className="searchGroup">
-                    <SearchInput placeholder="Search account" />
+                    <SearchInput
+                        placeholder="Search account"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
                     <CircleBtn iconHref="assets/images/icon/sprite_groupbtn.svg#Sliders" />
                 </div>
                 <div className="outerWrapperCol">
                     {loading && <p>Loading accounts...</p>}
                     {error && <p>Error: {error}</p>}
-                    {!loading && !error && accounts.map((acc) => (
+                    {!loading && !error && filteredAccounts.map((acc) => (
                         <ItemList key={acc.id} account={acc} />
                     ))}
+                    {!loading && !error && filteredAccounts.length === 0 && (
+                        <p>No matching accounts found</p>
+                    )}
                 </div>
             </div>
-            <BlockBtn isActive = "true" />
+            <BlockBtn isActive="true" />
         </div>
     );
 }

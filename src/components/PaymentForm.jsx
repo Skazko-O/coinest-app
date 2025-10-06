@@ -56,10 +56,13 @@ function TransferForm() {
       </div>
       <Form className="customForm" onSubmit={handleSubmit}>
         <Form.Group className="cardWrapperForm pb-3" controlId="formGridCardNumber">
+          <div className="cardScrollContainer">
           <BankCardList
             selectedCardId={selectedCardId}
             onSelect={(id) => setSelectedCardId(id)}
+            cardClassName="bankCardItem"
           />
+          </div>
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridRecipient" className="pb-3">

@@ -1,4 +1,8 @@
-function SearchInput({ placeholder = 'Search...', id = 'search', name = 'search' }) {
+function SearchInput({ 
+  placeholder = 'Search...',
+  id = 'search',
+  name = 'search',
+  onChange }) {
   return (
     <div className="searchWrapper">
       <svg className="searchIcon" aria-hidden="true">
@@ -10,6 +14,7 @@ function SearchInput({ placeholder = 'Search...', id = 'search', name = 'search'
         name={name}
         placeholder={placeholder}
         className="searchInput"
+        onChange={onChange}
       />
     </div>
   );

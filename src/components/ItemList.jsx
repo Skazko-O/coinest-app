@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import CircleBtn from './CircleBtn';
 
-function ItemList({ account }) {
+function ItemList({ account, onClick }) {
   if (!account) return null;
   return (
 

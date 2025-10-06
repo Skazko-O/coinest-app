@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BankCard from './BankCard';
 
-function BankCardList({ selectedCardId, onSelect }) {
+function BankCardList({ selectedCardId, onSelect, cardClassName }) {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
@@ -12,12 +12,13 @@ function BankCardList({ selectedCardId, onSelect }) {
 
   return (
     <>
-      <h4 className="headForm">Payment Account</h4>
+      
       <div className="outerWrapperBankCard">
         <div className="outerWrapperRawBankCard">
           {cards.map((card) => (
             <div
               key={card.id}              
+              className={cardClassName}
               onClick={() => onSelect(card.id)}
               role="button"
               tabIndex={0}

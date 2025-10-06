@@ -6,27 +6,43 @@ import Accordion from 'react-bootstrap/Accordion';
 
 function ProviderList() {
     const [categories, setCategories] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
-        fetch("data/providers.json") // або заміни на реальний API
+        fetch("data/providers.json")
             .then((res) => res.json())
             .then(setCategories)
-            .catch((err) => console.error("Помилка завантаження JSON:", err));
+            .catch((err) => console.error("Download error JSON:", err));
     }, []);
+
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value.toLowerCase())
+    };
 
     return (
         <div>
             <div className="outerWrapper">
                 <div className="searchGroup">
-                    <SearchInput placeholder="Search prividers" />
+                    <SearchInput
+                        placeholder="Search providers"
+                        onChange={handleSearchChange}
+                    />
                     <CircleBtn iconHref="assets/images/icon/sprite_groupbtn.svg#Sliders" />
                 </div>
                 <Accordion defaultActiveKey={null}>
-                    {categories.map((item, idx) => (                        
-                            <Accordion.Item 
-                            eventKey={String(idx)} 
-                            className="custom-accordion mb-3" 
-                            key={item.category}>
+                    {categories.map((item, idx) => {
+                        const filteredCompanies = item.companies.filter(company =>
+                            company.toLowerCase().includes(searchTerm)
+                        );
+
+                        if (filteredCompanies.length === 0) return null;
+
+                        return (
+                            <Accordion.Item
+                                eventKey={String(idx)}
+                                className="custom-accordion mb-3"
+                                key={item.category}
+                            >
                                 <Accordion.Header>
                                     <div className="d-flex align-items-center gap-2">
                                         <CircleBtn iconHref={item.iconHref} />
@@ -35,19 +51,21 @@ function ProviderList() {
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <ul className="list-group">
-                                        {item.companies.map((company) => (
-                                            <li 
-                                            className="list-group-item d-flex align-items-center gap-3 mb-3" 
-                                            style={{ border: "none" }} 
-                                            key={`${item.category}-${company}`}>
+                                        {filteredCompanies.map((company) => (
+                                            <li
+                                                className="list-group-item d-flex align-items-center gap-3 mb-3"
+                                                style={{ border: "none" }}
+                                                key={`${item.category}-${company}`}
+                                            >
                                                 <CircleBtn iconHref={item.iconHref} />
                                                 {company}
                                             </li>
                                         ))}
                                     </ul>
                                 </Accordion.Body>
-                            </Accordion.Item>                        
-                    ))}
+                            </Accordion.Item>
+                        );
+                    })}
                 </Accordion>
             </div>
         </div>

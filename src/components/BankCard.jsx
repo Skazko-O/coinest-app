@@ -1,9 +1,9 @@
 import Card from 'react-bootstrap/Card';
 
-function BankCard({ bankcard, isActive }) {
+function BankCard({ bankcard, isActive, className }) {
     return (
 
-        <Card>
+        <Card className={className} style={{marginBottom:"0"}}>
             <Card.Body className={`cardBody ${isActive ? 'activeCard' : ''}`}>
                 <div className='cardName'>
                     {bankcard.name}
