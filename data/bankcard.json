@@ -2,11 +2,23 @@
     { "id": 1,
       "name": "Elite Traveler Mastercard",
       "balance": "643,000",
-      "number": "5589 9955 7766 3321"},
+      "iconHref": "assets/images/icon/sprite_card.svg#MC",
+      "number": "5589 9955 7766 3321"
+    },
 
     { "id": 2,
       "name": "Platinum Plus Visa",
       "balance": "415,000",
-      "number": "4532 8723 0045 9967"}
+      "iconHref": "assets/images/icon/sprite_card.svg#Visa",
+      "number": "4532 8723 0045 9967"
+    },
+
+      {
+        "id": 3,
+        "name": "Freedom Unlimited Mastercard",
+        "balance": "520,000",
+        "iconHref": "assets/images/icon/sprite_card.svg#MC",
+        "number": "5456 8654 8665 4445"
+      }
 
 ]
