@@ -12,6 +12,13 @@ import './assets/fonts/fonts.css';
 import Transactions from './pages/Transactions';
 import LoginPage from './pages/LoginPage';
 import RequireAuth from './components/RequireAuth';
+import Invoices from './pages/Invoices';
+import Cards from './pages/Cards';
+import Plans from './pages/Plans';
+import Investments from './pages/Investments';
+import Inbox from './pages/Inbox';
+import Promos from './pages/Promos';
+import Insights from './pages/Insights';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -24,11 +31,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="payments/transfer" element={<Transfer />} />
             <Route path="payments/payment" element={<Payment />} />
             <Route path="transactions" element={<Transactions />} />
+            <Route path="invoices" element={<Invoices />} />
+            <Route path="cards" element={<Cards />} />
+            <Route path="plans" element={<Plans />} />
+            <Route path="investments" element={<Investments />} />
+            <Route path="inbox" element={<Inbox />} />
+            <Route path="promos" element={<Promos />} />
+            <Route path="insights" element={<Insights />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Route>
       </Routes>
-      <ToastContainer position="top-center" autoClose={3000} />
+      <ToastContainer position="top-center" autoClose={2000} />
     </HashRouter>
   </React.StrictMode>
 );
