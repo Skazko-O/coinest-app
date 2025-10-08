@@ -1,0 +1,100 @@
+.login-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ECF4E9;
+    overflow: hidden;
+}
+
+.circle-sm {
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #D6EFC7;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    animation: slideInCircle 1s ease-out forwards;
+    animation-delay: 0s;
+    z-index: 3;
+}
+
+.circle-midl {
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #FCEEB5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    animation: slideInCircle 1s ease-out forwards;
+    animation-delay: 0.3s;
+    z-index: 2;
+}
+
+.circle-high {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #F7D9C4;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    animation: slideInCircle 1s ease-out forwards;
+    animation-delay: 0.6s;
+    z-index: 1;
+}
+
+@keyframes slideInCircle {
+    0% {
+        transform: translate(-50%, 150%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 50%);
+        opacity: 1;
+    }
+}
+
+.svg-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+
+    svg {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.logo-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  svg {
+    width: auto;
+    height: auto;
+  }
+}

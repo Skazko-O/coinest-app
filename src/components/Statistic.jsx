@@ -15,7 +15,11 @@ function Statistic({ selectedYear }) {
     } = useTransData(selectedYear);
 
     const [selectedType, setSelectedType] = useState('expence');
-    const COLORS = ['#1E4841', '#BBF49C', '#54943cff', '#458181ff', '#29a567ff'];
+    const COLORS = ['var(--goPro-bg)',
+        'var(--active-color)',
+        '#54943cff',
+        '#458181ff',
+        '#29a567ff'];
 
 
     const pieData = useMemo(() => {
@@ -104,7 +108,7 @@ function Statistic({ selectedYear }) {
                     >
                         <Label
                             // value={`${selectedType === 'income' ? 'Total Income:' : 'Total Expence:'} $${total}`}
-                             value={`$${total}`}
+                            value={`$${total}`}
                             position="center"
                             style={{ fontSize: '20px', fontWeight: '700', fill: 'var(--text-color)' }}
                         />
@@ -114,7 +118,7 @@ function Statistic({ selectedYear }) {
                         ))}
                     </Pie>
                 </PieChart>
-                <Table striped bordered hover >                   
+                <Table striped bordered hover >
                     <tbody className="tableRawStyle">
                         {sortedPieData.map((group, index) => {
                             const percent = total > 0 ? ((group.value / total) * 100).toFixed(1) : '0.0';

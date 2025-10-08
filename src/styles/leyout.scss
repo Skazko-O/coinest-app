@@ -38,7 +38,7 @@ header {
         padding-right: 35px;
         height: 36px;
         font-size: 12px;
-        color: $text-color;
+        color: var(--text-color);
         outline: none;
     }
 
@@ -53,7 +53,7 @@ header {
     svg {
         width: 18px;
         height: 18px;
-        fill: $green-text-color;
+        fill: var(--green-text-color);
     }
 }
 
@@ -75,7 +75,16 @@ header {
     flex-shrink: 0;
 }
 
-
+.logoutBtn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 5px;
+  color: var(--green-text-color);
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 1rem;
+}
 
 .circleGroup {
     display: flex;
@@ -93,7 +102,7 @@ header {
   svg {
     width: 18px;
     height: 18px;
-    fill: $green-text-color;
+    fill: var(--green-text-color);
   }
 
   img {
@@ -106,7 +115,7 @@ header {
 
 .circleBtn {
   @extend %baseBtn;
-  background-color: $green-bg;
+  background-color: var(--green-bg);
   border-radius: 50%;
 }
 
@@ -140,7 +149,7 @@ header {
         align-items: center;
         padding: 8px 12px 8px 16px;
         border-radius: 24px;
-        color: $text-color;
+        color: var(--text-color);
         text-align: center;
         font-family: 'Urbanist';
         font-size: 14px;
@@ -151,16 +160,16 @@ header {
         svg {
             width: 24px;
             height: 24px;
-            fill: $text-color;
+            fill: var(--text-color);
         }
 
         &:hover {
-            background-color: $active-color;
+            background-color: var(--active-color);
             color: var(--accent-color);
         }
 
         &.active {
-            background-color: $active-color;
+            background-color: var(--active-color);
             color: var(--accent-color);
         }
     }
@@ -174,7 +183,7 @@ header {
     position: relative;
     padding: 20px 16px;
     border-radius: 16px;
-    background-color: $green-text-color;
+    background-color: var(--goPro-bg);
 
     .lock {
         background-color: white;
@@ -195,7 +204,7 @@ header {
     .textGetPro {
         padding-top: 38px;
         padding-bottom: 20px;
-        color: $green-bg;
+        color: var( --grey-bg);
         font-size: 12px;
         font-weight: 400;
         line-height: 130%;
@@ -203,7 +212,7 @@ header {
 
     .btnGetPro {
         padding: 10px 14px;
-        background-color: $active-color;
+        background-color: var(--active-color);
         border-radius: 8px;
         color: var(--accent-color);
         text-align: center;
@@ -228,7 +237,7 @@ header {
 
 .copyright {
     font-size: 12px;
-    color:var (--accent-color);
+    color:var(--accent-color);
     line-height: 130%;
 }
 

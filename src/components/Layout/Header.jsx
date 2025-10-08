@@ -3,8 +3,16 @@ import SearchInput from "../SearchInput";
 import CircleBtn from "../CircleBtn";
 import Themeswitcher from '../Themeswitcher';
 import CurrencyRates from "../CurrencyRates";
+import { useNavigate } from "react-router";
 
 function Header() {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('auth');
+    navigate('/login');
+  }
 
   const pageTitles = {
     '/': 'Dashboard',
@@ -43,6 +51,9 @@ function Header() {
                 </a>
               </div>
               <CircleBtn imgSrc="assets/images/avatars/Avatar.png" alt="avatar" />
+              <button onClick={handleLogout} className="logoutBtn">
+                Logout
+              </button>
             </div>
           </div>
         </div>
