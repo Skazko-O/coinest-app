@@ -36,7 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="transactions" element={<Transactions />} />
             <Route path="invoices" element={<Invoices />} />
             <Route path="cards" element={<Cards />} />
-            <Route path="plans" element={<Plans />} />
+            <Route path="plans" element={<Plans />} /> 
             <Route path="investments" element={<Investments />} />
             <Route path="inbox" element={<Inbox />} />
             <Route path="promos" element={<Promos />} />

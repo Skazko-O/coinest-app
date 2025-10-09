@@ -22,11 +22,15 @@ function Header() {
     '/transactions': 'Transactions',
     '/invoices': 'Invoices',
     '/cards': 'Cards',
-    '/savingplans': 'Saving Plans',
+    '/plans': 'Saving Plans',
     '/investments': 'Investments',
     '/inbox': 'Inbox',
     '/promos': 'Promos',
-    '/insights': 'Insights'
+    '/insights': 'Insights',
+    '/privacy-policy': 'Privacy policy',
+    '/terms': 'Terms and conditions',
+    '/contact': 'Contact',
+    
   }
 
   const location = useLocation();

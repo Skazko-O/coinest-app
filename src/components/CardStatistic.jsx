@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 
 function CardStatistic({ data, totals, trend }) {
-    const isPositive = data.trend.startsWith('+');
+    const isPositive = trend.startsWith('+');
     const trendIcon = isPositive ? 'TrendUp' : 'TrendDown';
 
     let amount = 0;
