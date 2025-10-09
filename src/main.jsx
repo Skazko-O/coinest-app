@@ -19,6 +19,9 @@ import Investments from './pages/Investments';
 import Inbox from './pages/Inbox';
 import Promos from './pages/Promos';
 import Insights from './pages/Insights';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
+import Contact from './pages/Contact';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -38,6 +41,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="inbox" element={<Inbox />} />
             <Route path="promos" element={<Promos />} />
             <Route path="insights" element={<Insights />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="terms" element={<TermsAndConditions />} />
+            <Route path="contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Route>

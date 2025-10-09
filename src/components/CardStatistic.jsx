@@ -12,11 +12,11 @@ function CardStatistic({ data }) {
                             <use xlinkHref={`assets/images/icon/sprite_card.svg#${data.icon}`} />
                         </svg>
                     </button>
-                    <button className="dots">
+                    {/* <button className="dots">
                         <svg className="icon">
                             <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
                 <div className="statisticMain">
                     <div className={`badge ${isPositive ? 'badgeUp' : 'badgeDown'}`}>

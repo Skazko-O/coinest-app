@@ -39,11 +39,11 @@ function SavingPlans() {
                                 </button>
                                 <div className="totalItem">{plan.label}</div>
                                 </div>
-                                <button className="dots">
+                                {/* <button className="dots">
                                     <svg className="icon">
                                         <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                                     </svg>
-                                </button>
+                                </button> */}
                             </div>
                             <ProgressBar now={percent} label={`${percent}%`} className='mb-2' />
                             <div className="dailyLimit">

@@ -23,14 +23,14 @@ export default function LoginForm() {
             showToast.success('Login successful!');
             localStorage.setItem('auth', JSON.stringify(user));
 
-            if (data.rememberMe){
-                localStorage.setItem('rememberedEmail', data.email);
-                localStorage.setItem('rememberedPasword', btoa(data.password));
-            }
-            else {
-                localStorage.removeItem('rememberedEmail');
-                localStorage.removeItem('rememberedPasword');
-            }
+            // if (data.rememberMe){
+            //     localStorage.setItem('rememberedEmail', data.email);
+            //     localStorage.setItem('rememberedPasword', btoa(data.password));
+            // }
+            // else {
+            //     localStorage.removeItem('rememberedEmail');
+            //     localStorage.removeItem('rememberedPasword');
+            // }
             
             navigate('/');
         } else {
@@ -107,13 +107,13 @@ export default function LoginForm() {
                         </Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Group className="mb-3">
+                    {/* <Form.Group className="mb-3">
                         <Form.Check
                             type="checkbox"
                             label="Remember me"
                             {...register('rememberMe')}
                         />
-                    </Form.Group>
+                    </Form.Group> */}
 
                     <Button variant="primary" type="submit" className="w-100">
                         LOGIN

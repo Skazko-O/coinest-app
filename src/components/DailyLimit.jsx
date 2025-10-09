@@ -19,11 +19,11 @@ function DailyLimit() {
 
                 <div className="statisticHead">
                     <h3 className='headingSec'>Daily Limit</h3>
-                    <button className="dots">
+                    {/* <button className="dots">
                         <svg className="icon">
                             <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
                 <div className="dailyLimit mb-4">
                     <div className='spent'>${daily.spent} </div>

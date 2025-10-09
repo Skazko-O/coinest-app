@@ -84,6 +84,10 @@ header {
   font-weight: bold;
   cursor: pointer;
   margin-left: 1rem;
+
+ &:hover {
+    background-color: var(--green-bg);
+  }
 }
 
 .circleGroup {

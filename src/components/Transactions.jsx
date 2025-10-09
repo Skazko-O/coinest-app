@@ -243,7 +243,7 @@ export default function TransactionTable() {
             </button>
           </div>
         </div>
-        <div style={{ height: 'calc(100vh - 200px)', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ height: 'calc(100vh - 210px)', display: 'flex', flexDirection: 'column' }}>
           <div style={{ flex: 1, overflowY: 'auto' }}>
             <table style={{
               width: '100%',
@@ -316,7 +316,7 @@ function PaginationControls({ table, pagination }) {
           fontWeight: '500',
           color: i === current ? '#FBFBFC' : 'var(--green-text-color)',
           padding: '6px 10px',
-          background: i === current ? 'var(--green-text-color)' : 'var(--green-bg)',
+          background: i === current ? 'var(--goPro-bg)' : 'var(--green-bg)',
           borderRadius: '7px',
         }}
       >
@@ -368,7 +368,7 @@ function PaginationControls({ table, pagination }) {
             style={{
               fontWeight: current === pageCount - 1 ? 'bold' : 'normal',
               padding: '6px 10px',
-              background: current === pageCount - 1 ? 'var(--green-text-color)' : 'var(--green-bg)',
+              background: current === pageCount - 1 ? 'var(--goPro-bg)' : 'var(--green-bg)',
               borderRadius: '7px',
               fontSize: '10px'
             }}
