@@ -1,8 +1,19 @@
 import Card from 'react-bootstrap/Card';
 
-function CardStatistic({ data }) {
+function CardStatistic({ data, totals, trend }) {
     const isPositive = data.trend.startsWith('+');
     const trendIcon = isPositive ? 'TrendUp' : 'TrendDown';
+
+    let amount = 0;
+    if (totals && data.key) {
+        const keyMap = {
+            income: totals.totalIncome,
+            expense: totals.totalExpense,
+            balance: totals.totalBalance,
+        };
+        amount = keyMap[data.key] ?? 0;
+    }
+
     return (
         <Card>
             <Card.Body>
@@ -23,9 +34,11 @@ function CardStatistic({ data }) {
                         <div>
                             <img src={`assets/images/icon/${trendIcon}.svg`} alt={data.trendIcon} />
                         </div>
-                        <div>{data.trend}</div>
+                        <div>{trend}</div>
                     </div>
-                    <div className="amount">${data.amount.toLocaleString()}</div>
+                    <div className="amount">
+                        ${typeof amount === 'number' ? amount.toLocaleString() : '0'}
+                    </div>
                     <div className="totalItem">{data.label}</div>
                 </div>
             </Card.Body>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import CardStatistic from './CardStatistic';
 
-function CardStatisticList() {
+function CardStatisticList({ totals, trends }) {
   const [stats, setStats] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,12 @@ function CardStatisticList() {
   return (
     <div className="statisticGrid">
       {stats.map((stat) => (
-        <CardStatistic key={stat.id} data={stat} />
+        <CardStatistic
+          key={stat.id}
+          data={stat}
+          totals={totals}
+          trend={trends?.[stat.key] ?? '0%'}
+        />
       ))}
     </div>
   );

@@ -10,7 +10,7 @@ function RecentItem({ transfer }) {
 
   const isPerson = transfer.name && transfer.fname;
 
-  
+
   useEffect(() => {
     fetch('data/providers.json')
       .then((res) => res.json())
@@ -18,7 +18,7 @@ function RecentItem({ transfer }) {
       .catch((err) => console.error('Failed to load icon map:', err));
   }, []);
 
-  
+
   useEffect(() => {
     if (isPerson) {
       setIconHref(transfer.avatar);
@@ -30,15 +30,19 @@ function RecentItem({ transfer }) {
     }
   }, [iconMap, transfer, isPerson]);
 
-  
+
   const isSvgUse = iconHref?.includes('#');
   const iconProps = isSvgUse
     ? { iconHref }
     : { imgSrc: iconHref, alt: isPerson ? `${transfer.name} ${transfer.fname}` : transfer.companies };
 
-  
+
   return (
-    <Card>
+    <Card
+      onClick={() => onClick(account)}
+      className="clickableCard"
+      style={{ cursor: 'pointer' }}
+    >
       <Card.Body>
         <div className='cardStyle d-flex align-items-center gap-3'>
           <CircleBtn {...iconProps} />

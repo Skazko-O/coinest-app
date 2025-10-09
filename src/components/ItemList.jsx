@@ -5,7 +5,11 @@ function ItemList({ account, onClick }) {
   if (!account) return null;
   return (
 
-    <Card>
+    <Card
+      onClick={() => onClick(account)}
+      className="clickableCard"
+      style={{ cursor: 'pointer' }}
+    >
       <Card.Body>
         <div className='cardStyle'>
           <CircleBtn imgSrc={account.avatar} alt={`${account.name} ${account.fname}`} />

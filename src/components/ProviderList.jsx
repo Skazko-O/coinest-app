@@ -42,6 +42,8 @@ function ProviderList() {
                                 eventKey={String(idx)}
                                 className="custom-accordion mb-3"
                                 key={item.category}
+                                onClick={() => onClick(account)}                               
+                                style={{ cursor: 'pointer' }}
                             >
                                 <Accordion.Header>
                                     <div className="d-flex align-items-center gap-2">
