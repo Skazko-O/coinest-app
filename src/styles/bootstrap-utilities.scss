@@ -671,6 +671,7 @@ ul {
     border-top: 1px solid var(--green-bg) !important;
     padding: 10px;
     background-color: var(--green-bg) !important;
+    cursor: pointer;
 }
 
 .table-striped>tbody>tr:nth-of-type(odd)>* {
@@ -731,4 +732,8 @@ ul {
 .clickableCard:hover {
   background-color: var(--green-bg);
   border-radius: 16px; 
+}
+
+.recharts-default-legend {
+    display: none;
 }

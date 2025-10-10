@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   useReactTable,
   getCoreRowModel,
@@ -7,7 +7,6 @@ import {
   flexRender,
 } from '@tanstack/react-table';
 import SearchInput from './SearchInput';
-import { Dropdown } from 'react-bootstrap';
 
 export default function TransactionTable() {
   const [data, setData] = useState([]);
@@ -51,27 +50,7 @@ export default function TransactionTable() {
     )
   }
 
-  const columns = [
-    {
-      id: 'select',
-      header: ({ table }) => (
-        <input
-          type="checkbox"
-          checked={table.getIsAllRowsSelected()}
-          onChange={table.getToggleAllRowsSelectedHandler()}
-        />
-      ),
-      cell: ({ row }) => (
-        <input
-          type="checkbox"
-          checked={row.getIsSelected()}
-          disabled={!row.getCanSelect()}
-          onChange={row.getToggleSelectedHandler()}
-        />
-
-      ),
-      enableSorting: false
-    },
+  const columns = [    
     {
       accessorKey: 'name',
       header: 'Transaction Name',
@@ -170,13 +149,29 @@ export default function TransactionTable() {
   ];
 
   const [rowSelection, setRowSelection] = useState({});
-  
-  const [selectedCategory, setSelectedCategory] = useState('All Category');
-  const categories = ['All Category', ...new Set(data.map(tx => tx.category))];
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredData = selectedCategory === 'All Category'
-    ? data
-    : data.filter(tx => tx.category === selectedCategory);
+  const [selectedCategory, setSelectedCategory] = useState('All Category');
+  const categories = useMemo(() => {
+    if (!Array.isArray(data)) return ['All Category'];
+    return ['All Category', ...new Set(data.map(tx => tx.category))];
+  }, [data]);
+
+
+  const filteredData = useMemo(() => {
+    let result = data;
+
+    if (selectedCategory !== 'All Category') {
+      result = result.filter(tx => tx.category === selectedCategory);
+    }
+
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(tx => tx.name.toLowerCase().includes(query));
+    }
+
+    return result;
+  }, [data, selectedCategory, searchQuery]);
 
   const table = useReactTable({
     data: filteredData,
@@ -195,55 +190,21 @@ export default function TransactionTable() {
 
   if (loading) return <div>Loading transactions...</div>;
 
+
+
   return (
     <>
       <div className="outerWrapperBorder">
         <div className="statisticHead">
           <div className='flexGroup'>
-            <SearchInput placeholder="Search transaction" />
-            <Dropdown onSelect={(key) => setSelectedCategory(key)}>
-              <Dropdown.Toggle className="customToggle" id="range">
-                <span>{selectedCategory}</span>
-                <svg className="iconToggle" viewBox="0 0 24 24">
-                  <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleDown" />
-                </svg>
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                {categories.map(cat => (
-                  <Dropdown.Item key={cat} eventKey={cat}>
-                    {cat}
-                  </Dropdown.Item>
-                ))}
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown>
-              <Dropdown.Toggle className="customToggle" id="range">
-                <span>All Account</span>
-                <svg className="iconToggle" viewBox="0 0 24 24">
-                  <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleDown" />
-                </svg>
-              </Dropdown.Toggle>
-            </Dropdown>
-          </div>
-          <div className='flexGroup'>
-            <Dropdown>
-              <Dropdown.Toggle className="customToggle" id="range">
-                <svg className="iconToggle" viewBox="0 0 24 24">
-                  <use xlinkHref="assets/images/icon/sidebar-icon.svg#Calendar" />
-                </svg>
-                <span>1-30 September 2025</span>
-                <svg className="iconToggle" viewBox="0 0 24 24">
-                  <use xlinkHref="assets/images/icon/sidebar-icon.svg#AngleDown" />
-                </svg>
-              </Dropdown.Toggle>
-            </Dropdown>
-            <button className='downloadBtn'>
-              Download
-            </button>
-          </div>
+            <SearchInput
+              placeholder="Search transaction"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />           
+          </div>          
         </div>
-        <div style={{ height: 'calc(100vh - 210px)', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ height: 'calc(100vh - 270px)', display: 'flex', flexDirection: 'column' }}>
           <div style={{ flex: 1, overflowY: 'auto' }}>
             <table style={{
               width: '100%',

@@ -18,11 +18,11 @@ function CardStatistic({ data, totals, trend }) {
         <Card>
             <Card.Body>
                 <div className="statisticHead">
-                    <button className="circleBtn">
+                    <div className="circleBtn">
                         <svg className="icon">
                             <use xlinkHref={`assets/images/icon/sprite_card.svg#${data.icon}`} />
                         </svg>
-                    </button>
+                    </div>
                     {/* <button className="dots">
                         <svg className="icon">
                             <use xlinkHref="assets/images/icon/sprite_card.svg#DotsThreeVertical" />

@@ -40,7 +40,7 @@ function Header() {
       <div className="container">
         <div className="pageName">
           <h1>{currentTitle}</h1>
-          <div> <CurrencyRates /></div>
+          <div className="currency"> <CurrencyRates /></div>
           <div className="rightSection">
             {location.pathname === '/' && <SearchInput placeholder="Search..." />}
             <div className="circleGroup">

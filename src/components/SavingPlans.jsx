@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router';
 
 
 function SavingPlans() {
@@ -18,7 +19,7 @@ function SavingPlans() {
 
                     <h3 className='headingSec'>Saving Plans</h3>
 
-                    <a href="#" className='addPlan'>+ Add Plan</a>
+                    <Link to="/plans" className='addPlan'>+ Add Plan</Link>
                 </div>
                 {plan.length > 0 && (
                     <div className="fs-10 mb-2">
@@ -32,11 +33,11 @@ function SavingPlans() {
                         <Card key={plan.id} className='p-3'>
                             <div className="statisticHead">
                                 <div className="leftGroup">
-                                <button className="circleBtn">
+                                <div className="circleBtn">
                                     <svg className="icon">
                                         <use xlinkHref={`assets/images/icon/sprite_card.svg#${plan.icon}`} />
                                     </svg>
-                                </button>
+                                </div>
                                 <div className="totalItem">{plan.label}</div>
                                 </div>
                                 {/* <button className="dots">

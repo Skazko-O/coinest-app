@@ -1,7 +1,8 @@
-function SearchInput({ 
+function SearchInput({
   placeholder = 'Search...',
   id = 'search',
   name = 'search',
+  value,
   onChange }) {
   return (
     <div className="searchWrapper">
@@ -12,6 +13,7 @@ function SearchInput({
         type="text"
         id={id}
         name={name}
+        value={value}
         placeholder={placeholder}
         className="searchInput"
         onChange={onChange}

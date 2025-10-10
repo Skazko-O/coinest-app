@@ -1,0 +1,17 @@
+const pages = [
+  { name: 'Dashboard', path: '/' },
+  { name: 'Payments', path: '/payments' },
+  { name: 'Transfer', path: '/payments/transfer' },
+  { name: 'Payment', path: '/payments/payment' },
+  { name: 'Transactions', path: '/transactions' },
+  { name: 'Invoices', path: '/invoices' },
+  { name: 'Cards', path: '/cards' },
+  { name: 'Saving Plans', path: '/plans' },
+  { name: 'Investments', path: '/investments' },
+  { name: 'Inbox', path: '/inbox' },
+  { name: 'Promos', path: '/promos' },
+  { name: 'Insights', path: '/insights' },
+  { name: 'Privacy policy', path: '/privacy-policy' },
+  { name: 'Terms and conditions', path: '/terms' },
+  { name: 'Contact', path: '/contact' },
+];
