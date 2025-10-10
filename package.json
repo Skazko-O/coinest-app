@@ -35,6 +35,9 @@
     "dependencies": {
   
       
+    "@tanstack/react-form": "^1.23.6",
+  
+      
     "@tanstack/react-table": "^8.21.3",
   
       

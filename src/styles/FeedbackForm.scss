@@ -1,0 +1,94 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap:18px;    
+    max-height: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--goPro-bg);
+    color: var(--white-bg);
+}
+
+.headerForm {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white-bg);
+}
+
+.fieldSet {
+    display: flex;
+    gap:25px;
+}
+
+.input-wrapper label {
+    display: block;
+}
+
+.input-wrapper,
+.fieldSet > div {
+  width: 100% !important;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;  
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+.btnForm {
+  position: relative;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-width: 200px;
+  z-index: 1;
+}
+
+.neon-pulse {
+  background: var(--green-bg);
+  border: 2px solid var(--active-color);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  overflow: visible;
+}
+
+.neon-pulse::before,
+.neon-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid var(--active-color);
+  border-radius: inherit;
+  animation: pulseOut 2s ease-out infinite;
+  opacity: 0;
+}
+
+.neon-pulse::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

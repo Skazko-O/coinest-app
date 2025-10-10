@@ -19,8 +19,8 @@ import Investments from './pages/Investments';
 import Inbox from './pages/Inbox';
 import Promos from './pages/Promos';
 import Insights from './pages/Insights';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/Policy/PrivacyPolicy';
+import TermsAndConditions from './pages/Policy/TermsAndConditions';
 import Contact from './pages/Contact';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

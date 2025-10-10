@@ -1,5 +1,5 @@
-import PlaceholderPage from '../components/PlaceholderPage';
+import FeedbackForm from '../components/FeedbackForm';
 
 export default function Contact() {
-  return <PlaceholderPage title="Contact" description="This section will be available soon." />;
+  return <FeedbackForm />;
 }

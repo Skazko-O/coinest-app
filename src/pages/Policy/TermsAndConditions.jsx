@@ -1,9 +1,8 @@
-import '../styles/privacyPolicy.scss';
+import styles from './privacyPolicy.module.scss';
 
 export default function TermsAndConditions() {
   return (
-    <>
-      <h1>Terms and Conditions</h1>
+    <div className={styles.privacyPolicy}>      
       <p>Last updated: October 09, 2025</p>
       <p>Please read these terms and conditions carefully before using Our Service.</p>
       <h2>Interpretation and Definitions</h2>
@@ -88,6 +87,6 @@ export default function TermsAndConditions() {
       <ul>
         <li>By email: admin@coinest.app</li>
       </ul>
-    </>
+    </div>
   )
 }
