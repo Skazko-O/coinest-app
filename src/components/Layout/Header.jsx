@@ -4,6 +4,7 @@ import CircleBtn from "../CircleBtn";
 import Themeswitcher from '../Themeswitcher';
 import CurrencyRates from "../CurrencyRates";
 import { useNavigate } from "react-router";
+import { Link } from 'react-router-dom'
 
 function Header() {
 
@@ -37,10 +38,10 @@ function Header() {
   const currentTitle = pageTitles[location.pathname] || 'Page';
   return (
     <header>
-      <div className="container">
+      <div className="myContainer">
         <div className="pageName">
           <h1>{currentTitle}</h1>
-          <div className="currency"> <CurrencyRates /></div>
+          <div> <CurrencyRates /></div>
           <div className="rightSection">
             {location.pathname === '/' && <SearchInput placeholder="Search..." />}
             <div className="circleGroup">
@@ -50,9 +51,9 @@ function Header() {
             </div>
             <div className="userGroup">
               <div>
-                <a href="#" className="userName">
+                <Link to="/" className="userName">
                   Skazko Oleksandr
-                </a>
+                </Link>
               </div>
               <CircleBtn imgSrc="assets/images/avatars/Avatar.png" alt="avatar" />
               <button onClick={handleLogout} className="logoutBtn">

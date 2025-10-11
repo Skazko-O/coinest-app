@@ -11,7 +11,7 @@ function Layout() {
     <>
       <Sidebar />
       <div className="content">
-        <div className="container">
+        <div className={style.myContainer}>
           <div className={style.pageWrapper}>
             <Header />
             <main className={style.main}>

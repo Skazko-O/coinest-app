@@ -45,7 +45,7 @@ export default function TransactionTable() {
   function SortIcon() {
     return (
       <svg width="12" height="12">
-        <use xlinkHref="assets/icon/sprite_control.svg#Sort" />
+        <use xlinkHref="assets/images/icon/sprite_control.svg#Sort" />
       </svg>
     )
   }
@@ -151,19 +151,8 @@ export default function TransactionTable() {
   const [rowSelection, setRowSelection] = useState({});
   const [searchQuery, setSearchQuery] = useState('');
 
-  const [selectedCategory, setSelectedCategory] = useState('All Category');
-  const categories = useMemo(() => {
-    if (!Array.isArray(data)) return ['All Category'];
-    return ['All Category', ...new Set(data.map(tx => tx.category))];
-  }, [data]);
-
-
   const filteredData = useMemo(() => {
-    let result = data;
-
-    if (selectedCategory !== 'All Category') {
-      result = result.filter(tx => tx.category === selectedCategory);
-    }
+    let result = data;   
 
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
@@ -171,7 +160,7 @@ export default function TransactionTable() {
     }
 
     return result;
-  }, [data, selectedCategory, searchQuery]);
+  }, [data, searchQuery]);
 
   const table = useReactTable({
     data: filteredData,
@@ -184,13 +173,9 @@ export default function TransactionTable() {
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     enableRowSelection: true,
-  });
-
-  const selectedRows = table.getSelectedRowModel().rows;
+  });  
 
   if (loading) return <div>Loading transactions...</div>;
-
-
 
   return (
     <>
@@ -230,8 +215,7 @@ export default function TransactionTable() {
                         }}
                       >
                         {flexRender(header.column.columnDef.header, header.getContext())}
-                        {header.column.getIsSorted() === 'asc' && <SortIcon />}
-                        {header.column.getIsSorted() === 'desc' && <SortIcon />}
+                        {header.column.getIsSorted() && <SortIcon />}                       
                       </th>
                     ))}
                   </tr>

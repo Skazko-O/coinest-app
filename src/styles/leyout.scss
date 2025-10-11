@@ -1,22 +1,39 @@
 @use './variables.scss' as *;
 
+
+
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
     padding-top: 22px;
-    background-color: var( --bg-color);
+    background-color: var(--bg-color);
 }
 
 .pageName {
-  display: grid;
-  grid-template-columns: 2fr 5fr 5fr;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 5fr 5fr;
+    align-items: center;
 }
 
-.currency{
-    font-size: 12px;
+.currency {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 10px;
+
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        p {
+            margin: 0;
+        }
+    }
 }
+
 
 
 .rightSection {
@@ -80,18 +97,17 @@ header {
 }
 
 .logoutBtn {
-  background: none;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 5px;
-  color: var(--green-text-color);
-  font-weight: bold;
-  cursor: pointer;
-  margin-left: 1rem;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 5px;
+    color: var(--green-text-color);
+    font-weight: bold;
+    cursor: pointer;
 
- &:hover {
-    background-color: var(--green-bg);
-  }
+    &:hover {
+        background-color: var(--green-bg);
+    }
 }
 
 .circleGroup {
@@ -100,38 +116,38 @@ header {
 }
 
 %baseBtn {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 
-  svg {
-    width: 18px;
-    height: 18px;
-    fill: var(--green-text-color);
-  }
+    svg {
+        width: 18px;
+        height: 18px;
+        fill: var(--green-text-color);
+    }
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
 }
 
 .circleBtn {
-  @extend %baseBtn;
-  background-color: var(--green-bg);
-  border-radius: 50%;
+    @extend %baseBtn;
+    background-color: var(--green-bg);
+    border-radius: 50%;
 }
 
 .sqearBtn {
-  @extend %baseBtn;
-  background-color: transparent;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
+    @extend %baseBtn;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .searchGroup {
@@ -212,7 +228,7 @@ header {
     .textGetPro {
         padding-top: 38px;
         padding-bottom: 20px;
-        color: var( --grey-bg);
+        color: var(--grey-bg);
         font-size: 12px;
         font-weight: 400;
         line-height: 130%;
@@ -227,6 +243,7 @@ header {
         font-size: 14px;
         font-weight: 500;
         line-height: 100%;
+
         &:hover {
             background-color: var(--yellow-text-color);
             color: var(--text-color);
@@ -249,7 +266,7 @@ header {
 
 .copyright {
     font-size: 12px;
-    color:var(--accent-color);
+    color: var(--accent-color);
     line-height: 130%;
 }
 
@@ -273,7 +290,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     width: 198px;
-    background-color: var( --green-bg);
+    background-color: var(--green-bg);
     color: var(--text-color);
     padding: 22px 16px 26px;
     top: 0;
@@ -282,6 +299,7 @@ footer {
     overflow-y: auto;
     transition: width 0.3s ease;
     overflow: hidden;
+    z-index: 1001;
 
     &:hover {
         width: 198px;
@@ -307,9 +325,35 @@ footer {
             display: block;
         }
     }
+}
 
-    @media (max-width: 750px) {
-        
+@media (max-width: 1480px) {
+    .currency {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1280px) {
+    header {
+        .userName {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: 1124px) {
+
+    .content {
+        margin-left: 72px;
+    }
+
+    .searchWrapper {
+        display: none;
+    }
+
+    .sidebar {
         width: 72px;
 
         .menuText,
@@ -331,7 +375,7 @@ footer {
             justify-content: center;
         }
 
-        &:hover {           
+        &:hover {
 
             a.link {
                 justify-content: flex-start;
@@ -351,7 +395,39 @@ footer {
                 display: block;
             }
         }
+    }
 
+}
 
+@media (max-width: 750px) {
+
+    footer,
+    .footerElement {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .currency {
+        display: none;
+    }
+
+    .rightSection {
+        display: none;
+    }
+
+    .pageName {
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }

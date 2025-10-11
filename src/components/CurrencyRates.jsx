@@ -46,17 +46,17 @@ const CurrencyRates = () => {
     if (loading) return <p>Downloading the exchange rate...</p>;
 
     return (
-        <div className="d-flex align-items-center gap-3 flex-wrap">
+        <div className="currency">
 
             {usdRate && (
-                <div className="d-flex align-items-center gap-1">
+                <div>
                     <div>USD/UAH</div>
                     <p> {usdRate.rateBuy.toFixed(2)} /</p>
                     <p> {usdRate.rateSell.toFixed(2)}</p>
                 </div>
             )}
             {eurRate && (
-                <div className="d-flex align-items-center gap-1">
+                <div>
                     <div>EUR/UAH</div>
                     <p> {eurRate.rateBuy.toFixed(2)} /</p>
                     <p> {eurRate.rateSell.toFixed(2)}</p>
