@@ -145,13 +145,14 @@ export default function FeedbackForm() {
                 }}
             >
                 {(field) => (
-                    <div>
+                    <div style={{ width: '100%' }}>
                         <label htmlFor="msg">Message</label>
                         <textarea
                             id="msg"
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
                             onBlur={field.handleBlur}
+                            style={{ resize: 'none', width: '100%' }}
                         />
                         {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
                     </div>
