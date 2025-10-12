@@ -9,11 +9,11 @@ function Transfer() {
     return (
 
         <Row>            
-            <Col sm={3}>
+            <Col xl={3}>
                 <FinanceBtn />
                 <TransferList />
             </Col>           
-            <Col sm={9}>
+            <Col xl={9}>
                 <Row>
                     <Col>
                         <RecentList title="Recent Transfer" dataUrl="data/transfer.json" />

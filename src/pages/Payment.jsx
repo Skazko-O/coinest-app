@@ -9,11 +9,11 @@ function Payment() {
     return (
 
         <Row>
-            <Col sm={3}>
+            <Col xl={3}>
                 <FinanceBtn />
                 <ProviderList />
             </Col>
-            <Col sm={9}>
+            <Col xl={9}>
                 <Row>
                     <Col>
                         <RecentList
