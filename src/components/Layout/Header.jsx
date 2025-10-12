@@ -1,5 +1,5 @@
 import { useLocation } from "react-router";
-import SearchInput from "../SearchInput";
+import SearchInput_Header from "../SearchInput_Header";
 import CircleBtn from "../CircleBtn";
 import Themeswitcher from '../Themeswitcher';
 import CurrencyRates from "../CurrencyRates";
@@ -43,7 +43,7 @@ function Header() {
           <h1>{currentTitle}</h1>
           <div> <CurrencyRates /></div>
           <div className="rightSection">
-            {location.pathname === '/' && <SearchInput placeholder="Search..." />}
+            {location.pathname === '/' && <SearchInput_Header placeholder="Search..." />}
             <div className="circleGroup">
               <CircleBtn iconHref="assets/images/icon/sprite_header.svg#ChatTeardropDots" />
               <CircleBtn iconHref="assets/images/icon/sprite_header.svg#Bell" />

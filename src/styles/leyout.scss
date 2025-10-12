@@ -1,8 +1,9 @@
 @use './variables.scss' as *;
 
+
 .myContainer {
-  width: min(90%, 1192px);
-  margin: 0 auto;
+    width: min(90%, 1192px);
+    margin: 0 auto;
 }
 
 header {
@@ -15,7 +16,7 @@ header {
 
 .pageName {
     display: grid;
-    grid-template-columns: 2fr 5fr 5fr;
+    grid-template-columns: 2fr 3fr 7fr;
     align-items: center;
 }
 
@@ -46,12 +47,13 @@ header {
     margin-left: auto;
 }
 
-.searchWrapper {
+.searchWrapper,
+.searchWrapperHeader {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
-    // min-width: 255px;
+
 
     .searchIcon {
         position: absolute;
@@ -280,17 +282,17 @@ header {
 }
 
 footer {
-  padding-bottom: 22px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    padding-bottom: 22px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .footerContent {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .sidebar {
@@ -355,11 +357,7 @@ footer {
 
 @media (max-width: 1124px) {
 
-    .content {
-        margin-left: 72px;
-    }
-
-    .searchWrapper {
+    .searchWrapperHeader {
         display: none;
     }
 
@@ -411,7 +409,7 @@ footer {
 
 @media (max-width: 750px) {
 
-    footer,
+    .footerContent,
     .footerElement {
         display: flex;
         flex-direction: column;
@@ -429,18 +427,7 @@ footer {
 
 @media (max-width: 620px) {
 
-    .sidebar {
-        display: none;
-    }
-
-    .content {
-        margin-left: 0;       
-    }
-
-    .currency {
-        display: none;
-    }
-
+    .sidebar,
     .rightSection {
         display: none;
     }

@@ -10,18 +10,19 @@ function Layout() {
 
     <>
       <Sidebar />
-      
-      <div className={style.pageWrapper}>
-        <Header />
+      <div className={style.layoutShifted}>
+        <div className={style.pageWrapper}>
+          <Header />
 
-        <main className={style.main}>
-          <div className={style.myContainer}>
-            <Outlet />
-          </div>
-        </main>
+          <main className={style.main}>
+            <div className={style.myContainer}>
+              <Outlet />
+            </div>
+          </main>
 
-        <Footer />
-      </div>    
+          <Footer />
+        </div>
+      </div>
     </>
   );
 }

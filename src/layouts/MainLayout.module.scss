@@ -1,6 +1,6 @@
 .pageWrapper {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -16,4 +16,16 @@
 .myContainer {
   width: min(90%, 1192px);
   margin: 0 auto;
+}
+
+.layoutShifted {
+  margin-left: 200px;
+
+  @media (max-width: 1124px) {
+    margin-left: 72px;
+  }
+
+  @media (max-width: 620px) {
+    margin-left: 0;
+  }
 }
