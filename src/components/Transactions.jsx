@@ -50,7 +50,7 @@ export default function TransactionTable() {
     )
   }
 
-  const columns = [    
+  const columns = [
     {
       accessorKey: 'name',
       header: 'Transaction Name',
@@ -152,7 +152,7 @@ export default function TransactionTable() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredData = useMemo(() => {
-    let result = data;   
+    let result = data;
 
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
@@ -161,6 +161,8 @@ export default function TransactionTable() {
 
     return result;
   }, [data, searchQuery]);
+
+  const hideColumns = ['id', 'note', 'datetime'];
 
   const table = useReactTable({
     data: filteredData,
@@ -173,7 +175,7 @@ export default function TransactionTable() {
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     enableRowSelection: true,
-  });  
+  });
 
   if (loading) return <div>Loading transactions...</div>;
 
@@ -186,12 +188,12 @@ export default function TransactionTable() {
               placeholder="Search transaction"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-            />           
-          </div>          
+            />
+          </div>
         </div>
         <div style={{ height: 'calc(100vh - 270px)', display: 'flex', flexDirection: 'column' }}>
-          <div style={{ flex: 1, overflowY: 'auto' }}>
-            <table style={{
+          <div style={{ flex: 1, overflowY: 'auto', overflowX: 'auto' }}>
+            <table style={{              
               width: '100%',
               borderCollapse: 'collapse',
               fontSize: '12px'
@@ -202,6 +204,7 @@ export default function TransactionTable() {
                     {headerGroup.headers.map(header => (
                       <th
                         key={header.id}
+                        className={hideColumns.includes(header.column.id) ? 'hide-on-tablet' : ''}
                         onClick={header.column.getToggleSortingHandler()}
                         style={{
                           position: 'sticky',
@@ -215,7 +218,7 @@ export default function TransactionTable() {
                         }}
                       >
                         {flexRender(header.column.columnDef.header, header.getContext())}
-                        {header.column.getIsSorted() && <SortIcon />}                       
+                        {header.column.getIsSorted() && <SortIcon />}
                       </th>
                     ))}
                   </tr>
@@ -225,7 +228,10 @@ export default function TransactionTable() {
                 {table.getPaginationRowModel().rows.map(row => (
                   <tr key={row.id} style={{ borderBottom: '1px solid #E5E6E6' }}>
                     {row.getVisibleCells().map(cell => (
-                      <td key={cell.id} style={{ padding: '8px' }}>
+                      <td
+                        key={cell.id}
+                        className={hideColumns.includes(cell.column.id) ? 'hide-on-tablet' : ''}
+                        style={{ padding: '8px' }}>
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </td>
                     ))}
@@ -272,7 +278,7 @@ function PaginationControls({ table, pagination }) {
 
   return (
     <div style={{ marginTop: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-      <div style={{ display: 'flex', gap: '10px', alignItems: 'center', fontSize: "12px" }}>
+      <div className="hide-on-mobile" style={{ display: 'flex', gap: '10px', alignItems: 'center', fontSize: "12px" }}>
         <span>Showing</span>
         <select style={{
           fontFamily: 'rawline',

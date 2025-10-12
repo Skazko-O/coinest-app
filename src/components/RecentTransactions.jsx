@@ -142,12 +142,12 @@ function RecentTransactions({ selectedYear }) {
                   Amount <SortIcon active={sortField === 'amount'} />
                 </div>
               </th>
-              <th onClick={() => handleSort('note')}>
+              <th onClick={() => handleSort('note')} className="hide-on-mobile">
                 <div className="tableHeadStyle">
                   Note <SortIcon active={sortField === 'note'} />
                 </div>
               </th>
-              <th onClick={() => handleSort('status')}>
+              <th onClick={() => handleSort('status')} className="hide-on-mobile">
                 <div className="tableHeadStyle">
                   Status <SortIcon active={sortField === 'status'} />
                 </div>
@@ -178,8 +178,8 @@ function RecentTransactions({ selectedYear }) {
                   </div>
                 </td>
                 <td>${tx.amount.toFixed(2)}</td>
-                <td>{tx.note}</td>
-                <td>
+                <td className="hide-on-mobile">{tx.note}</td>
+                <td className="hide-on-mobile">
                   <div className={`status ${tx.status.toLowerCase()}`}>
                     {tx.status}
                   </div>

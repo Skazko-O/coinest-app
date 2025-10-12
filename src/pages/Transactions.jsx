@@ -7,7 +7,7 @@ import TransactionTable from '../components/Transactions';
 function Transactions() {  
     return (
         <Row>
-            <Col sm={12}>
+            <Col xl={12}>
                  <TransactionTable />
             </Col>                      
         </Row>

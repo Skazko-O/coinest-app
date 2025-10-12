@@ -38,7 +38,7 @@ function Header() {
   const currentTitle = pageTitles[location.pathname] || 'Page';
   return (
     <header>
-      <div className="myContainer">
+      <div className="myContainer headerContainer">
         <div className="pageName">
           <h1>{currentTitle}</h1>
           <div> <CurrencyRates /></div>

@@ -25,13 +25,14 @@ function Dashboard() {
   return (
     <Container>
       <Row>
-        <Col sm={3}>
+        <Col xl={3} className="order-md-1 order-xl-1">
           <WidgetCard />
           <FinanceBtn />
           <DailyLimit />
           <SavingPlans />
         </Col>
-        <Col sm={6}>
+
+        <Col xl={6} className="order-md-3 order-xl-2">
           <CardStatisticList
             totals={{
               totalIncome: totals.totalIncome,
@@ -51,7 +52,8 @@ function Dashboard() {
           />
           <RecentTransactions selectedYear={selectedYear} />
         </Col>
-        <Col sm={3}>
+
+        <Col xl={3} className="order-md-2 order-xl-3">
           <Statistic selectedYear={selectedYear} />
         </Col>
       </Row>

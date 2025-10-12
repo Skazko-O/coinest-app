@@ -1,6 +1,9 @@
 @use './variables.scss' as *;
 
-
+.myContainer {
+  width: min(90%, 1192px);
+  margin: 0 auto;
+}
 
 header {
     position: sticky;
@@ -48,7 +51,7 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    min-width: 255px;
+    // min-width: 255px;
 
     .searchIcon {
         position: absolute;
@@ -407,15 +410,24 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+
+    header {
+
+        .currency,
+        .circleGroup {
+            display: none;
+        }
+    }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 620px) {
+
     .sidebar {
         display: none;
     }
 
     .content {
-        margin-left: 0;
+        margin-left: 0;       
     }
 
     .currency {
@@ -429,5 +441,13 @@ footer {
     .pageName {
         grid-template-columns: 1fr;
         justify-items: center;
+    }
+
+    header {
+        background-color: var(--green-bg);
+    }
+
+    .recharts-default-tooltip {
+        padding: 0 !important;
     }
 }

@@ -10,10 +10,10 @@ function Layout() {
 
     <>
       <Sidebar />
-      <div className="content">
-        <div className={style.myContainer}>
+      <div className="content">        
           <div className={style.pageWrapper}>
             <Header />
+            <div className={style.myContainer}>
             <main className={style.main}>
               <Outlet />
             </main>
