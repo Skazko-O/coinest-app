@@ -1,22 +1,22 @@
 [
   {
-    "id": "income",
-    "trend": "+1.78%",
-    "amount": 78000,
+    "id": 1,
+    "key": "income",
+    "trend": "+1.78%",    
     "label": "Total income",
     "icon": "CoinIn"    
   },
   {
-    "id": "expense",
-    "trend": "-1.78%",
-    "amount": 43000,
+    "id": 2,
+    "key": "expense",
+    "trend": "-1.78%",    
     "label": "Total Expense",
     "icon": "CoinOut"
   },
   {
-    "id": "savings",
-    "trend": "+1.24%",
-    "amount": 56000,
+    "id": 3,
+    "key": "balance",
+    "trend": "+1.24%",    
     "label": "Total Savings",
     "icon": "Wallet"
   }
