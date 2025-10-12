@@ -51,15 +51,15 @@ const CurrencyRates = () => {
             {usdRate && (
                 <div>
                     <div>USD/UAH</div>
-                    <p> {usdRate.rateBuy.toFixed(2)} /</p>
-                    <p> {usdRate.rateSell.toFixed(2)}</p>
+                    <p>{usdRate.rateBuy.toFixed(2)}/
+                    {usdRate.rateSell.toFixed(2)}</p>
                 </div>
             )}
             {eurRate && (
                 <div>
                     <div>EUR/UAH</div>
-                    <p> {eurRate.rateBuy.toFixed(2)} /</p>
-                    <p> {eurRate.rateSell.toFixed(2)}</p>
+                    <p>{eurRate.rateBuy.toFixed(2)}/
+                    {eurRate.rateSell.toFixed(2)}</p>
                 </div>
             )}
         </div>
