@@ -27,11 +27,11 @@ function Cashflow({ selectedYear, setSelectedYear, onTotalsChange }) {
     setSelectedYear(eventKey);
   };
 
-  const filteredData = cashflowData.filter(
+  const filteredData = cashflowData.filter(  //Витягує всі записи за вибраний рік.
     (item) => item.year === Number(selectedYear)
   );
 
-  const sum = (arr, key) => arr.reduce((acc, item) => acc + item[key], 0);
+  const sum = (arr, key) => arr.reduce((acc, item) => acc + item[key], 0); //функція для підсумку income, expense
 
   const currentData = cashflowData.filter(item => item.year === Number(selectedYear));
   const previousData = cashflowData.filter(item => item.year === Number(selectedYear) - 1);
@@ -44,6 +44,8 @@ function Cashflow({ selectedYear, setSelectedYear, onTotalsChange }) {
   const previousExpense = sum(previousData, 'expense');
   const previousBalance = previousIncome - previousExpense;
 
+
+  //Обчислює тренд у відсотках.
   const calcTrend = (current, previous) => {
     if (!previous || previous === 0) return '0%';
     const diff = ((current - previous) / previous) * 100;
@@ -55,6 +57,7 @@ function Cashflow({ selectedYear, setSelectedYear, onTotalsChange }) {
   const trendExpense = calcTrend(currentExpense, previousExpense);
   const trendBalance = calcTrend(currentBalance, previousBalance);
 
+  //Передаємо данні в батьківський компонент
   useEffect(() => {
     if (typeof onTotalsChange === 'function') {
       onTotalsChange({

@@ -150,7 +150,8 @@ export default function TransactionTable() {
 
   const [rowSelection, setRowSelection] = useState({});
   const [searchQuery, setSearchQuery] = useState('');
-
+  
+//Пошук по назві транзакції (tx.name)
   const filteredData = useMemo(() => {
     let result = data;
 

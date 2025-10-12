@@ -13,6 +13,9 @@ export function useTransData(selectedYear) {
     fetchData();
   }, []);
 
+// Виконується один раз при монтуванні.
+// Завантажує transactions.json і зберігає в allTransactions.
+
   useEffect(() => {
     setSelectedMonth(null);
   }, [selectedYear]);
@@ -29,6 +32,9 @@ export function useTransData(selectedYear) {
     return Array.from(monthsSet).sort((a, b) => a - b);
   }, [allTransactions, selectedYear]);
 
+  //Витягує всі місяці, в яких є транзакції за вибраний рік.
+  // Повертає відсортований масив чисел (0–11).
+
   const filteredTransactions = useMemo(() => {
     const year = Number(selectedYear);
     return allTransactions.filter((tx) => {
@@ -39,6 +45,9 @@ export function useTransData(selectedYear) {
       );
     });
   }, [allTransactions, selectedYear, selectedMonth]);
+
+  // Якщо місяць не вибрано — повертає всі транзакції за рік.
+  // Якщо вибрано місяць — фільтрує по ньому.
 
   const monthNames = useMemo(() => [
     'January', 'February', 'March', 'April', 'May', 'June',
