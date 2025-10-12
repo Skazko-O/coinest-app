@@ -10,17 +10,18 @@ function Layout() {
 
     <>
       <Sidebar />
-      <div className="content">        
-          <div className={style.pageWrapper}>
-            <Header />
-            <div className={style.myContainer}>
-            <main className={style.main}>
-              <Outlet />
-            </main>
-            <Footer />
+      
+      <div className={style.pageWrapper}>
+        <Header />
+
+        <main className={style.main}>
+          <div className={style.myContainer}>
+            <Outlet />
           </div>
-        </div>
-      </div>
+        </main>
+
+        <Footer />
+      </div>    
     </>
   );
 }

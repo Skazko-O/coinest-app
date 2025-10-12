@@ -280,10 +280,17 @@ header {
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 22px;
+  padding-bottom: 22px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .sidebar {
