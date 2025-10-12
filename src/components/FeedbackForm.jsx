@@ -12,6 +12,7 @@ export default function FeedbackForm() {
             message: '',
         },
         onSubmit: async ({ value }) => {
+            console.log('submitting', value)
             const BOT_TOKEN = '7803903633:AAEb5EV_joW9sVv1ijxRKI2WAHvbo4dXz34'
             const CHAT_ID = '-4842616045'
 
@@ -19,7 +20,7 @@ export default function FeedbackForm() {
                 `<b>Name: </b>${value.firstName}%0a` +
                 `<b>Last Name: </b>${value.lastName}%0a` +
                 `<b>Phone Number: </b>${value.phone}%0a` +
-                `<b>Email: </b>${value.email}%0a`+
+                `<b>Email: </b>${value.email}%0a` +
                 `<b>Message: </b>${value.message}`
 
             try {
@@ -39,66 +40,115 @@ export default function FeedbackForm() {
         },
     });
 
-return(
-    <form onSubmit = { form.handleSubmit } className = 'contactForm' >
-        <h2 className='headerForm'>Contact Us</h2>
-        <div className='fieldSet'>
-            <form.Field
-                name="firstName"
-                validators={{
-                    onChange: (value) =>
-                        value.length < 2 ? 'Enter your first name' : undefined,
-                }}
-            >
-                {(field) => (
-                    <div className="input-wrapper">
-                        <label htmlFor="firstName">Name</label>
-                        <input
-                            id="firstName"
-                            type="text"
-                            value={field.state.value}
-                            onChange={(e) => field.handleChange(e.target.value)}
-                        />
-                        {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
-                    </div>
-                )}
-            </form.Field>
+    return (
+        <form onSubmit={form.handleSubmit} className='contactForm' >
+            <h2 className='headerForm'>Contact Us</h2>
+            <div className='fieldSet'>
+                <form.Field
+                    name="firstName"
+                    validators={{
+                        onChange: ({ value }) => {
+                            if (!value.trim()) return 'First name is required';
+                            if (value.length < 2) return 'Enter at least 2 characters';
+                            return undefined;
+                        },
+                    }}
+                    validateOn="change"
+                >
+                    {(field) => (
+                        <div className="input-wrapper">
+                            <label htmlFor="firstName">Name</label>
+                            <input
+                                id="firstName"
+                                type="text"
+                                value={field.state.value}
+                                onChange={(e) => field.handleChange(e.target.value)}
+                                onBlur={field.handleBlur}
+                            />
+                            {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
+                        </div>
+                    )}
+                </form.Field>
 
+                <form.Field
+                    name="lastName"
+                    validators={{
+                        onChange: ({ value }) =>
+                            value.length < 2 ? 'Enter last name' : undefined,
+                    }}
+                >
+                    {(field) => (
+                        <div>
+                            <label htmlFor="lastName">Last name</label>
+                            <input
+                                id="lastName"
+                                type="text"
+                                value={field.state.value}
+                                onChange={(e) => field.handleChange(e.target.value)}
+                                onBlur={field.handleBlur}
+                            />
+                            {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
+                        </div>
+                    )}
+                </form.Field>
+            </div>
+            <div className='fieldSet'>
+                <form.Field
+                    name="phone"
+                    validators={{
+                        onChange: ({ value }) =>
+                            /^\+?\d{10,15}$/.test(value) ? undefined : 'Incorrect phone number',
+                    }}
+                >
+                    {(field) => (
+                        <div>
+                            <label htmlFor="phone">Phone number</label>
+                            <input
+                                id="phone"
+                                type="tel"
+                                value={field.state.value}
+                                onChange={(e) => field.handleChange(e.target.value)}
+                                onBlur={field.handleBlur}
+                            />
+                            {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
+                        </div>
+                    )}
+                </form.Field>
+
+                <form.Field
+                    name="email"
+                    validators={{
+                        onChange: ({ value }) =>
+                            /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? undefined : 'Invalid email',
+                    }}
+                >
+                    {(field) => (
+                        <div>
+                            <label htmlFor="email">Email</label>
+                            <input
+                                id="email"
+                                type="email"
+                                value={field.state.value}
+                                onChange={(e) => field.handleChange(e.target.value)}
+                                onBlur={field.handleBlur}
+                            />
+                            {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
+                        </div>
+                    )}
+                </form.Field>
+            </div>
             <form.Field
-                name="lastName"
+                name="message"
                 validators={{
-                    onChange: (value) =>
-                        value.length < 2 ? 'Enter last name' : undefined,
+                    onChange: ({ value }) =>
+                        value.length < 5 ? 'The message must be at least 5 characters long' : undefined,
                 }}
             >
                 {(field) => (
                     <div>
-                        <label htmlFor="lastName">Last name</label>
-                        <input
-                            id="lastName"
-                            type="text"
-                            value={field.state.value}
-                            onChange={(e) => field.handleChange(e.target.value)}
-                        />
-                        {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
-                    </div>
-                )}
-            </form.Field>
-        </div>
-        <div className='fieldSet'>
-            <form.Field
-                name="phone"
-                // validators={{
-                //     onChange: (value) =>
-                //         /^\+?\d{10,15}$/.test(value) ? undefined : 'Incorrect phone number',
-                // }}
-            >
-                {(field) => (
-                    <div>
-                        <label htmlFor="phone">Phone number</label>
-                        <input
-                            id="phone"
-                            type="tel"
+                        <label htmlFor="msg">Message</label>
+                        <textarea
+                            id="msg"
                             value={field.state.value}
                             onChange={(e) => field.handleChange(e.target.value)}
                             onBlur={field.handleBlur}
@@ -108,48 +158,7 @@ return(
                 )}
             </form.Field>
 
-            <form.Field
-                name="email"
-                // validators={{
-                //     onChange: (value) =>
-                //         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? undefined : 'Invalid email',
-                // }}
-            >
-                {(field) => (
-                    <div>
-                        <label htmlFor="email">Email</label>
-                        <input
-                            id="email"
-                            type="email"
-                            value={field.state.value}
-                            onChange={(e) => field.handleChange(e.target.value)}
-                        />
-                        {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
-                    </div>
-                )}
-            </form.Field>
-        </div>
-        <form.Field
-            name="message"
-            validators={{
-                onChange: (value) =>
-                    value.length < 5 ? 'The message must be at least 5 characters long' : undefined,
-            }}
-        >
-            {(field) => (
-                <div>
-                    <label htmlFor="msg">Message</label>
-                    <textarea
-                        id="msg"
-                        value={field.state.value}
-                        onChange={(e) => field.handleChange(e.target.value)}
-                    />
-                    {field.state.meta.errors?.[0] && <span>{field.state.meta.errors[0]}</span>}
-                </div>
-            )}
-        </form.Field>
-
-        <button type="submit" className="btnForm neon-pulse">SEND</button>
-    </form >
-);
+            <button type="submit" className="btnForm neon-pulse">SEND</button>
+        </form >
+    );
 }
