@@ -66,7 +66,7 @@ export default function LoginForm() {
                             type="email"
                             placeholder="Enter email"
                             {...register('email', {
-                                required: 'Email is required',
+                               // required: 'Email is required',
                                 pattern: {
                                     value: /^\S+@\S+$/i,
                                     message: 'Invalid email format'
@@ -85,7 +85,7 @@ export default function LoginForm() {
                             type="password"
                             placeholder="Password"
                             {...register('password', {
-                                required: 'Password is required',
+                           //     required: 'Password is required',
                                 minLength: {
                                     value: 6,
                                     message: 'Minimum length is 6 characters'
